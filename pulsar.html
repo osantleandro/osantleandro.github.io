@@ -376,6 +376,17 @@ td .sub{display:block;font-size:10px;color:var(--mute)}
 }
 @media(max-width:520px){.g2,.g3,.g21,.g12{grid-template-columns:1fr}.g4,.g5,.g6{grid-template-columns:repeat(2,minmax(0,1fr))}.ph h1{font-size:22px}.k .v{font-size:19px}.k .v.lg{font-size:24px}.card{padding:12px}.filters .dt{display:none}.demo-tag{font-size:8.5px;bottom:4px}}
 
+/* planejamento: segmento, toggles, linhas que abrem */
+.plseg{display:flex;flex-direction:column;align-items:flex-start;gap:5px;margin-bottom:14px}
+.plseg .l,.pltog .l{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.pltog{display:flex;gap:18px;flex-wrap:wrap;margin:4px 0 12px}.pltog>div{display:flex;flex-direction:column;align-items:flex-start;gap:5px}
+table.xp tr.par{cursor:pointer}table.xp tr.par:hover td{background:var(--card-2)}
+table.xp .cv{display:inline-block;width:16px;color:var(--mute);font-weight:800;transition:transform .15s}
+table.xp tr.par.open .cv{transform:rotate(90deg)}
+table.xp tr.kid td{color:var(--dim);font-size:12px}table.xp tr.kid td.l{padding-left:34px}
+.upd{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--mute);margin-right:4px;white-space:nowrap}.upd .ic{width:13px;height:13px}
+@media (max-width:760px){.upd{display:none}}
+
 .lgd{display:flex;gap:14px;flex-wrap:wrap;font-size:10.5px;color:var(--mute);margin-bottom:6px}
 .lgd i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
 .chart{display:block;overflow:visible;font-family:var(--f)}
@@ -417,6 +428,7 @@ td .sub{display:block;font-size:10px;color:var(--mute)}
 <symbol id="i-layers2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
 <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></symbol>
 <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3 6.5 20.2l1-6.2L3 9.6l6.2-.9z"/></symbol>
 <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
 <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
 <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="13" rx="2"/><path d="M8 21h8"/></symbol>
@@ -448,6 +460,7 @@ td .sub{display:block;font-size:10px;color:var(--mute)}
       <button class="burger" id="burger" aria-label="Abrir menu"><svg class="ic"><use href="#i-menu"/></svg></button>
       <div class="search" id="searchBtn" role="button" tabindex="0"><svg class="ic"><use href="#i-search"/></svg><span>Buscar páginas e relatórios</span><span class="kbd">Ctrl K</span></div>
       <div class="sp"></div>
+      <span class="upd"><svg class="ic"><use href="#i-refresh"/></svg>Atualizado 17/11 · 06:00</span>
       <button class="tb" id="tvBtn"><svg class="ic"><use href="#i-tv"/></svg><span class="t">Modo TV</span></button>
       <button class="tb or" id="aiBtn"><svg class="ic"><use href="#i-spark"/></svg><span class="t">Leitura IA</span></button>
       <button class="tb" id="alBtn" aria-label="Alertas"><svg class="ic"><use href="#i-bell"/></svg><span class="cnt" id="alCnt"></span></button>
@@ -644,10 +657,10 @@ const D = (() => {
 
   // ---------- motions e alertas ----------
   const motions = [
-    { n: 'Reativação de base inativa', area: 'Marketing', dono: 'Marketing', nov: 3800, dez: 6200, st: 'Em andamento' },
-    { n: 'Upgrade de plano na base', area: 'CS', dono: 'Customer Success', nov: 5200, dez: 7400, st: 'Em andamento' },
-    { n: 'Parcerias com agências', area: 'Vendas', dono: 'Vendas SMB', nov: 0, dez: 4100, st: 'Planejada' },
-    { n: 'Outbound Enterprise', area: 'Vendas', dono: 'Vendas Enterprise', nov: 6900, dez: 13800, st: 'Em andamento' },
+    { n: 'Reativação de base inativa', area: 'Marketing', dono: 'Marketing', seg: 'smb', etapa: 'MQL', canal: 'Digital', linha: 'Plano Pro', nov: 3800, dez: 6200, jan: 5400, st: 'Em andamento', add: { mql: 60, sql: 18, opp: 12, won: 4 } },
+    { n: 'Upgrade de plano na base', area: 'CS', dono: 'Customer Success', seg: 'smb', etapa: 'WON', canal: 'Base', linha: 'Upgrade de plano', nov: 5200, dez: 7400, jan: 7400, st: 'Em andamento', add: { won: 9 } },
+    { n: 'Parcerias com agências', area: 'Vendas', dono: 'Vendas SMB', seg: 'smb', etapa: 'SQL', canal: 'Parceiros', linha: 'Plano Pro', nov: 0, dez: 4100, jan: 6000, st: 'Planejada', add: {} },
+    { n: 'Outbound Enterprise', area: 'Vendas', dono: 'Vendas Enterprise', seg: 'ent', etapa: 'SQL', canal: 'Outbound', linha: 'Enterprise', nov: 6900, dez: 13800, jan: 13800, st: 'Em andamento', add: { sql: 14, opp: 9, won: 2 } },
   ];
 
   return { R, U, N, rd, MES, MESL, months, CUR, PREV, DT, DU, PACE, BDAYS, P, f, fc, bg, cm, mrr, mrrF, mrrB, proj, dailyOf, AE, SDR, CSM, ini, deals, STAGES, TEMPS, LOSS, lostDeals, CANAIS_CONV, MQL_CH, media, site, email, emailCamp, campaigns, clients, onboarding, modules, MODS, ia, salesCoh, baseCoh, motions, PLANOS };
@@ -831,7 +844,7 @@ const toast = (t, s, i = 'check') => { const el = $('#toast'); el.innerHTML = ic
 function navHTML() {
   let h = ''; let last = null;
   SCREENS.filter(s => s.nav).forEach(s => {
-    if (s.area !== last) { const a = AREAS.find(x => x.id === s.area); if (a.n) h += `<div class="ng">${a.n}</div>`; last = s.area; }
+    if (s.area !== last) { if (last === 'inicio') h += `<div class="ng">Favoritos</div><a class="ni fav ${S.route === 'vendas/pace' ? '' : ''}" href="#/vendas/pace"><svg class="ic" style="color:#E3A84A"><use href="#i-star"/></svg>Resumo SMB e ENT · Pace</a>`; const a = AREAS.find(x => x.id === s.area); if (a.n) h += `<div class="ng">${a.n}</div>`; last = s.area; }
     const on = S.route === s.id || (s.navGroup && S.route.startsWith(s.navGroup + '/'));
     h += `<a class="ni ${on ? 'on' : ''} ${allowed(s.id) ? '' : 'lock'}" href="#/${s.id}">${ic(s.icon)}${s.navName || s.name}${s.tag ? `<span class="tag">${s.tag}</span>` : ''}${allowed(s.id) ? '' : ic('lock')}</a>`;
   });
@@ -1368,37 +1381,83 @@ RV({
 /* ================= PLANEJAMENTO ================= */
 const PL = (o) => screen(Object.assign({ area: 'sistema', tabs: 'plan', crumb: 'Planejamento', navGroup: 'plan', icon: 'cal' }, o));
 const LOCKS = [];
+const segPick = () => `<div class="plseg"><span class="l">Segmento</span><div class="seg" data-seg="seg">${[['all', 'Total'], ['smb', 'SMB'], ['ent', 'ENT']].map(([v, n]) => `<button data-v="${v}" class="${S.seg === v ? 'on' : ''}">${n}</button>`).join('')}</div></div>`;
+const segOf = (sg) => (m) => sg === 'all' || m.seg === sg;
+const motSum = (sg, k) => D.motions.filter(segOf(sg)).reduce((t, m) => t + (+m[k] || 0), 0);
+const motAdd = (sg, k, canal) => D.motions.filter(segOf(sg)).filter(m => canal == null || (canal === 'out') === (m.canal === 'Outbound')).reduce((t, m) => t + ((m.add || {})[k] || 0), 0);
+const DSH = { mql: .62, sql: .71, opp: .74, won: .7, bk: .68 };
+const split = (v, k) => { const dg = Math.round(v * DSH[k]); return [dg, v - dg]; };
+if (!S.exp) S.exp = {};
+/* linhas do Forecast do mês, com filhos por canal */
+function fcLines(sg, withMot) {
+  const i = D.CUR, a = D.f(sg, i), f = D.fc(sg, i), cm = D.cm(sg, i), bg = D.bg(sg, i), out = [];
+  ['mql', 'sql', 'opp', 'won', 'bk'].forEach(k => {
+    const mo = k === 'bk' ? motSum(sg, 'nov') : motAdd(sg, k);
+    const [ad, ao] = split(a[k], k), [fd, fo] = split(f[k], k);
+    const kids = k === 'bk' ? [] : [{ n: 'Digital', a: ad, ft: fd, mo: motAdd(sg, k, 'dig') }, { n: 'Outbound', a: ao, ft: fo, mo: motAdd(sg, k, 'out') }].map(x => ({ ...x, f: x.ft + (withMot ? x.mo : 0), k }));
+    out.push({ k, n: STN[k] + (k === 'mql' ? ' / Lead' : ''), a: a[k], ft: f[k], mo, f: f[k] + (withMot ? mo : 0), c: cm[k], b: bg[k], kids, g: 'acq' });
+  });
+  [['Expansion', 'expansion'], ['Reduction', 'reduction'], ['Churn', 'churn']].forEach(([n, k]) => { const ff = D.mrrF(sg, i)[k]; out.push({ k: 'bk', id: k, n, a: D.mrr(sg, i)[k], ft: ff, mo: 0, f: ff, c: ff, cF: 1, b: (D.mrrB(sg, i) || {})[k] ?? ff, kids: [], g: 'base' }); });
+  return out;
+}
+const fv = (k, v) => k === 'bk' ? fR(v) : fN(v);
+const dv = (k, v) => k === 'bk' ? fR(v, true) : (v > 0 ? '+' : '') + fN(v);
+const pc = (r, neg) => `<span style="color:${neg ? 'var(--dim)' : pcol(r)}">${isFinite(r) ? fP(r, 0) : '—'}</span>`;
+const regT = (cols, rows, name) => { const id = 't' + (++tid); TABLES[id] = { cols, rows, name }; return `<div class="tt"><button class="btn sm" data-copy="${id}">${ic('copy')}Copiar</button><button class="btn sm" data-csv="${id}">${ic('download')}CSV</button></div>`; };
+const bindExp = () => $$('[data-exp]').forEach(tr => tr.onclick = () => { const k = tr.dataset.exp; S.exp[k] = !S.exp[k]; render(); });
+const lockInfo = () => LOCKS.find(l => l.m === 'Nov/26');
+
 PL({
   id: 'plan', nav: true, navName: 'Planejamento', name: 'Fechamento do mês', q: 'Forecast travado, Commit e trava',
   render() {
-    const sg = S.seg, i = D.CUR, a = D.f(sg, i), f = D.fc(sg, i), cm = D.cm(sg, i), mo = D.motions.reduce((t, x) => t + x.nov, 0);
-    const rows = [{ _grp: 'Aquisição' }, ...['mql', 'sql', 'opp', 'won', 'bk'].map(k => ({ n: STN[k], a: a[k], f: k === 'bk' ? f.bk + mo : f[k], c: cm[k], k })), { _grp: 'Base (mês parcial)' }, ...[['Expansion', 'expansion'], ['Reduction', 'reduction'], ['Churn', 'churn']].map(([n, k]) => ({ n, a: D.mrr(sg, i)[k], f: D.mrrF(sg, i)[k], c: D.mrrF(sg, i)[k], k: 'bk' }))];
-    const F = (k, v) => k === 'bk' ? fR(v) : fN(v);
-    return `${filtersBar({ noPer: 1, dt: 'Nov/26 · dia útil 11 de 19' })}${sec(1, 'Fechamento do mês', 'O que os gerentes se comprometem a entregar está coberto pelo pipe e pelo Forecast?')}
-    ${table([{ k: 'n', l: 'Indicador', l2: 1 }, { k: 'a', l: 'Real até hoje', f: (v, r) => F(r.k, v) }, { k: 'f', l: 'Forecast (com motions)', f: (v, r) => F(r.k, v) }, { k: 'pf', l: '% do Forecast', f: (v, r) => fP(r.a / r.f, 0) }, { k: 'c', l: 'Commit', f: (v, r) => F(r.k, v) }, { k: 'g', l: 'Commit − Forecast', f: (v, r) => r.k === 'bk' ? fR(r.c - r.f, true) : fN(r.c - r.f) }], rows, { name: 'fechamento' })}
+    const sg = S.seg, i = D.CUR, fm = S.fm || 'com', cmp = S.cmp || 'commit', est = isEst(), L = fcLines(sg, fm === 'com'), lk = lockInfo();
+    const cC = cmp !== 'budget', cB = cmp !== 'commit';
+    const hd = ['Indicador', 'Real até hoje', `Forecast (${fm} motions)`, '% do Forecast', ...(cC ? ['Commit', ...(cmp === 'commit' ? ['Commit − Forecast'] : []), '% do Commit'] : []), ...(cB ? ['Budget', ...(cmp === 'budget' ? ['Budget − Forecast'] : []), '% do Budget'] : [])];
+    const row = (r, kid) => { const neg = r.g === 'base' && r.id !== 'expansion'; const cells = [fv(r.k, r.a), fv(r.k, r.f), pc(r.a / r.f, neg)];
+      if (cC) { if (kid) cells.push('—', ...(cmp === 'commit' ? ['—'] : []), '—'); else cells.push(fv(r.k, r.c) + (r.cF ? ' <span class="mu" style="font-size:10.5px">(Forecast)</span>' : ''), ...(cmp === 'commit' ? [`<span style="color:${r.c - r.f >= 0 ? 'var(--ok)' : 'var(--bad)'}">${dv(r.k, r.c - r.f)}</span>`] : []), pc(r.a / r.c, neg)); }
+      if (cB) { if (kid) cells.push('—', ...(cmp === 'budget' ? ['—'] : []), '—'); else if (!est) cells.push('<span class="mu">restrito</span>', ...(cmp === 'budget' ? ['—'] : []), '—'); else cells.push(fv(r.k, r.b), ...(cmp === 'budget' ? [`<span style="color:${r.b - r.f <= 0 ? 'var(--ok)' : 'var(--bad)'}">${dv(r.k, r.b - r.f)}</span>`] : []), pc(r.a / r.b, neg)); }
+      return cells; };
+    const key = (r) => r.id || r.k, body = [];
+    [['acq', 'Acquisition'], ['base', 'Post-sale (base, mês parcial)']].forEach(([g, gn]) => { body.push(`<tr class="grp"><td colspan="${hd.length}">${gn}</td></tr>`); L.filter(r => r.g === g).forEach(r => { const op = S.exp[key(r)]; body.push(`<tr class="${r.kids.length ? 'par' : ''} ${op ? 'open' : ''}" ${r.kids.length ? `data-exp="${key(r)}"` : ''}><td class="l">${r.kids.length ? '<span class="cv">›</span>' : '<span class="cv"></span>'}${r.n}</td>${row(r).map(c => `<td>${c}</td>`).join('')}</tr>`); if (op) r.kids.forEach(x => body.push(`<tr class="kid"><td class="l">${x.n}</td>${row(x, 1).map(c => `<td>${c}</td>`).join('')}</tr>`)); }); });
+    const strip = (t) => String(t).replace(/<[^>]+>/g, '');
+    const tt = regT(hd, L.map(r => [r.n, ...row(r).map(strip)]), 'fechamento-do-mes');
+    return `${segPick()}${sec(1, 'Fechamento do mês', 'O que os gerentes se comprometem a entregar está coberto pelo pipe e pelo Forecast?')}
+    <div class="card"><div class="ch"><div><h3>Nov/26 · Forecast × ${cmp === 'commit' ? 'Commit' : cmp === 'budget' ? 'Budget' : 'Commit e Budget'}</h3><small>Clique numa linha de aquisição pra abrir por canal</small></div><div class="hint" style="margin:0">${lk ? `Forecast travado em ${lk.em.split(' ')[0]}` : 'Forecast ainda não travado · seção 02'}</div></div>
+    <div class="pltog"><div><span class="l">Forecast</span><div class="seg" data-seg="fm">${[['com', 'Com motions'], ['sem', 'Sem motions']].map(([v, n]) => `<button data-v="${v}" class="${fm === v ? 'on' : ''}">${n}</button>`).join('')}</div></div><div><span class="l">Comparar com</span><div class="seg" data-seg="cmp">${[['commit', 'Commit'], ['budget', 'Budget'], ['both', 'Commit e Budget']].map(([v, n]) => `<button data-v="${v}" class="${cmp === v ? 'on' : ''}">${n}</button>`).join('')}</div></div></div>
+    <div class="card flat">${tt}<div class="tw"><table class="xp"><thead><tr>${hd.map((h, j) => `<th class="${j ? '' : 'l'}">${h}</th>`).join('')}</tr></thead><tbody>${body.join('')}</tbody></table></div></div>${!est && cB ? '<p class="hint">Budget fica restrito ao nível estratégico.</p>' : ''}</div>
     ${sec(2, 'Trava do Forecast', 'No início do mês a projeção vira o Forecast oficial e deixa de mudar')}
     <div class="card"><div class="tw"><table><thead><tr><th>Mês</th><th>Travado em</th><th>Por</th><th>Bookings travado</th></tr></thead><tbody id="locks">${LOCKS.length ? LOCKS.map(l => `<tr><td class="l">${l.m}</td><td>${l.em}</td><td>${l.por}</td><td>${l.v}</td></tr>`).join('') : '<tr><td colspan="4" class="l mu">Nenhum mês travado nesta demonstração ainda.</td></tr>'}</tbody></table></div>
     <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap"><button class="btn pri" id="lockBtn" ${LOCKS.length ? 'disabled' : ''}>${ic('lock')}Travar Nov/26 e enviar para a planilha</button><span class="hint" style="margin:6px 0 0">Grava o Forecast do mês na aba de metas.</span></div></div>
     ${sec(3, 'Commit dos gerentes', 'Quanto cada gerente se compromete a entregar neste mês?')}
     ${table([{ k: 'n', l: 'Indicador', l2: 1 }, { k: 'f', l: 'Forecast SMB', f: fN }, { k: 'c', l: 'Commit SMB', f: fN }, { k: 'o', l: 'De onde vem', l2: 1 }], [{ n: 'MQL', f: D.fc('smb', i).mql, c: D.cm('smb', i).mql, o: 'conversão SQL/MQL dos últimos 3 meses' }, { n: 'SQL', f: D.fc('smb', i).sql, c: D.cm('smb', i).sql, o: 'soma das metas dos SDRs' }, { n: 'OPP', f: D.fc('smb', i).opp, c: D.cm('smb', i).opp, o: 'conversão OPP/SQL dos últimos 3 meses' }, { n: 'Bookings (R$)', f: D.fc('smb', i).bk, c: D.cm('smb', i).bk, o: 'soma das metas dos executivos' }], { name: 'commit' })}`;
   },
-  after() { const b = $('#lockBtn'); if (b) b.onclick = () => { if (!confirmBox('Travar o Forecast de Nov/26? Depois disso, ajustes entram só como motion ou Commit.', () => { LOCKS.push({ m: 'Nov/26', em: '17/11/2026 ' + new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }), por: 'Você (demonstração)', v: fR(D.fc(S.seg, D.CUR).bk) }); render(); toast('Forecast de Nov/26 travado', 'Enviado para a planilha de metas', 'lock'); })) return; }; }
+  after() { bindExp(); const b = $('#lockBtn'); if (b) b.onclick = () => { if (!confirmBox('Travar o Forecast de Nov/26? Depois disso, ajustes entram só como motion ou Commit.', () => { LOCKS.push({ m: 'Nov/26', em: '17/11/2026 ' + new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }), por: 'Você (demonstração)', v: fR(D.fc(S.seg, D.CUR).bk) }); render(); toast('Forecast de Nov/26 travado', 'Enviado para a planilha de metas', 'lock'); })) return; }; }
 });
 PL({
   id: 'plan/motions', name: 'Motions', q: 'Iniciativas incrementais sobre o Forecast',
   render() {
-    const tot = D.motions.reduce((t, x) => ({ nov: t.nov + x.nov, dez: t.dez + x.dez }), { nov: 0, dez: 0 });
-    return `${sec(1, 'Motions', 'O que vai somar por cima do Forecast, e quem é dono?')}
-    <div class="g g3">${kpi('Motions ativas', fN(D.motions.length), 'iniciativas')}${kpi('Somam em Nov/26', fR(tot.nov), 'bookings incrementais')}${kpi('Somam em Dez/26', fR(tot.dez), 'bookings incrementais')}</div>
-    <div style="margin-top:12px">${table([{ k: 'n', l: 'Motion', l2: 1 }, { k: 'dono', l: 'Dono' }, { k: 'st', l: 'Status', f: (v) => v === 'Planejada' ? pill('mu', v) : pill('ok', v) }, { k: 'nov', l: 'Nov/26', f: fR }, { k: 'dez', l: 'Dez/26', f: fR }], [...D.motions, { n: 'Total', dono: '', st: '', nov: tot.nov, dez: tot.dez, _cls: 'tot' }], { name: 'motions' })}</div>
-    ${sec(2, 'Nova motion', '')}<form class="card" id="mf" style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
-      <label class="k"><span class="l">Nome</span><input class="num-in" style="width:240px;text-align:left" name="n" required placeholder="Ex.: Campanha de indicação"></label>
-      <label class="k"><span class="l">Dono</span><input class="num-in" style="width:160px;text-align:left" name="d" required placeholder="Ex.: Marketing"></label>
-      <label class="k"><span class="l">Nov/26 (R$)</span><input class="num-in" name="nov" type="number" min="0" value="2000"></label>
-      <label class="k"><span class="l">Dez/26 (R$)</span><input class="num-in" name="dez" type="number" min="0" value="4000"></label>
-      <button class="btn pri">${ic('plus')}Adicionar</button></form>`;
+    const sg = S.seg, ms = D.motions.map((m, j) => ({ ...m, j })).filter(segOf(sg)), M = ['nov', 'dez', 'jan'], MN = ['Nov/26', 'Dez/26', 'Jan/27'];
+    const tot = (k) => ms.reduce((t, m) => t + (+m[k] || 0), 0), sel = (n, o, v) => `<select class="num-in" name="${n}" style="width:auto;min-width:104px;padding-right:22px;text-align:left">${o.map(x => `<option ${x === v ? 'selected' : ''}>${x}</option>`).join('')}</select>`;
+    const rows = ms.map(m => `<tr><td class="l"><b>${esc(m.n)}</b><div class="mu" style="font-size:10.5px">${esc(m.dono)}</div></td><td>${m.seg === 'ent' ? 'ENT' : 'SMB'}</td><td>${m.etapa}</td><td>${m.canal}</td><td class="l mu">${esc(m.linha)}</td>${M.map(k => `<td><input class="num-in" type="number" min="0" step="100" data-mv="${m.j}:${k}" value="${m[k] || 0}" aria-label="NMRR ${k}"></td>`).join('')}<td><b>${fR(M.reduce((t, k) => t + (+m[k] || 0), 0))}</b></td><td>${m.st === 'Planejada' ? pill('mu', m.st) : pill('ok', m.st)}</td></tr>`).join('');
+    const tt = regT(['Motion', 'Seg.', 'Etapa de entrada', 'Canal', 'Linha', ...MN, 'Total', 'Status'], ms.map(m => [m.n, m.seg.toUpperCase(), m.etapa, m.canal, m.linha, ...M.map(k => m[k] || 0), M.reduce((t, k) => t + (+m[k] || 0), 0), m.st]), 'motions');
+    return `${segPick()}${sec(1, 'Motions · incremental sobre o Forecast', 'O que vai somar por cima do Forecast, em que etapa entra e quem é dono?')}
+    <div class="g g3">${kpi('Motions', fN(ms.length), 'iniciativas no segmento')}${kpi('Somam em Nov/26', fR(tot('nov')), 'NMRR incremental')}${kpi('Somam até Jan/27', fR(tot('nov') + tot('dez') + tot('jan')), 'NMRR incremental')}</div>
+    <div class="card" style="margin-top:12px"><div class="ch"><div><h3>Motions salvas</h3><small>Os valores de NMRR são editáveis direto na tabela</small></div><div class="hint" style="margin:0" id="medit">${S.medit ? 'editado por você · demonstração' : ''}</div></div>
+    <div class="card flat">${tt}<div class="tw"><table><thead><tr><th class="l">Motion</th><th>Seg.</th><th>Etapa de entrada</th><th>Canal</th><th class="l">Linha</th>${MN.map(n => `<th>NMRR ${n}</th>`).join('')}<th>Total</th><th>Status</th></tr></thead><tbody>${rows || `<tr><td colspan="11" class="l mu">Nenhuma motion nesse segmento.</td></tr>`}<tr class="tot"><td class="l">Total</td><td colspan="4"></td>${M.map(k => `<td>${fR(tot(k))}</td>`).join('')}<td>${fR(tot('nov') + tot('dez') + tot('jan'))}</td><td></td></tr></tbody></table></div></div></div>
+    ${sec(2, 'Nova motion', 'Entra como Planejada e já soma no Forecast com motions')}<form class="card" id="mf" style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
+      <label class="k"><span class="l">Nome</span><input class="num-in" style="width:220px;text-align:left" name="n" required placeholder="Ex.: Campanha de indicação"></label>
+      <label class="k"><span class="l">Dono</span><input class="num-in" style="width:150px;text-align:left" name="d" required placeholder="Ex.: Marketing"></label>
+      <label class="k"><span class="l">Seg.</span>${sel('seg', ['SMB', 'ENT'], sg === 'ent' ? 'ENT' : 'SMB')}</label>
+      <label class="k"><span class="l">Etapa</span>${sel('etapa', ['MQL', 'SQL', 'OPP', 'WON'], 'MQL')}</label>
+      <label class="k"><span class="l">Canal</span>${sel('canal', ['Digital', 'Outbound', 'Parceiros', 'Base'], 'Digital')}</label>
+      <label class="k"><span class="l">NMRR Nov/26</span><input class="num-in" name="nov" type="number" min="0" value="2000"></label>
+      <label class="k"><span class="l">NMRR Dez/26</span><input class="num-in" name="dez" type="number" min="0" value="4000"></label>
+      <button class="btn pri">${ic('plus')}Nova motion</button></form>`;
   },
-  after() { const f = $('#mf'); if (f) f.onsubmit = (e) => { e.preventDefault(); const d = new FormData(f); D.motions.push({ n: d.get('n'), dono: d.get('d'), st: 'Planejada', nov: +d.get('nov') || 0, dez: +d.get('dez') || 0 }); render(); toast('Motion adicionada', 'Já soma no Forecast com motions', 'plus'); }; }
+  after() {
+    $$('[data-mv]').forEach(el => el.onchange = () => { const [j, k] = el.dataset.mv.split(':'); D.motions[+j][k] = Math.max(0, +el.value || 0); S.medit = 1; render(); toast('Motion atualizada', 'O Forecast com motions já recalculou', 'check'); });
+    const f = $('#mf'); if (f) f.onsubmit = (e) => { e.preventDefault(); const d = new FormData(f); D.motions.push({ n: d.get('n'), dono: d.get('d'), seg: d.get('seg').toLowerCase(), etapa: d.get('etapa'), canal: d.get('canal'), linha: 'a definir', st: 'Planejada', nov: +d.get('nov') || 0, dez: +d.get('dez') || 0, jan: 0, add: {} }); S.medit = 1; render(); toast('Motion adicionada', 'Já soma no Forecast com motions', 'plus'); };
+  }
 });
 PL({
   id: 'plan/ano', name: 'Visão do ano', q: 'Real + Forecast + motions até dezembro',
@@ -1413,10 +1472,19 @@ PL({
 PL({
   id: 'plan/motor', name: 'Motor do Forecast', q: 'O Forecast aberto linha a linha',
   render() {
+    const sg = S.seg, L = fcLines(sg, true).filter(r => r.g === 'acq'), lk = lockInfo();
+    const body = L.map(r => { const op = S.exp['m' + r.k]; const line = (x, kid) => `<td>${fv(r.k, x.a)}</td><td>${fv(r.k, x.ft)}</td><td class="${x.mo ? '' : 'mu'}">${x.mo ? dv(r.k, x.mo) : '—'}</td><td><b>${fv(r.k, x.ft + x.mo)}</b></td><td>${pc(x.a / (x.ft + x.mo))}</td>`;
+      return `<tr class="${r.kids.length ? 'par' : ''} ${op ? 'open' : ''}" ${r.kids.length ? `data-exp="m${r.k}"` : ''}><td class="l">${r.kids.length ? '<span class="cv">›</span>' : '<span class="cv"></span>'}${r.n}</td>${line(r)}</tr>` + (op ? r.kids.map(x => `<tr class="kid"><td class="l">${x.n}</td>${line(x, 1)}</tr>`).join('') : ''); }).join('');
+    const hd = ['Indicador', 'Real até hoje', lk ? 'Forecast travado' : 'Forecast (não travado)', '+ Motions', 'Forecast + motions', '% do Forecast + motions'];
+    const tt = regT(hd, L.flatMap(r => [[r.n, r.a, r.ft, r.mo, r.ft + r.mo, fP(r.a / (r.ft + r.mo), 0)], ...r.kids.map(x => ['  ' + r.n + ' · ' + x.n, x.a, x.ft, x.mo, x.ft + x.mo, fP(x.a / (x.ft + x.mo), 0)])]), 'forecast-linha-a-linha');
+    const sec1 = `${segPick()}${sec(1, 'Forecast do mês · linha a linha', 'De onde vem cada número do Forecast, por etapa e canal')}
+    <div class="card"><div class="ch"><div><h3>Nov/26 · Forecast linha a linha</h3><small>Forecast travado + motions = o número que a liderança acompanha</small></div><div class="hint" style="margin:0">${lk ? `Forecast travado em ${lk.em.split(' ')[0]}` : 'Forecast ainda não travado'}</div></div>
+    <div style="display:flex;gap:6px;margin-bottom:10px"><button class="btn sm" id="expAll">Abrir tudo</button><button class="btn sm" id="expNone">Recolher tudo</button></div>
+    <div class="card flat">${tt}<div class="tw"><table class="xp"><thead><tr>${hd.map((h, j) => `<th class="${j ? '' : 'l'}">${h}</th>`).join('')}</tr></thead><tbody><tr class="grp"><td colspan="6">Acquisition</td></tr>${body}</tbody></table></div></div></div>`;
     const p = S.mot || (S.mot = { mql: Math.round(D.fc('smb', 23 - 1).mql * .86), c1: 42, c2: 62, c3: 21, tk: 1310 });
     const sql = p.mql * p.c1 / 100, opp = sql * p.c2 / 100, won = opp * p.c3 / 100, bk = won * p.tk;
     const inp = (k, v, suf) => `<input class="num-in" data-mot="${k}" type="number" value="${v}">${suf ? ` <span class="mu">${suf}</span>` : ''}`;
-    return `${sec(1, 'Premissas de Dez/26 · SMB', 'Mexa nas premissas e veja o Forecast se recalcular')}
+    return `${sec1}${sec(2, 'Premissas de Dez/26 · SMB', 'Mexa nas premissas e veja o Forecast do próximo mês se recalcular')}
     <div class="card"><div class="tw"><table><thead><tr><th>Linha</th><th>Premissa</th><th>Como foi calculada</th><th>Resultado</th></tr></thead><tbody>
     <tr><td class="l">MQL</td><td>${inp('mql', p.mql)}</td><td class="mu">média de 3 meses × sazonalidade de dezembro</td><td><b>${fN(p.mql)}</b></td></tr>
     <tr><td class="l">MQL → SQL</td><td>${inp('c1', p.c1, '%')}</td><td class="mu">média ponderada de 3 meses</td><td><b>${fN(sql)}</b> SQL</td></tr>
@@ -1426,7 +1494,7 @@ PL({
     <tr class="tot"><td class="l">Bookings · Forecast de Dez/26</td><td></td><td></td><td style="color:var(--or-2);font-size:14px">${fR(bk)}</td></tr></tbody></table></div>
     <p class="hint">No produto, essas premissas vêm das regras e do histórico; aqui dá para mexer e ver o efeito na hora.</p></div>`;
   },
-  after() { $$('[data-mot]').forEach(el => el.onchange = () => { S.mot[el.dataset.mot] = Math.max(0, +el.value || 0); render(); }); }
+  after() { bindExp(); const ea = $('#expAll'), en = $('#expNone'); if (ea) ea.onclick = () => { ['mql', 'sql', 'opp', 'won'].forEach(k => S.exp['m' + k] = 1); render(); }; if (en) en.onclick = () => { ['mql', 'sql', 'opp', 'won'].forEach(k => S.exp['m' + k] = 0); render(); }; $$('[data-mot]').forEach(el => el.onchange = () => { S.mot[el.dataset.mot] = Math.max(0, +el.value || 0); render(); }); }
 });
 const RULES = { own: true, sdr: true, win: 90, desc: ['Lead duplicado', 'Já é cliente', 'Teste interno'], out: ['outbound', 'prospecção'], antes: ['diagnóstico', 'agendamento', 'qualificar', 'no-show'] };
 PL({
