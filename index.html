@@ -22,8 +22,8 @@
   --mono:"JetBrains Mono",ui-monospace,monospace;
   --max:1120px;
 }
-/* tokens escuros: faixas pretas e a demo do Pulsar (inclusive no modo TV) */
-.dark,#pulsar{
+/* tokens escuros: faixas pretas e a demo do Norn (inclusive no modo TV) */
+.dark,#norn{
   --bg:#0D0D0C; --bg-soft:#111110; --card:#151514; --card-2:#1C1C1A; --hover:#232321;
   --line:#272725; --line-strong:#3A3936;
   --txt:#F3F2EE; --txt-dim:#A3A19B; --txt-mute:#77756F;
@@ -430,8 +430,8 @@ footer b{color:#F3F2EE;font-weight:800}
 @media(max-width:760px){
   .demo-bar{flex-wrap:wrap}
   .demo-url{display:none}
-  #pulsar .demo-body{grid-template-columns:1fr;height:620px}
-  #pulsar .p-side{display:flex;gap:6px;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:8px}
+  #norn .demo-body{grid-template-columns:1fr;height:620px}
+  #norn .p-side{display:flex;gap:6px;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:8px}
   .p-logo,.p-grp{display:none}
   .p-nav{width:auto;white-space:nowrap}
   .p-nav.on::before{display:none}
@@ -444,8 +444,8 @@ footer b{color:#F3F2EE;font-weight:800}
   .p-2{grid-template-columns:1fr}
   .p-h{flex-direction:column;align-items:flex-start}
   .p-ai{width:88%}
-  #pulsar.tv .p-main{padding:66px 16px 20px}
-  #pulsar.tv .p-tvbar{padding:0 16px}
+  #norn.tv .p-main{padding:66px 16px 20px}
+  #norn.tv .p-tvbar{padding:0 16px}
 }
 
 </style>
@@ -554,12 +554,12 @@ footer b{color:#F3F2EE;font-weight:800}
     <h2>Duas ferramentas que eu construí com IA. <em>Pode clicar.</em></h2>
     <p class="intro">As demos abaixo funcionam de verdade: troque de tela, mude o perfil, aprove um post, gere um corte. Os dados são de exemplo.</p>
     <div class="cases">
-<!-- ========== PULSAR ========== -->
+<!-- ========== NORN ========== -->
       <article class="case">
         <div class="case-head">
           <div>
-            <div class="case-tag">Painel de RevOps · Em produção na liderança</div>
-            <h3>Pulsar</h3>
+            <div class="case-tag">Painel de RevOps · Criado para um SaaS · Em produção na liderança</div>
+            <h3>Norn</h3>
             <div class="case-sub">Marketing, Vendas, CS, Produto e Receita num lugar só, com a mesma regra pra todo mundo</div>
           </div>
           <span class="badge">Demo interativa</span>
@@ -581,10 +581,10 @@ footer b{color:#F3F2EE;font-weight:800}
           <div class="chips"><span class="chip">React</span><span class="chip">Python · FastAPI</span><span class="chip">Postgres</span><span class="chip">HubSpot API</span><span class="chip">BigQuery</span><span class="chip">SSO por convite</span><span class="chip">Leitura por IA</span><span class="chip">Docker · GitLab CI</span></div>
 
           <div class="appframe">
-            <div class="demo-bar"><div class="demo-dots"><span></span><span></span><span></span></div><div class="demo-url">norn · recriação pública do Pulsar com dados fictícios</div><button class="d-btn" id="pReplay" type="button"><svg class="ic"><use href="#i-play"/></svg>Ver abertura</button><a class="d-btn on" href="norn.html" target="_blank" rel="noopener"><svg class="ic"><use href="#i-arrow"/></svg>Abrir em tela cheia</a></div>
-            <iframe id="pFrame" src="norn.html?embed=1#/overview" title="Norn · recriação interativa do Pulsar" loading="lazy" allow="fullscreen; clipboard-write"></iframe>
+            <div class="demo-bar"><div class="demo-dots"><span></span><span></span><span></span></div><div class="demo-url">norn · versão pública com dados fictícios</div><button class="d-btn" id="pReplay" type="button"><svg class="ic"><use href="#i-play"/></svg>Ver abertura</button><a class="d-btn on" href="norn.html" target="_blank" rel="noopener"><svg class="ic"><use href="#i-arrow"/></svg>Abrir em tela cheia</a></div>
+            <iframe id="pFrame" src="norn.html?embed=1#/overview" title="Norn · demo interativa" loading="lazy" allow="fullscreen; clipboard-write"></iframe>
           </div>
-          <div class="demo-note"><svg class="ic"><use href="#i-user"/></svg><span><b>Norn: a recriação pública do Pulsar, com a marca Ygg.</b> 38 telas, dados 100% fictícios; o Pulsar real usa dados da empresa e é fechado. Navegue pelo menu, troque Período e Painel, abra os alertas, a Leitura IA, o Modo TV e o "Ver como" no canto de baixo. Em tela cheia a experiência fica completa.</span></div>
+          <div class="demo-note"><svg class="ic"><use href="#i-user"/></svg><span><b>Criei esse painel para um SaaS, onde ele roda em produção com outro nome.</b> Por discrição, aqui ele virou Norn, com a marca Ygg, produto genérico e dados 100% fictícios. A versão real usa dados da empresa e é fechada. São 38 telas. Navegue pelo menu, troque Período e Painel, abra os alertas, a Leitura IA, o Modo TV e o "Ver como" no canto de baixo. Em tela cheia a experiência fica completa.</span></div>
         </div>
       </article>
 
@@ -695,7 +695,7 @@ footer b{color:#F3F2EE;font-weight:800}
         <summary><span class="nn">Nota 03</span><h3>Construí um painel de receita com IA<small>O gargalo deixou de ser programar</small></h3><span class="tg"><svg class="ic"><use href="#i-plus"/></svg></span></summary>
         <div class="body">
           <p>Toda semana a mesma pergunta: como estamos no mês? A resposta estava espalhada em planilha, CRM e plataforma de mídia, e cada área chegava com a sua versão.</p>
-          <p>Construí o Pulsar inteiro com um agente de IA. Eu sabia o que a liderança precisava ver e como o dado se comporta. A IA escrevia o código.</p>
+          <p>Construí o painel inteiro com um agente de IA. Eu sabia o que a liderança precisava ver e como o dado se comporta. A IA escrevia o código.</p>
           <p>O resultado é um lugar só, com o mesmo número pra todo mundo: alerta quando um indicador sai do ritmo da meta, leitura automática da tela por IA, acesso por perfil, feedback com print direto pro RevOps e modo TV.</p>
           <p class="pull">Construir ferramenta interna deixou de depender de saber programar. Depende de saber exatamente o que precisa ser construído.</p>
         </div>
@@ -719,7 +719,7 @@ footer b{color:#F3F2EE;font-weight:800}
             <li><b>Política de Atribuição de Receita</b> de 90 dias, aprovada e em vigor</li>
             <li>Forecast e pipeline levados à diretoria, com governança de CRM, dados e ferramentas</li>
             <li>Metas e comissionamento do time comercial, e ponte entre Comercial e Produto</li>
-            <li><b>Pulsar</b>, painel de receita da liderança, construído com IA</li>
+            <li><b>Painel de receita da liderança</b>, construído com IA (Norn, no portfólio)</li>
           </ul>
         </div>
       </div>
@@ -994,9 +994,9 @@ new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !starte
 (()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el))})();
 
-/* Pulsar: a abertura do produto toca quando a demo aparece na tela (uma vez) e pelo botão "Ver abertura" */
+/* Norn: a abertura do produto toca quando a demo aparece na tela (uma vez) e pelo botão "Ver abertura" */
 (() => { const f = document.getElementById('pFrame'), b = document.getElementById('pReplay'); if (!f) return; let done = false, ready = false, want = false;
-  const play = () => { if (ready) f.contentWindow.postMessage('pulsar-intro', '*'); else want = true; };
+  const play = () => { if (ready) f.contentWindow.postMessage('norn-intro', '*'); else want = true; };
   f.addEventListener('load', () => { ready = true; if (want) { want = false; setTimeout(play, 150); } });
   new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && e.intersectionRatio > .55 && !done) { done = true; play(); } }), { threshold: [.55] }).observe(f);
   if (b) b.onclick = play; })();
