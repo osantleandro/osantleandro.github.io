@@ -8,20 +8,26 @@
 <meta name="theme-color" content="#0B0B0A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* Pulsar · demonstração para portfólio. Paleta Ygg (preto, off-white, laranja #FF6A00). Dados 100% fictícios. */
 :root{
-  --bg:#0B0B0A; --side:#070707; --top:#0E0E0D; --card:#141413; --card-2:#1A1A19; --card-3:#21211F; --hover:#232321;
-  --line:#262624; --line-2:#33332F;
-  --txt:#F3F2EE; --dim:#A3A19B; --mute:#77756F; --faint:#5A5853;
+  --bg:#0B0B0A; --side:#080808; --top:#0B0B0A; --card:#171716; --card-2:#1C1C1B; --card-3:#242422; --hover:#232321;
+  --line:rgba(243,242,238,.085); --line-2:rgba(243,242,238,.2);
+  --txt:#F3F2EE; --dim:rgba(243,242,238,.74); --mute:rgba(243,242,238,.52); --faint:rgba(243,242,238,.34);
   --or:#FF6A00; --or-2:#FF8A3D; --or-soft:rgba(255,106,0,.12); --or-line:rgba(255,106,0,.35);
-  --ok:#4CC38A; --ok-soft:rgba(76,195,138,.13); --warn:#E3A84A; --warn-soft:rgba(227,168,74,.14); --bad:#F2766B; --bad-soft:rgba(242,118,107,.13);
+  --ok:#4CC38A; --ok-soft:rgba(76,195,138,.15); --warn:#E3A84A; --warn-soft:rgba(227,168,74,.16); --bad:#F2766B; --bad-soft:rgba(242,118,107,.15);
   --info:#83A9F0; --info-soft:rgba(131,169,240,.13);
-  --c1:#FF6A00; --c2:#E9E7E1; --c3:#83A9F0; --c4:#4CC38A; --c5:#E3A84A; --c6:#B28DFF;
-  --f:"Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --c1:#FF8A3D; --c2:#F3F2EE; --c3:#C9B8A6; --c4:#8C8A84; --c5:#E3A84A; --c6:#B28DFF;
+  --fg:#F3F2EE; --fg-2:rgba(243,242,238,.78); --fg-3:rgba(243,242,238,.55);
+  --good:#4CC38A; --good-ink:#8FE0B6; --warn-ink:#F2C879; --bad-ink:#FFAB9E;
+  --panel-solid:#161615; --track:rgba(243,242,238,.07); --accent:#FF6A00; --accent-soft:rgba(255,106,0,.13);
+  --fv-a:#FFA060; --fv-b:#C24E00; --fv-ink:#1B0F06;
+  --glow:linear-gradient(160deg,#20201E 0%,#191918 45%,#151514 100%);
+  --sh:inset 0 1px 0 rgba(255,255,255,.055),inset 0 -1px 0 rgba(0,0,0,.3),0 18px 34px -20px rgba(0,0,0,.9),0 2px 6px -2px rgba(0,0,0,.45);
+  --f:"Poppins",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,monospace;
-  --side-w:232px;
+  --side-w:236px; --r:16px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
@@ -87,7 +93,7 @@ a{color:inherit;text-decoration:none}
 .ph{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:2px 0 14px}
 .ph h1{font-size:26px;font-weight:800;letter-spacing:-.035em;line-height:1.1}
 .ph p{color:var(--dim);font-size:12.5px;margin-top:4px}
-.ph .chip{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:999px;padding:2px 9px;margin-left:6px}
+.ph .chip{flex-direction:row;border:0;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--ok);background:var(--ok-soft);border-radius:999px;padding:2px 9px;margin-left:6px}
 .ph .chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
 .tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);margin-bottom:12px;overflow-x:auto;scrollbar-width:none}
 .tabs a{padding:8px 11px;font-size:12px;font-weight:700;color:var(--mute);border-bottom:2px solid transparent;white-space:nowrap}
@@ -115,7 +121,6 @@ a{color:inherit;text-decoration:none}
 .g5{grid-template-columns:repeat(5,minmax(0,1fr))}
 .g6{grid-template-columns:repeat(6,minmax(0,1fr))}
 .g21{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
-.g12{grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:0}
 .card.flat{padding:0;overflow:hidden}
 .ch{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:10px}
@@ -386,6 +391,143 @@ table.xp tr.par.open .cv{transform:rotate(90deg)}
 table.xp tr.kid td{color:var(--dim);font-size:12px}table.xp tr.kid td.l{padding-left:34px}
 .upd{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--mute);margin-right:4px;white-space:nowrap}.upd .ic{width:13px;height:13px}
 @media (max-width:760px){.upd{display:none}}
+
+/* ================= visual do Pulsar ================= */
+body{font-size:13px}
+.card{background:var(--glow);border:1px solid rgba(243,242,238,.07);border-radius:var(--r);box-shadow:var(--sh);padding:15px 16px}
+.card.flat{padding:0 0 4px;overflow:hidden}.card .card.flat,.card .card{background:none;border:0;box-shadow:none;border-radius:0}.card.flat>.ch{padding:14px 16px 0}
+.card .card.flat,.card .card{box-shadow:none}
+.ch{margin-bottom:12px}.ch h3{font-size:13.5px;font-weight:600;letter-spacing:-.005em}.ch small{font-size:12px;color:var(--fg-3);font-weight:400}
+.k{gap:4px;position:relative;overflow:hidden}
+.k .l{font-size:11px;font-weight:500;letter-spacing:.12em;color:rgba(243,242,238,.68);display:flex;justify-content:space-between;gap:8px}
+.k .l span{letter-spacing:0;text-transform:none;color:var(--fg-3);font-weight:400}
+.k .v{font-weight:600;font-size:clamp(21px,1.85vw,29px);letter-spacing:-.02em}
+.k .v.lg{font-size:clamp(26px,2.4vw,36px)}
+.k .s{font-size:12px;color:var(--fg-3);line-height:1.4}
+.k .spark{margin-top:6px}
+.k .go{font-size:12px;font-weight:600;color:var(--c1);opacity:0;transition:opacity .15s}
+.k[data-go]{cursor:pointer;transition:transform .15s}.k[data-go]:hover{transform:translateY(-1px)}.k[data-go]:hover .go{opacity:1}
+.d{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;align-self:flex-start;white-space:nowrap;display:inline-block}
+.d.up{color:var(--good-ink);background:color-mix(in srgb,var(--good) 16%,transparent)}
+.d.down{color:var(--bad-ink);background:color-mix(in srgb,var(--bad) 16%,transparent)}
+.d.flat{color:var(--fg-2);background:var(--track)}
+.sec{margin:28px 0 12px}
+.sec h2{font-size:15px;font-weight:600;letter-spacing:-.01em;gap:10px}
+.sec h2 em{font-family:var(--f);font-size:11px;font-weight:600;color:var(--fg-3);background:var(--track);border:0;border-radius:6px;padding:2px 7px}
+.sec p{font-size:12.5px;color:var(--fg-2)}
+.ph h1{font-weight:600;font-size:27px;letter-spacing:-.02em}
+.crumb{font-weight:500;font-size:12px}
+.tabs a{font-weight:500;font-size:12.5px;padding:9px 12px}.tabs a.on{font-weight:600}
+.fl{border:0;background:none;padding:0 6px 0 0;height:28px;font-size:12px;color:var(--fg-3)}
+.fl select{font-weight:600;font-size:12px}
+.filters{gap:6px 14px;padding:4px 0 10px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.filters .dt{font-family:var(--f);font-size:12px}
+th{font-size:11px;font-weight:500;letter-spacing:.1em;color:var(--fg-3);background:transparent}
+td{font-size:12.5px;border-bottom:1px solid rgba(243,242,238,.05)}
+tbody tr:hover td{background:rgba(243,242,238,.03)}
+tr.grp td{background:rgba(243,242,238,.04);font-weight:600;color:var(--fg-2)}
+.pill{font-weight:600;border-radius:999px;padding:2px 8px;font-size:11px}
+.ni{font-weight:500;font-size:12.5px}.ng{font-weight:600}
+.brand b{font-weight:700}.btn{font-weight:600}
+/* gráficos */
+.chart>svg{display:block;width:100%;height:auto;overflow:visible}
+.axis text{fill:var(--fg-3);font:400 11.5px var(--f)}
+.axis text.cur{fill:var(--accent);font-weight:600}
+.grd{stroke:rgba(243,242,238,.1);stroke-dasharray:1 5}
+.curl{stroke:var(--line-2);stroke-dasharray:3 4}
+.mesh path{vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 2px rgba(255,138,61,.3))}
+.endl{font:600 12px var(--f);paint-order:stroke;stroke:var(--panel-solid);stroke-width:4px;stroke-linejoin:round}
+.barl{font:600 12px var(--f);fill:var(--fg-2);paint-order:stroke;stroke:var(--panel-solid);stroke-width:3px;stroke-linejoin:round}
+.axnote{font:400 11px var(--f);fill:var(--fg-3)}
+.wfl{stroke:var(--line-2);stroke-dasharray:3 3}
+.callout line{stroke:var(--accent)}.callout .co-v{fill:var(--fg);font:700 15px var(--f);letter-spacing:-.01em}.callout .co-l{fill:var(--fg-3);font:400 12px var(--f)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font:400 12px var(--f);color:var(--fg-3);margin-bottom:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:9px;height:9px;border-radius:2px;display:inline-block;flex:none}
+.legend b{font-weight:600;color:var(--fg);margin-left:2px}.legend em{font-style:normal;background:var(--track);padding:1px 6px;border-radius:999px}
+.lgd{display:none}
+.vtip{position:fixed;z-index:200;pointer-events:none;background:rgba(18,18,17,.94);border:1px solid var(--line-2);border-radius:12px;padding:8px 12px;font:400 12px var(--f);color:var(--fg);box-shadow:0 12px 28px rgba(0,0,0,.45);max-width:300px;opacity:0;transition:opacity .08s;backdrop-filter:blur(8px)}
+.vtip b{display:block;font-weight:600;margin-bottom:3px}.vtip .r{display:flex;justify-content:space-between;gap:14px}.vtip .r span:first-child{opacity:.75;display:inline-flex;gap:6px;align-items:center}.vtip .r.tt{border-top:1px solid rgba(255,255,255,.14);margin-top:4px;padding-top:4px;font-weight:600}
+.vtip i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.spark{display:block;max-width:100%}
+/* medidor */
+.gauge .g-bezel{fill:none;stroke:rgba(243,242,238,.16);stroke-width:1.5}.gauge .g-face{fill:#121211}
+.gauge .gt{stroke:rgba(243,242,238,.14);stroke-width:1.8;stroke-linecap:round}.gauge .gt.on{stroke:var(--c1);filter:drop-shadow(0 0 2.5px rgba(255,138,61,.9))}
+.ps-ring{position:relative;width:74px;height:74px;flex:none}.ps-ring span{position:absolute;inset:0;display:grid;place-items:center;font:700 13px var(--f);color:var(--fg)}
+/* barras horizontais */
+.hbars{display:flex;flex-direction:column;gap:8px}
+.hb{display:grid;grid-template-columns:minmax(110px,32%) minmax(0,1fr) auto;gap:12px;align-items:center;padding:0;font-size:12px}
+.hb-l{font:500 12px var(--f);color:var(--fg);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.hb-l small{display:block;font-size:11px;color:var(--fg-3);font-weight:400}
+.hb-t{position:relative;height:10px;border-radius:3px;background:rgba(243,242,238,.06)}
+.hb-f{position:relative;height:100%;border-radius:3px;background:linear-gradient(90deg,color-mix(in srgb,var(--hc,var(--c1)) 8%,transparent),var(--hc,var(--c1)));box-shadow:4px 0 12px -2px color-mix(in srgb,var(--hc,var(--c1)) 60%,transparent);transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.hb-g{position:absolute;inset:0 auto 0 0;border-radius:3px;background:var(--accent-soft);border-right:2px solid var(--line-2)}
+.hb-m{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--fg);border-radius:1px}
+.hb-v{font:600 12px var(--f);color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}.hb-v em{font-style:normal;font-weight:400;color:var(--fg-3);margin-left:4px}
+/* rosca */
+.bd{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.bd svg{flex:none}
+.bd .trk{stroke:rgba(243,242,238,.2);stroke-dasharray:1.6 3.4}.bd .seg{filter:drop-shadow(0 0 5px rgba(255,138,61,.4))}
+.bd-c{fill:var(--fg);font:700 22px var(--f);letter-spacing:-.02em}.bd-s{fill:var(--fg-3);font:400 12px var(--f)}
+.bd-rows{flex:1;min-width:220px;display:flex;flex-direction:column;gap:2px}
+.bd-r{display:grid;grid-template-columns:10px minmax(0,1fr) auto 44px;grid-template-rows:auto 4px;column-gap:10px;row-gap:5px;align-items:center;padding:6px 8px;border-radius:10px}
+.bd-r:hover{background:var(--track)}.bd-k{width:10px;height:10px;border-radius:50%}
+.bd-l{font:500 12.5px var(--f);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bd-v{font:700 13px var(--f);text-align:right}.bd-p{font:500 12px var(--f);color:var(--fg-3);text-align:right}
+.bd-bar{grid-column:2/5;height:4px;border-radius:4px;background:var(--track);overflow:hidden}.bd-bar i{display:block;height:100%;border-radius:4px}
+/* mix */
+.mix{display:flex;flex-direction:column;gap:11px}.mx-r{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center}
+.mx-l{font:600 12px var(--f);display:flex;flex-direction:column}.mx-l em{font-style:normal;font-weight:400;color:var(--fg-3);font-size:11.5px}
+.mx-t{display:flex;height:28px;gap:3px;border-radius:9px;overflow:hidden;background:rgba(243,242,238,.06)}
+.mx-s{height:100%;display:grid;place-items:center;min-width:2px;border-radius:6px}.mx-s span{font:600 11.5px var(--f);color:var(--fv-ink);white-space:nowrap;overflow:hidden;padding:0 4px}
+/* funil */
+.fviz{display:grid;grid-template-columns:minmax(260px,460px) 1fr;gap:22px;align-items:center}.fviz svg{width:100%;height:auto;display:block;filter:drop-shadow(0 0 18px rgba(255,138,61,.16))}
+.fviz .fv-n{fill:var(--fv-ink);font:700 23px var(--f);letter-spacing:-.02em}.fviz .fv-l{fill:var(--fv-ink);opacity:.85;font:600 10.5px var(--f);letter-spacing:.18em}
+.fviz .fv-edge{stroke:var(--fv-ink);opacity:.3;stroke-width:1.2;stroke-linecap:round}
+.fviz .fv-ghost{fill:none;stroke:var(--fg-3);stroke-width:1.2;stroke-dasharray:3 4;opacity:.55}
+.fviz .fv-cv line{stroke:var(--line-2);stroke-width:1.2;stroke-dasharray:2 3}.fviz .fv-cv rect{fill:#121211;stroke:var(--line-2)}.fviz .fv-cv text{fill:var(--c1);font:600 12px var(--f)}
+.fviz .fv-lg{fill:var(--fg-3);font:400 12px var(--f)}
+.fviz-cards{display:flex;flex-direction:column;gap:10px}
+.fvc{border-left:3px solid var(--c1);padding:6px 0 6px 13px;display:flex;flex-direction:column;gap:3px}.fvc.money{background:rgba(76,195,138,.06);border-radius:0 8px 8px 0}
+.fvc-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.fvc-h b{font:600 13px var(--f)}.fvc-v{font:700 21px var(--f);letter-spacing:-.01em}
+.fvc-g{font:600 12px var(--f)}.fvc-g.pos{color:var(--good-ink)}.fvc-g.neg{color:var(--bad-ink)}
+.fvc-s{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font:400 12px var(--f);color:var(--fg-2)}
+/* faixa do pace */
+.ps{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));border-radius:var(--r);background:var(--glow);box-shadow:var(--sh);border:1px solid rgba(243,242,238,.07);overflow:hidden}
+.ps-k{position:relative;padding:15px 16px 14px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:10px;min-width:0}.ps-k:last-child{border-right:0}
+.ps-k:not(:last-child)::after{content:"\203A";position:absolute;right:-9px;top:50%;transform:translateY(-50%);width:17px;height:17px;border-radius:50%;background:#121211;border:1px solid var(--line-2);display:grid;place-items:center;font:600 12px/15px var(--f);color:var(--c1);text-align:center;z-index:2}
+.ps-k.clk{cursor:pointer}.ps-k.clk:hover{background:rgba(243,242,238,.025)}
+.ps-h{display:flex;justify-content:space-between;gap:6px;align-items:flex-start}.ps-h span:first-child{display:flex;flex-direction:column;gap:1px;min-width:0}
+.ps-h b{font:600 12px var(--f);letter-spacing:.12em;text-transform:uppercase;color:rgba(243,242,238,.75)}.ps-h small{font:400 11px var(--f);color:var(--fg-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ps-pill{font:600 11.5px var(--f);padding:2px 8px;border-radius:999px;white-space:nowrap}
+.ps-pill.good,.ps-sl.good{background:color-mix(in srgb,var(--good) 16%,transparent);color:var(--good-ink)}.ps-pill.warn,.ps-sl.warn{background:color-mix(in srgb,#e3a33a 18%,transparent);color:var(--warn-ink)}
+.ps-pill.bad,.ps-sl.bad{background:color-mix(in srgb,var(--bad) 15%,transparent);color:var(--bad-ink)}.ps-pill.flat,.ps-sl.flat{background:var(--track);color:var(--fg-3)}
+.ps-b{display:flex;justify-content:space-between;align-items:center;gap:8px}.ps-big{font:700 clamp(20px,1.6vw,27px) var(--f);letter-spacing:-.02em;line-height:1.1;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ps-of{font:400 12px var(--f);color:var(--fg-3)}.ps-cv{margin-top:6px;font:400 12px var(--f);color:var(--fg-3)}.ps-cv b{color:var(--fg);background:var(--accent-soft);padding:1px 7px;border-radius:999px;font-weight:600}
+.ps-vs{margin-top:5px;font:400 11.5px var(--f);color:var(--fg-3);display:flex;gap:5px;align-items:baseline;flex-wrap:wrap}
+.ps-bul{display:flex;flex-direction:column;gap:3px}.ps-bt{position:relative;height:10px;border-radius:5px;background:var(--track)}
+.ps-bt i{position:absolute;top:0;bottom:0;left:0;border-radius:5px;width:0}.ps-bt .rit{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--bc) 40%,transparent) 0 4px,transparent 4px 8px)}
+.ps-bt .real{background:var(--bc)}.ps-bt .pc{left:auto;width:2px;top:-3px;bottom:-3px;background:var(--fg);border-radius:1px}
+.ps-bs{display:flex;justify-content:space-between;font:400 10px var(--f);color:var(--fg-3)}
+.ps-rows{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;gap:5px 8px;margin:0;padding-top:10px;border-top:1px dashed var(--line);font:400 12px var(--f);align-items:center}
+.ps-rows dt{color:var(--fg-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}.ps-rows dd{margin:0;font-weight:600;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ps-rows dd.p{display:flex;justify-content:flex-end}.ps-sl{font:600 10.5px/1 var(--f);font-style:normal;padding:3px 0;border-radius:999px;text-align:center;width:44px;display:inline-block}
+.ps .go{font:500 12px var(--f);color:var(--c1)}
+/* chips de leitura */
+.chips.rd{display:flex;flex-wrap:wrap;gap:8px}.chips.rd .chip{display:inline-flex;flex-direction:column;gap:1px;padding:7px 11px;border-radius:10px;border:1px solid var(--line-2);background:rgba(243,242,238,.03);font-size:12px}
+.chips.rd .chip b{font-weight:600}.chips.rd .chip small{color:var(--fg-3);font-size:11.5px}.chips.rd .chip.bad{border-color:rgba(242,118,107,.45);background:rgba(242,118,107,.07)}.chips.rd .chip.good{border-color:rgba(76,195,138,.45);background:rgba(76,195,138,.07)}
+.pills{display:inline-flex;gap:6px;flex-wrap:wrap}.pills button{all:unset;cursor:pointer;padding:5px 13px;border-radius:999px;border:1px solid var(--line-2);font:500 12px var(--f);color:var(--fg-2)}
+.pills button.on{background:var(--accent);color:#120800;border-color:var(--accent);box-shadow:0 0 16px -5px rgba(255,106,0,.8)}
+@media(max-width:900px){.fviz{grid-template-columns:1fr}.ps{grid-template-columns:1fr}.ps-k{border-right:0;border-bottom:1px solid var(--line)}.ps-k:not(:last-child)::after{display:none}}
+
+.chips.rd{justify-content:flex-start}
+.tcs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.tc .tc-h{display:flex;flex-direction:column;gap:2px;margin-bottom:2px}.tc-h span{font:500 12px var(--f);color:var(--fg-3)}.tc-h b{font:700 25px var(--f);letter-spacing:-.02em}.tc-h em{font-style:normal;font:500 12px var(--f)}.tc-h em.up{color:var(--good-ink)}.tc-h em.down{color:var(--bad-ink)}
+
+.mini{display:flex;flex-direction:column;gap:2px;padding:11px 12px;border-radius:12px;background:rgba(243,242,238,.035);border:1px solid var(--line);border-bottom:2px solid var(--c1)}.mini b{font:600 22px var(--f);letter-spacing:-.02em;color:#FFB27A}.mini span{font:500 10.5px var(--f);letter-spacing:.08em;text-transform:uppercase;color:var(--fg-2);line-height:1.3}.mini small{font-size:11px;color:var(--fg-3)}.mini.bad{border-bottom-color:var(--bad)}.mini.bad b{color:var(--bad-ink)}
+.hc{display:inline-block;min-width:44px;padding:4px 6px;border-radius:6px;text-align:center;font-weight:600}
+.hg svg{overflow:visible;display:block}.hg-v{fill:var(--fg);font:700 15px var(--f)}.hg-l{fill:var(--fg-3);font:500 11.5px var(--f);text-transform:uppercase;letter-spacing:.05em}
+.hg-s{fill:var(--fg-3);font:400 11.5px var(--f)}.hg-s.up{fill:var(--good-ink);font-weight:600}.hg-s.down{fill:var(--bad-ink);font-weight:600}.hg-t{fill:var(--fg-3);font:600 11.5px var(--f);letter-spacing:.1em}
+.hg-cb{fill:#121211;stroke:var(--line-2)}.hg-c{fill:var(--c1);font:600 11.5px var(--f)}
+.sstat{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px 18px}.sstat div{display:flex;flex-direction:column;gap:2px}.sstat span{font:400 11.5px var(--f);color:var(--fg-3)}.sstat b{font:600 18px var(--f);letter-spacing:-.01em}.sstat small{font-size:11.5px;color:var(--fg-3)}
+.g31{grid-template-columns:minmax(0,3fr) minmax(0,1fr)}@media(max-width:1180px){.g31{grid-template-columns:1fr}}
+.ch{flex-wrap:wrap}
+@media(max-width:760px){.ch h3 small{display:block}.chips.rd .chip{flex:1 1 140px}}
 
 .lgd{display:flex;gap:14px;flex-wrap:wrap;font-size:10.5px;color:var(--mute);margin-bottom:6px}
 .lgd i{display:inline-block;width:10px;height:3px;border-radius:2px;margin-right:5px;vertical-align:middle}
@@ -709,11 +851,8 @@ const segName = () => ({ all: 'Consolidado', smb: 'SMB', ent: 'Enterprise' }[S.s
 /* ---------- componentes ---------- */
 const pill = (c, t) => `<span class="pill ${c}">${t}</span>`;
 const st = (r, inv) => inv ? (r <= 1 ? pill('ok', '✓ Dentro do limite') : pill('bad', '↑ Acima do limite')) : (r >= 1 ? pill('ok', '✓ No ritmo') : r >= .9 ? pill('warn', '• Perto') : pill('bad', '↓ Abaixo'));
-const kpi = (l, v, s = '', o = {}) => `<div class="card k ${o.cls || ''}"><div class="l">${l}</div><div class="v ${o.lg ? 'lg' : ''}" ${o.color ? `style="color:${o.color}"` : ''}>${v}</div>${s ? `<div class="s">${s}</div>` : ''}${o.spark ? spark(o.spark, o.sc || '#FF6A00') : ''}${o.extra || ''}</div>`;
 const card = (t, body, o = {}) => `<div class="card ${o.cls || ''}" ${o.id ? `id="${o.id}"` : ''}>${t ? `<div class="ch"><div><h3>${t}</h3>${o.sub ? `<small>${o.sub}</small>` : ''}</div>${o.r ? `<div class="r">${o.r}</div>` : ''}</div>` : ''}${body}</div>`;
 const sec = (n, t, q) => `<div class="sec"><h2><em>${String(n).padStart(2, '0')}</em>${t}</h2>${q ? `<p>${q}</p>` : ''}</div>`;
-const bar = (p, color = '#FF6A00', mk) => `<div class="bar"><i data-w="${Math.max(0, Math.min(100, p * 100))}" style="background:${color}"></i>${mk != null ? `<span class="mk" style="left:${Math.min(100, mk * 100)}%"></span>` : ''}</div>`;
-const hbars = (rows, o = {}) => { const mx = o.max || Math.max(...rows.map(r => Math.abs(r.v)), 1); return rows.map(r => `<div class="hb"><div>${r.l}${r.sub ? `<div class="mu" style="font-size:10.5px">${r.sub}</div>` : ''}</div>${bar(Math.abs(r.v) / mx, r.c || '#FF6A00', r.mk)}<div class="vl">${r.t ?? fN(r.v)}${r.s ? `<small>${r.s}</small>` : ''}</div></div>`).join(''); };
 const seg = (key, opts, cur) => `<div class="seg" data-seg="${key}">${opts.map(([v, l]) => `<button data-v="${v}" class="${v === cur ? 'on' : ''}">${l}</button>`).join('')}</div>`;
 const heatO = (v, mx) => { const t = Math.max(0, Math.min(1, v / (mx || 1))); return `background:rgba(255,106,0,${(.08 + t * .7).toFixed(2)});color:${t > .55 ? '#0B0B0A' : '#F3F2EE'}`; };
 const heatC = (v, lo, hi, inv) => { const t = Math.max(0, Math.min(1, (v - lo) / ((hi - lo) || 1))); const k = inv ? 1 - t : t; return `background:rgba(${k > .5 ? '76,195,138' : '242,118,107'},${.12 + Math.abs(k - .5) * .5});color:${k > .5 ? '#BFF0D6' : '#FFD1CB'}`; };
@@ -729,75 +868,10 @@ const table = (cols, rows, o = {}) => {
 };
 
 /* ---------- gráficos SVG ---------- */
-const spark = (vals, color = '#FF6A00', w = 140, h = 30) => {
-  const v = vals.filter(x => x != null); const mx = Math.max(...v), mn = Math.min(...v), r = (mx - mn) || 1;
-  const pts = vals.map((x, i) => [i / (vals.length - 1) * w, h - 3 - ((x - mn) / r) * (h - 6)]);
-  const d = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
-  return `<svg class="spk" viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="none"><path d="${d} L${w} ${h} L0 ${h}Z" fill="${color}" opacity=".12"/><path d="${d}" fill="none" stroke="${color}" stroke-width="1.6" vector-effect="non-scaling-stroke"/><circle cx="${pts[pts.length - 1][0]}" cy="${pts[pts.length - 1][1]}" r="2.6" fill="${color}"/></svg>`;
-};
 const nice = (m) => { if (m <= 0) return 1; const p = Math.pow(10, Math.floor(Math.log10(m))); const n = m / p; return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p; };
 const axisFmt = (f) => f === 'R' ? (v) => fR(v).replace('R$ ', '') : f === 'P' ? (v) => nf0.format(v * 100) + '%' : fN;
 /* linhas: series [{vals, color, dash, area, name}] */
-const lineChart = ({ labels, series, h = 190, fmt = 'N', mark, every = 1, min0 = true, legend = true, endLabel = true }) => {
-  const W = 680, H = h, pl = 52, pr = 64, pt = 12, pb = 24;
-  const all = series.flatMap(s => s.vals).filter(v => v != null && isFinite(v));
-  let mx = nice(Math.max(...all) * 1.08), mn = min0 ? 0 : Math.min(0, ...all);
-  if (!min0) { const lo = Math.min(...all), hi = Math.max(...all); const pad = (hi - lo) * .15 || 1; mn = lo - pad; mx = hi + pad; }
-  const x = (i) => pl + i * (W - pl - pr) / Math.max(1, labels.length - 1), y = (v) => pt + (H - pt - pb) * (1 - (v - mn) / ((mx - mn) || 1));
-  const F = axisFmt(fmt), FF = fmt === 'R' ? fR : fmt === 'P' ? fP : fN;
-  let g = ''; for (let k = 0; k <= 4; k++) { const v = mn + (mx - mn) * k / 4; g += `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="#232321"/><text x="${pl - 8}" y="${y(v) + 3}" text-anchor="end" fill="#77756F" font-size="10">${F(v)}</text>`; }
-  labels.forEach((l, i) => { if (i % every === 0 || i === labels.length - 1) g += `<text x="${x(i)}" y="${H - 6}" text-anchor="middle" fill="${i === mark ? '#F3F2EE' : '#77756F'}" font-size="10" font-weight="${i === mark ? 800 : 500}">${l}</text>`; });
-  let p = '', ends = '';
-  series.forEach((s, si) => {
-    let d = '', started = false, last = null;
-    s.vals.forEach((v, i) => { if (v == null || !isFinite(v)) { started = false; return; } d += (started ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1); started = true; last = i; });
-    if (s.area && last != null) { const fi = s.vals.findIndex(v => v != null); p += `<path d="${d} L${x(last)} ${y(mn)} L${x(fi)} ${y(mn)}Z" fill="${s.color}" opacity=".13"/>`; }
-    p += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.w || 2.2}" ${s.dash ? 'stroke-dasharray="5 5"' : ''} stroke-linejoin="round"/>`;
-    s.vals.forEach((v, i) => { if (v != null && isFinite(v)) p += `<circle cx="${x(i)}" cy="${y(v)}" r="7" fill="transparent"><title>${labels[i]} · ${s.name || ''}: ${FF(v)}</title></circle>`; });
-    if (endLabel && last != null && !s.noEnd) ends += `<circle cx="${x(last)}" cy="${y(s.vals[last])}" r="3.6" fill="#0B0B0A" stroke="${s.color}" stroke-width="2"/><text x="${x(last) + 8}" y="${y(s.vals[last]) + 3}" fill="${s.color}" font-size="10.5" font-weight="800">${FF(s.vals[last])}</text>`;
-  });
-  const lg = legend ? `<div class="lgd">${series.map(s => `<span><i style="background:${s.color};${s.dash ? 'opacity:.7' : ''}"></i>${s.name || ''}</span>`).join('')}</div>` : '';
-  return `${lg}<svg viewBox="0 0 ${W} ${H}" width="100%" class="chart">${g}${p}${ends}</svg>`;
-};
 /* barras: series [{vals, color, name}], stacked opcional, overlay de linhas */
-const barChart = ({ labels, series, h = 190, fmt = 'N', stacked = false, lines = [], mark, every = 1, hatchFrom }) => {
-  const W = 680, H = h, pl = 52, pr = 18, pt = 12, pb = 24;
-  const tot = labels.map((_, i) => stacked ? series.reduce((a, s) => a + Math.max(0, s.vals[i] || 0), 0) : Math.max(...series.map(s => s.vals[i] || 0)));
-  const mx = nice(Math.max(...tot, ...lines.flatMap(l => l.vals.filter(v => v != null))) * 1.08);
-  const bw = (W - pl - pr) / labels.length, x = (i) => pl + i * bw, y = (v) => pt + (H - pt - pb) * (1 - v / mx);
-  const F = axisFmt(fmt), FF = fmt === 'R' ? fR : fmt === 'P' ? fP : fN;
-  let g = ''; for (let k = 0; k <= 4; k++) { const v = mx * k / 4; g += `<line x1="${pl}" x2="${W - pr}" y1="${y(v)}" y2="${y(v)}" stroke="#232321"/><text x="${pl - 8}" y="${y(v) + 3}" text-anchor="end" fill="#77756F" font-size="10">${F(v)}</text>`; }
-  labels.forEach((l, i) => { if (i % every === 0 || i === labels.length - 1) g += `<text x="${x(i) + bw / 2}" y="${H - 6}" text-anchor="middle" fill="${i === mark ? '#F3F2EE' : '#77756F'}" font-size="10" font-weight="${i === mark ? 800 : 500}">${l}</text>`; });
-  let b = '<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#2A2A28"/><line x1="0" y1="0" x2="0" y2="6" stroke="#77756F" stroke-width="2"/></pattern></defs>';
-  labels.forEach((_, i) => {
-    let base = 0; const n = stacked ? 1 : series.length; const iw = Math.min(28, bw * .7 / n);
-    series.forEach((s, si) => {
-      const v = s.vals[i]; if (v == null) return;
-      const bx = stacked ? x(i) + bw / 2 - iw / 2 : x(i) + bw / 2 - (iw * n) / 2 + si * iw;
-      const top = stacked ? y(base + Math.max(0, v)) : y(Math.max(0, v)), bot = stacked ? y(base) : y(0);
-      const fill = hatchFrom != null && i >= hatchFrom && si === 0 ? 'url(#hatch)' : s.color;
-      b += `<rect x="${bx + .5}" y="${top}" width="${Math.max(1, iw - 1.5)}" height="${Math.max(0, bot - top)}" rx="2.5" fill="${fill}" opacity="${i === mark || mark == null ? 1 : .78}"><title>${labels[i]} · ${s.name || ''}: ${FF(v)}</title></rect>`;
-      if (stacked) base += Math.max(0, v);
-    });
-  });
-  let ln = '';
-  lines.forEach(l => { let d = '', st = false; l.vals.forEach((v, i) => { if (v == null) { st = false; return; } d += (st ? 'L' : 'M') + (x(i) + bw / 2) + ' ' + y(v); st = true; }); ln += `<path d="${d}" fill="none" stroke="${l.color}" stroke-width="2" ${l.dash ? 'stroke-dasharray="5 5"' : ''}/>`; l.vals.forEach((v, i) => { if (v != null) ln += `<circle cx="${x(i) + bw / 2}" cy="${y(v)}" r="2.5" fill="${l.color}"><title>${labels[i]} · ${l.name}: ${FF(v)}</title></circle>`; }); });
-  const lg = `<div class="lgd">${series.map(s => `<span><i style="background:${s.color}"></i>${s.name || ''}</span>`).join('')}${lines.map(l => `<span><i style="background:${l.color}"></i>${l.name}</span>`).join('')}</div>`;
-  return `${lg}<svg viewBox="0 0 ${W} ${H}" width="100%" class="chart">${g}${b}${ln}</svg>`;
-};
-const donut = (parts, center, sub) => {
-  const tot = parts.reduce((a, p) => a + p.v, 0) || 1; let a0 = -Math.PI / 2; const R = 54, r = 38;
-  const arcs = parts.map(p => { const a1 = a0 + p.v / tot * Math.PI * 2; const lg = a1 - a0 > Math.PI ? 1 : 0; const P = (a, rr) => [70 + rr * Math.cos(a), 70 + rr * Math.sin(a)];
-    const [x0, y0] = P(a0, R), [x1, y1] = P(a1, R), [x2, y2] = P(a1, r), [x3, y3] = P(a0, r);
-    const d = `M${x0} ${y0} A${R} ${R} 0 ${lg} 1 ${x1} ${y1} L${x2} ${y2} A${r} ${r} 0 ${lg} 0 ${x3} ${y3}Z`; a0 = a1; return `<path d="${d}" fill="${p.c}"><title>${p.l}: ${fN(p.v)}</title></path>`; }).join('');
-  return `<div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><svg viewBox="0 0 140 140" width="140" height="140">${arcs}<text x="70" y="70" text-anchor="middle" fill="#F3F2EE" font-size="22" font-weight="800">${center}</text><text x="70" y="86" text-anchor="middle" fill="#77756F" font-size="9.5">${sub || ''}</text></svg><div style="flex:1;min-width:160px">${parts.map(p => `<div class="hb" style="grid-template-columns:1fr auto auto"><div><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${p.c};margin-right:7px"></span>${p.l}</div><div class="vl">${fN(p.v)}</div><div class="mu" style="width:42px;text-align:right">${fP(p.v / tot, 0)}</div></div>`).join('')}</div></div>`;
-};
-const gauge = (p, label, sub) => {
-  const a = Math.PI * (1 - Math.max(0, Math.min(1, p))); const cx = 90, cy = 86, R = 66;
-  const seg = (f0, f1, c) => { const A0 = Math.PI * (1 - f0), A1 = Math.PI * (1 - f1); return `<path d="M${cx + R * Math.cos(A0)} ${cy - R * Math.sin(A0)} A${R} ${R} 0 0 1 ${cx + R * Math.cos(A1)} ${cy - R * Math.sin(A1)}" stroke="${c}" stroke-width="12" fill="none"/>`; };
-  return `<svg viewBox="0 0 180 120" width="100%" style="max-width:230px;display:block;margin:0 auto">${seg(0, .5, '#F2766B')}${seg(.5, .8, '#E3A84A')}${seg(.8, 1, '#4CC38A')}<line x1="${cx}" y1="${cy}" x2="${cx + (R - 16) * Math.cos(a)}" y2="${cy - (R - 16) * Math.sin(a)}" stroke="#F3F2EE" stroke-width="3" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="5" fill="#F3F2EE"/><text x="${cx}" y="${cy + 26}" text-anchor="middle" fill="${p >= .8 ? '#4CC38A' : p >= .5 ? '#E3A84A' : '#F2766B'}" font-size="22" font-weight="800">${fP(p, 0)}</text></svg><div style="text-align:center;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#77756F">${label}</div>${sub ? `<div class="hint" style="text-align:center;margin-top:2px">${sub}</div>` : ''}`;
-};
-const ring = (p, c) => { const r = 22, C = 2 * Math.PI * r, v = Math.max(0, Math.min(1, p)); return `<svg width="58" height="58" viewBox="0 0 58 58"><circle cx="29" cy="29" r="${r}" stroke="#262624" stroke-width="6" fill="none"/><circle cx="29" cy="29" r="${r}" stroke="${c}" stroke-width="6" fill="none" stroke-dasharray="${C * v} ${C}" transform="rotate(-90 29 29)" stroke-linecap="round"/><text x="29" y="33" text-anchor="middle" fill="#F3F2EE" font-size="11" font-weight="800">${fP(p, 0)}</text></svg>`; };
 const pcol = (r) => r >= 1 ? '#4CC38A' : r >= .9 ? '#E3A84A' : '#F2766B';
 
 /* ---------- telas ---------- */
@@ -858,7 +932,7 @@ function render() {
   const s = scr(S.route) || scr('overview');
   $('#nav').innerHTML = navHTML();
   $('#me-n').textContent = 'Demonstração'; $('#me-p').textContent = PROFS[S.prof].n;
-  tid = 0; for (const k in TABLES) delete TABLES[k];
+  tid = 0; for (const k in TABLES) delete TABLES[k]; for (const k in CHS) delete CHS[k];
   const v = $('#view');
   if (!allowed(s.id)) {
     v.innerHTML = `<div class="page"><div class="lockpage"><div>${ic('lock')}<b>Esta tela não faz parte do seu perfil</b>Você está vendo como <b style="display:inline;color:var(--or-2)">${PROFS[S.prof].n}</b>. No Pulsar, o acesso é por convite e por perfil, e o filtro é aplicado no servidor.<div style="margin-top:14px"><button class="btn" data-prof="est">Voltar para Estratégico</button></div></div></div></div>`;
@@ -870,6 +944,7 @@ function render() {
   requestAnimationFrame(() => $$('.bar i[data-w]', v).forEach(el => el.style.width = el.dataset.w + '%'));
   if (s.after && allowed(s.id)) s.after();
   $('.app').classList.remove('nav-open');
+  requestAnimationFrame(() => fitCharts($('#view')));
   if (AIOPEN) openAI(true);
 }
 function go(id) { location.hash = '#/' + id; }
@@ -880,7 +955,7 @@ document.addEventListener('change', (e) => {
   const f = e.target.closest('[data-f]'); if (f) { S[f.dataset.f] = f.value; render(); toast(f.dataset.f === 'seg' ? `Painel: ${segName()}` : `Período: ${S.per === 'cur' ? 'mês atual' : 'mês passado'}`, 'Recortado no navegador, sem nova consulta', 'filter'); }
 });
 document.addEventListener('click', async (e) => {
-  const sg = e.target.closest('.seg[data-seg] button');
+  const sg = e.target.closest('.seg[data-seg] button, .pills[data-seg] button');
   if (sg) { const k = sg.parentElement.dataset.seg; S[k] = sg.dataset.v; const s = scr(S.route); if (s.onSeg && s.onSeg(k)) return; render(); return; }
   const cp = e.target.closest('[data-copy]');
   if (cp) { const t = TABLES[cp.dataset.copy]; const txt = [t.cols, ...t.rows].map(r => r.join('\t')).join('\n'); try { await navigator.clipboard.writeText(txt); toast('Tabela copiada', 'Cole direto na planilha', 'copy'); } catch { toast('Não deu para copiar aqui', 'Use o botão CSV', 'x'); } return; }
@@ -958,6 +1033,216 @@ function openMenu() {
   $('.me').appendChild(m);
 }
 
+/* ================= visual do Pulsar (portado dos componentes do produto), na paleta Ygg ================= */
+let VZ = 0; const vid = () => 'v' + (++VZ);
+const CHS = {}; const chId = (f, cfg) => { const id = 'c' + (++VZ); CHS[id] = { f, cfg }; return id; };
+const niceMax = v => { const p = 10 ** Math.floor(Math.log10(v || 1)), m = v / p; return [1, 1.2, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10].find(x => x >= m) * p; };
+function smoothPath(P) {
+  const n = P.length; if (!n) return ''; if (n === 1) return `M${P[0][0]},${P[0][1]}`; if (n === 2) return `M${P[0][0]},${P[0][1]}L${P[1][0]},${P[1][1]}`;
+  const dx = [], m = [], t = [];
+  for (let i = 0; i < n - 1; i++) { dx[i] = P[i + 1][0] - P[i][0]; m[i] = (P[i + 1][1] - P[i][1]) / (dx[i] || 1); }
+  t[0] = m[0]; t[n - 1] = m[n - 2];
+  for (let i = 1; i < n - 1; i++) t[i] = m[i - 1] * m[i] <= 0 ? 0 : (m[i - 1] + m[i]) / 2;
+  for (let i = 0; i < n - 1; i++) { if (m[i] === 0) { t[i] = 0; t[i + 1] = 0; continue; } const a = t[i] / m[i], b = t[i + 1] / m[i], q = a * a + b * b; if (q > 9) { const k = 3 / Math.sqrt(q); t[i] = k * a * m[i]; t[i + 1] = k * b * m[i]; } }
+  let d = `M${P[0][0].toFixed(1)},${P[0][1].toFixed(1)}`;
+  for (let i = 0; i < n - 1; i++) { const h3 = dx[i] / 3; d += `C${(P[i][0] + h3).toFixed(1)},${(P[i][1] + t[i] * h3).toFixed(1)} ${(P[i + 1][0] - h3).toFixed(1)},${(P[i + 1][1] - t[i + 1] * h3).toFixed(1)} ${P[i + 1][0].toFixed(1)},${P[i + 1][1].toFixed(1)}`; }
+  return d;
+}
+const runs = (v, X, Y) => { const out = []; let cur = []; v.forEach((p, i) => { if (p == null || !isFinite(p)) { if (cur.length) out.push(cur); cur = []; return; } cur.push([X(i), Y(p)]); }); if (cur.length) out.push(cur); return out; };
+function scaleY(vals, h, pt, pb, zero = true) {
+  const fin = vals.filter(v => v != null && isFinite(v));
+  let lo = zero ? Math.min(0, ...fin) : Math.min(...fin), hi = Math.max(...fin, zero ? 0 : -Infinity);
+  if (!fin.length) { lo = 0; hi = 1; }
+  if (!zero) { const pad = (hi - lo) * .12 || Math.abs(hi) * .05 || 1; lo -= pad; hi += pad; }
+  const span = niceMax((hi - lo) * 1.06 || 1), step = span / 4;
+  if (zero && lo >= 0) { lo = 0; hi = span; } else { lo = Math.floor(lo / step) * step; hi = lo + Math.ceil((hi - lo) / step) * step; }
+  const y = v => pt + (h - pt - pb) * (1 - (v - lo) / (hi - lo || 1));
+  const ticks = []; for (let t = lo; t <= hi + step / 2; t += step) ticks.push(t);
+  return { y, ticks, lo, hi, step };
+}
+const decS = (v, unit, step) => { let d = 0; if (step) { const x = step / unit; while (d < 2 && Math.abs(Math.round(x * 10 ** d) - x * 10 ** d) > 1e-6) d++; } return (v / unit).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }); };
+const AXF = { N: (v, st) => Math.abs(v) >= 1000 ? decS(v, 1000, st) + ' mil' : fN(v), R: (v, st) => Math.abs(v) >= 1e6 ? decS(v, 1e6, st) + ' mi' : Math.abs(v) >= 1000 ? decS(v, 1000, st) + ' mil' : fN(v), P: (v, st) => fP(v, st && st < .01 ? 1 : 0) };
+const VF = (f) => f === 'R' ? fR : f === 'P' ? (v) => fP(v, 1) : fN;
+const lastI = v => { let i = v.length - 1; while (i >= 0 && (v[i] == null || !isFinite(v[i]))) i--; return i; };
+const spreadY = (items, gap = 15, top = 8, bottom = 1e9) => { const s = [...items].sort((a, b) => a.y - b.y); for (let i = 1; i < s.length; i++) if (s[i].y - s[i - 1].y < gap) s[i].y = s[i - 1].y + gap; for (let i = s.length - 1; i >= 0; i--) { if (s[i].y > bottom) s[i].y = bottom; if (i && s[i].y - s[i - 1].y < gap) s[i - 1].y = s[i].y - gap; if (s[i].y < top) s[i].y = top; } return s; };
+const keyI = (c, line, dash) => line ? `<svg width="14" height="8" style="flex:none"><line x1="0" x2="14" y1="4" y2="4" stroke="${c}" stroke-width="2" ${dash ? 'stroke-dasharray="4 3"' : ''}/></svg>` : `<i style="background:${c}"></i>`;
+const legendH = (items) => `<div class="legend">${items.map(x => `<span>${keyI(x.c, x.line, x.dash)}${x.n}${x.b ? `<b>${x.b}</b>` : ''}${x.e ? `<em>${x.e}</em>` : ''}</span>`).join('')}</div>`;
+const tipA = (t) => `data-tip="${String(t).replace(/"/g, '&quot;')}"`;
+const fxDefs = (u, c, k) => `<filter id="${u}g${k}" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="${u}a${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".24"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient>`;
+const endDot = (x, y, c) => `<circle cx="${x}" cy="${y}" r="11" fill="${c}" opacity=".13"/><circle cx="${x}" cy="${y}" r="5.5" fill="var(--panel-solid)" stroke="${c}" stroke-width="2.5"/>`;
+
+/* linhas: series [{vals, color, dash, area, name, noEnd}] — malha "terreno" sob a 1ª série, brilho, ponto final com anel */
+const lineChart = (cfg0) => { const cfg = (cfg0.W || 760) < 520 && cfg0.series.length > 1 ? { ...cfg0, endLabel: false } : cfg0; const { labels, series, h = 220, fmt = 'N', mark, every, min0 = true, legend = true, endLabel = true, W = 760, bars } = cfg;
+  const u = vid(), cid = chId('line', cfg), F = VF(fmt), A = AXF[fmt] || AXF.N, n = labels.length, labelAll = endLabel && series.filter(s => !s.noEnd).length > 1;
+  const endTxt = (s) => { const i = lastI(s.vals); return i < 0 ? '' : (labelAll && s.name ? s.name + ': ' : '') + F(s.vals[i]); };
+  const pl = 50, pr = endLabel ? Math.min(240, 30 + Math.max(0, ...series.filter(s => !s.noEnd).map(s => endTxt(s).length)) * 6.7) : 16, pt = 18, pb = 26;
+  const { y, ticks, step } = scaleY(series.flatMap(s => s.vals), h, pt, pb, min0);
+  const x = i => pl + (n <= 1 ? (W - pl - pr) / 2 : (W - pl - pr) * i / (n - 1)), ev = every || Math.ceil(n / Math.max(2, Math.floor((W - pl - pr) / 58)));
+  const base = y(Math.max(0, ticks[0]));
+  let g = `<g class="axis">${ticks.map(t => `<line class="grd" x1="${pl}" x2="${W - pr}" y1="${y(t)}" y2="${y(t)}"/><text x="${pl - 8}" y="${y(t) + 3.5}" text-anchor="end">${A(t, step)}</text>`).join('')}${labels.map((l, i) => i % ev === 0 || i === n - 1 || i === mark ? `<text x="${x(i)}" y="${h - 7}" text-anchor="middle" class="${i === mark ? 'cur' : ''}">${l}</text>` : '').join('')}</g>`;
+  if (bars) { const bmax = Math.max(1, ...bars.vals.filter(v => v != null)) * 2.3, bw = Math.max(2, (W - pl - pr) / n * .5); g += bars.vals.map((v, i) => v ? `<rect x="${x(i) - bw / 2}" y="${h - pb - (h - pb - pt) * v / bmax}" width="${bw}" height="${(h - pb - pt) * v / bmax}" rx="2" fill="${bars.color}" opacity=".13" ${tipA(labels[i] + ' · ' + bars.name + ': ' + F(v))}/>` : '').join(''); }
+  if (mark != null && mark >= 0 && mark < n) g += `<line class="curl" x1="${x(mark)}" x2="${x(mark)}" y1="${pt}" y2="${h - pb}"/>`;
+  const soRef = series.slice(1).every(s => s.dash);
+  series.forEach((s, k) => {
+    if (!((s.area || (k === 0 && !s.dash && (series.length <= 4 || soRef))) && lastI(s.vals) > 0)) return;
+    runs(s.vals, x, y).forEach(P => { if (P.length < 2) return; const d = smoothPath(P) + `L${P[P.length - 1][0]},${base}L${P[0][0]},${base}Z`;
+      g += `<path d="${d}" fill="url(#${u}a${k})"/><g class="mesh">${Array.from({ length: 14 }, (_, q) => { const f = 1 - (q + 1) / 15; return `<path d="${smoothPath(P.map(([px, py]) => [px, base - (base - py) * f]))}" fill="none" stroke="${s.color}" stroke-width=".9" opacity="${(.8 * (1 - q / 14)).toFixed(2)}"/>`; }).join('')}</g>`; });
+  });
+  series.forEach((s, k) => { g += `<path d="${runs(s.vals, x, y).map(smoothPath).join('')}" fill="none" stroke="${s.color}" stroke-width="${s.dash ? 1.6 : 2.6}" stroke-linejoin="round" stroke-linecap="round" ${s.dash ? 'stroke-dasharray="4 4" opacity=".8"' : `filter="url(#${u}g${k})"`}/>`; });
+  if (endLabel) { const ends = spreadY(series.map((s, k) => ({ s, k, i: lastI(s.vals) })).filter(e => e.i >= 0 && !e.s.noEnd).map(e => ({ ...e, y: y(e.s.vals[e.i]), y0: y(e.s.vals[e.i]) })), 15, pt, h - pb);
+    ends.forEach(e => { g += endDot(x(e.i), e.y0, e.s.color) + `<text x="${x(e.i) + 13}" y="${e.y + 4}" class="endl" fill="${e.s.color}">${labelAll && e.s.name ? e.s.name + ': ' : ''}${F(e.s.vals[e.i])}</text>`; }); }
+  const hw = (W - pl - pr) / Math.max(1, n - 1);
+  g += labels.map((l, i) => `<rect x="${x(i) - hw / 2}" y="0" width="${hw}" height="${h - pb}" fill="transparent" ${tipA(`<b>${l}</b>` + series.map(s => `<div class="r"><span>${keyI(s.color, 1, s.dash)}${s.name || ''}</span><span>${s.vals[i] == null ? '—' : F(s.vals[i])}</span></div>`).join(''))}/>`).join('');
+  const lg = legend && (series.length > 1 || bars) ? legendH([...series.map(s => ({ n: s.name || '', c: s.color, line: 1, dash: s.dash })), ...(bars ? [{ n: bars.name, c: bars.color }] : [])]) : '';
+  return `<div class="chart pc" data-ch="${cid}">${lg}<svg viewBox="0 0 ${W} ${h}" width="100%"><defs>${series.map((s, k) => fxDefs(u, s.color, k)).join('')}</defs>${g}</svg></div>`;
+};
+
+/* colunas: trilho atrás de cada coluna, degradê que some na base, coluna em foco acesa com rótulo flutuante; stacked, agrupada ou com projeção listrada */
+const barChart = (cfg) => { const { labels, series, h = 220, fmt = 'N', stacked = false, lines = [], mark, every, hatchFrom, W = 760, legend = true, totals = false } = cfg;
+  const u = vid(), cid = chId('bar', cfg), F = VF(fmt), A = AXF[fmt] || AXF.N, n = labels.length;
+  const pl = 50, pr = lines.length ? 84 : 12, pt = 34, pb = 26, bw = (W - pl - pr) / Math.max(n, 1);
+  const tot = labels.map((_, i) => stacked ? series.reduce((a, s) => a + Math.max(0, s.vals[i] || 0), 0) : Math.max(0, ...series.map(s => s.vals[i] || 0)));
+  const { y, ticks, step } = scaleY([...tot, ...series.flatMap(s => s.vals.filter(v => v < 0)), ...lines.flatMap(l => l.vals)], h, pt, pb, true);
+  const cx = i => pl + bw * i + bw / 2, grp = !stacked && series.length > 1, cw = Math.max(5, Math.min(grp ? 18 : 30, bw * (grp ? .8 / series.length : .62)));
+  const foc = mark != null && mark >= 0 ? mark : lastI(tot.map(v => v || null)), ev = every || Math.ceil(n / Math.max(2, Math.floor((W - pl - pr) / 52)));
+  const col = (x0, y0, y1, w, r = 6) => { const hh = Math.max(0, y0 - y1), rr = Math.min(r, hh, w / 2); return `M${x0},${y0}V${y1 + rr}Q${x0},${y1} ${x0 + rr},${y1}H${x0 + w - rr}Q${x0 + w},${y1} ${x0 + w},${y1 + rr}V${y0}Z`; };
+  let defs = `<linearGradient id="${u}tr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3F2EE" stop-opacity=".06"/><stop offset="1" stop-color="#F3F2EE" stop-opacity=".005"/></linearGradient><filter id="${u}gl" x="-60%" y="-20%" width="220%" height="140%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`;
+  series.forEach((s, k) => { defs += `<linearGradient id="${u}d${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${s.color}" stop-opacity="${stacked ? .9 : .55}"/><stop offset="1" stop-color="${s.color}" stop-opacity="${stacked ? .32 : .1}"/></linearGradient><linearGradient id="${u}D${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${s.color}"/><stop offset="1" stop-color="${s.color}" stop-opacity=".45"/></linearGradient><pattern id="${u}p${k}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="${s.color}" opacity=".12"/><line x1="0" y1="0" x2="0" y2="6" stroke="${s.color}" stroke-opacity=".55" stroke-width="2.2"/></pattern>`; });
+  let g = `<g class="axis">${ticks.map(t => `<line class="grd" x1="${pl}" x2="${W - pr}" y1="${y(t)}" y2="${y(t)}"/><text x="${pl - 8}" y="${y(t) + 3.5}" text-anchor="end">${A(t, step)}</text>`).join('')}${labels.map((l, i) => i % ev === 0 || i === foc ? `<text x="${cx(i)}" y="${h - 7}" text-anchor="middle" class="${i === foc ? 'cur' : ''}">${l}</text>` : '').join('')}</g>`;
+  const tw = grp ? cw * series.length + 4 : cw;
+  g += labels.map((_, i) => `<rect x="${cx(i) - tw / 2}" y="${pt - 6}" width="${tw}" height="${h - pt - pb + 6}" rx="${Math.min(8, tw / 2)}" fill="url(#${u}tr)"/>`).join('');
+  labels.forEach((_, i) => {
+    const on = i === foc; let s0 = `<g ${on ? `filter="url(#${u}gl)"` : ''} opacity="${on || mark == null ? 1 : .8}">`;
+    if (stacked) { let acc = 0; const vis = series.filter(s => (s.vals[i] || 0) > 0).length; let seen = 0;
+      series.forEach((s, k) => { const v = Math.max(0, s.vals[i] || 0); if (!v) return; seen++; const y0 = y(acc), y1 = y(acc + v); acc += v; const x0 = cx(i) - cw / 2;
+        s0 += seen === vis ? `<path d="${col(x0, y0, y1 + (seen > 1 ? 0 : 0), cw)}" fill="url(#${u}${on ? 'D' : 'd'}${k})"/>` : `<rect x="${x0}" y="${y1}" width="${cw}" height="${Math.max(0, y0 - y1 - 1.5)}" rx="1" fill="url(#${u}${on ? 'D' : 'd'}${k})"/>`; });
+    } else series.forEach((s, k) => { const v = s.vals[i]; if (v == null || !v) return; const x0 = grp ? cx(i) - tw / 2 + 2 + k * cw : cx(i) - cw / 2, w = grp ? cw - 1.5 : cw;
+      const hatch = hatchFrom != null && i >= hatchFrom && k === 0;
+      s0 += v >= 0 ? `<path d="${col(x0, y(0), y(v), w)}" fill="url(#${u}${hatch ? 'p' : on ? 'D' : 'd'}${k})" ${hatch ? `stroke="${s.color}" stroke-opacity=".5"` : ''}/>` : `<rect x="${x0}" y="${y(0)}" width="${w}" height="${y(v) - y(0)}" rx="3" fill="url(#${u}d${k})"/>`; });
+    g += s0 + '</g>';
+  });
+  lines.forEach(l => { g += `<path d="${runs(l.vals, cx, y).map(smoothPath).join('')}" fill="none" stroke="${l.color}" stroke-width="${l.dash ? 1.8 : 2.2}" stroke-linecap="round" ${l.dash ? 'stroke-dasharray="4 4"' : ''}/>`; });
+  spreadY(lines.map(l => ({ l, i: lastI(l.vals) })).filter(e => e.i >= 0).map(e => ({ ...e, y: y(e.l.vals[e.i]), y0: y(e.l.vals[e.i]) })), 15, pt, h - pb).forEach(e => { g += endDot(cx(e.i), e.y0, e.l.color) + `<text x="${cx(e.i) + 13}" y="${e.y + 4}" class="endl" fill="${e.l.color}">${F(e.l.vals[e.i])}</text>`; });
+  if (foc >= 0 && tot[foc] > 0) { const X = cx(foc), yy = y(tot[foc]), right = X < (W - pr) * .72, lx = right ? X + tw / 2 + 22 : X - tw / 2 - 22, ref = lines[0] && lines[0].vals[foc];
+    g += `<g class="callout"><line x1="${X + (right ? tw / 2 : -tw / 2)}" x2="${lx + (right ? -4 : 4)}" y1="${yy}" y2="${yy}" stroke-dasharray="3 3"/><text x="${lx}" y="${yy - 2}" text-anchor="${right ? 'start' : 'end'}" class="co-v">${F(tot[foc])}</text><text x="${lx}" y="${yy + 13}" text-anchor="${right ? 'start' : 'end'}" class="co-l">${labels[foc]}${ref ? ` · ${fP(tot[foc] / ref, 0)} de ${(lines[0].name || 'meta').toLowerCase()}` : ''}</text></g>`; }
+  g += labels.map((l, i) => `<rect x="${pl + bw * i}" y="0" width="${bw}" height="${h - pb}" fill="transparent" ${tipA(`<b>${l}</b>` + series.map(s => `<div class="r"><span>${keyI(s.color)}${s.name || ''}</span><span>${s.vals[i] == null ? '—' : F(s.vals[i])}</span></div>`).join('') + (stacked && series.length > 1 ? `<div class="r tt"><span>Total</span><span>${F(tot[i])}</span></div>` : '') + lines.map(L => `<div class="r"><span>${keyI(L.color, 1, L.dash)}${L.name}</span><span>${L.vals[i] == null ? '—' : F(L.vals[i])}</span></div>`).join(''))}/>`).join('');
+  const sT = series.map(s => s.vals.reduce((a, b) => a + (b || 0), 0)), gT = sT.reduce((a, b) => a + b, 0);
+  const lg = legend && (series.length > 1 || lines.length || hatchFrom != null) ? legendH([...series.map((s, k) => ({ n: s.name || '', c: s.color, b: totals ? F(sT[k]) : '', e: totals && gT ? fP(sT[k] / gT, 0) : '' })), ...(hatchFrom != null ? [{ n: 'Projeção', c: 'repeating-linear-gradient(135deg,#F3F2EE55 0 2px,transparent 2px 4px)' }] : []), ...lines.map(l => ({ n: l.name, c: l.color, line: 1, dash: l.dash }))]) : '';
+  return `<div class="chart pc" data-ch="${cid}">${lg}<svg viewBox="0 0 ${W} ${h}" width="100%"><defs>${defs}</defs>${g}</svg></div>`;
+};
+
+/* minigráfico de cartão: curva suave, área que some, brilho, último ponto marcado */
+const spark = (vals, color = '#FF6A00', w = 120, h = 28) => {
+  const u = vid(), pts = vals.map((x, i) => [i, x]).filter(p => p[1] != null && isFinite(p[1])); if (pts.length < 2) return '';
+  const lo = Math.min(...pts.map(p => p[1])), hi = Math.max(...pts.map(p => p[1])), sp = hi - lo || 1;
+  const X = i => 2 + (w - 8) * i / (vals.length - 1), Y = v => h - 4 - (h - 8) * (v - lo) / sp, d = smoothPath(pts.map(p => [X(p[0]), Y(p[1])])), L = pts[pts.length - 1];
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}"><defs><linearGradient id="${u}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${color}" stop-opacity=".38"/><stop offset="1" stop-color="${color}" stop-opacity="0"/></linearGradient></defs><path d="${d}L${X(L[0])},${h}L${X(pts[0][0])},${h}Z" fill="url(#${u})"/><path d="${d}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" style="filter:drop-shadow(0 2px 3px ${color}73)"/><circle cx="${X(L[0])}" cy="${Y(L[1])}" r="3" fill="var(--panel-solid)" stroke="${color}" stroke-width="1.6"/></svg>`;
+};
+
+/* medidor de instrumento: 270°, marcas acesas até o valor */
+const tickGauge = (v, size = 74, n = 36) => { const c = size / 2, R1 = c - 6, R2 = c - 12, a0 = 135, sp = 270;
+  return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" class="gauge"><circle cx="${c}" cy="${c}" r="${c - 1.5}" class="g-bezel"/><circle cx="${c}" cy="${c}" r="${R2 - 5}" class="g-face"/>${Array.from({ length: n + 1 }, (_, i) => { const a = (a0 + sp * i / n) * Math.PI / 180, on = i / n <= v + 1e-9 && v > 0; return `<line x1="${(c + Math.cos(a) * R2).toFixed(1)}" y1="${(c + Math.sin(a) * R2).toFixed(1)}" x2="${(c + Math.cos(a) * R1).toFixed(1)}" y2="${(c + Math.sin(a) * R1).toFixed(1)}" class="gt${on ? ' on' : ''}"/>`; }).join('')}</svg>`; };
+const ring = (p) => `<div class="ps-ring">${tickGauge(Math.max(0, Math.min(1, p || 0)))}<span>${isFinite(p) ? fP(p, 0) : '—'}</span></div>`;
+
+/* medidor de meta (semicírculo vermelho → verde com ponteiro) */
+const gauge = (p, label, sub) => {
+  const a = Math.PI * (1 - Math.max(0, Math.min(1, p))), cx = 90, cy = 86, R = 64, u = vid();
+  const arc = (f0, f1) => { const A0 = Math.PI * (1 - f0), A1 = Math.PI * (1 - f1); return `M${cx + R * Math.cos(A0)} ${cy - R * Math.sin(A0)} A${R} ${R} 0 0 1 ${cx + R * Math.cos(A1)} ${cy - R * Math.sin(A1)}`; };
+  const col = p >= .8 ? 'var(--good)' : p >= .5 ? 'var(--warn)' : 'var(--bad)';
+  return `<svg viewBox="0 0 180 124" width="100%" style="max-width:240px;display:block;margin:0 auto"><defs><linearGradient id="${u}" x1="0" x2="1"><stop offset="0" stop-color="#F2766B"/><stop offset=".55" stop-color="#E3A84A"/><stop offset="1" stop-color="#4CC38A"/></linearGradient></defs><path d="${arc(0, 1)}" stroke="url(#${u})" stroke-width="13" fill="none" stroke-linecap="round" opacity=".9"/><line x1="${cx}" y1="${cy}" x2="${cx + (R - 18) * Math.cos(a)}" y2="${cy - (R - 18) * Math.sin(a)}" stroke="#F3F2EE" stroke-width="3.5" stroke-linecap="round"/><circle cx="${cx}" cy="${cy}" r="6" fill="#F3F2EE"/><text x="${cx}" y="${cy + 30}" text-anchor="middle" fill="${col}" font-size="25" font-weight="700">${fP(p, 0)}</text></svg><div style="text-align:center;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)">${label}</div>${sub ? `<div class="hint" style="text-align:center;margin-top:2px">${sub}</div>` : ''}`;
+};
+
+/* composição: rosca grossa + linhas com barra de participação */
+const donut = (parts, center, sub) => {
+  const list = parts.filter(p => p.v > 0), tot = list.reduce((a, p) => a + p.v, 0) || 1, size = 160, R = size / 2 - 14, C = 2 * Math.PI * R; let acc = 0;
+  const segs = list.map(p => { const len = C * p.v / tot, el = `<circle cx="${size / 2}" cy="${size / 2}" r="${R}" fill="none" stroke="${p.c}" stroke-width="20" stroke-dasharray="${Math.max(0, len - 3)} ${C}" stroke-dashoffset="${-acc}" transform="rotate(-90 ${size / 2} ${size / 2})" class="seg" ${tipA(`<b>${p.l}</b>${fN(p.v)} · ${fP(p.v / tot, 0)}`)}/>`; acc += len; return el; }).join('');
+  return `<div class="bd"><svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}"><circle cx="${size / 2}" cy="${size / 2}" r="${R}" fill="none" class="trk" stroke-width="20"/>${segs}<text x="${size / 2}" y="${size / 2 + 3}" text-anchor="middle" class="bd-c">${center}</text><text x="${size / 2}" y="${size / 2 + 21}" text-anchor="middle" class="bd-s">${sub || 'total'}</text></svg><div class="bd-rows">${list.map(p => `<div class="bd-r"><span class="bd-k" style="background:${p.c}"></span><span class="bd-l">${p.l}</span><b class="bd-v">${p.t ?? fN(p.v)}</b><span class="bd-p">${fP(p.v / tot, 0)}</span><span class="bd-bar"><i style="width:${100 * p.v / tot}%;background:${p.c}"></i></span></div>`).join('')}</div></div>`;
+};
+
+/* barras horizontais com degradê e brilho na ponta; mk = marcador (meta) */
+const hbars = (rows, o = {}) => { const mx = o.max || Math.max(...rows.map(r => Math.abs(r.v)), 1);
+  return `<div class="hbars">${rows.map(r => `<div class="hb"><span class="hb-l">${r.l}${r.sub ? `<small>${r.sub}</small>` : ''}</span><div class="hb-t">${r.ref != null ? `<div class="hb-g" style="width:${Math.min(100, 100 * r.ref / mx)}%"></div>` : ''}<div class="hb-f" style="width:${Math.max(1, 100 * Math.abs(r.v) / mx)}%;--hc:${r.c || 'var(--c1)'}"></div>${r.mk != null ? `<span class="hb-m" style="left:${Math.min(100, r.mk * 100)}%"></span>` : ''}</div><span class="hb-v">${r.t ?? fN(r.v)}${r.s ? `<em>${r.s}</em>` : ''}</span></div>`).join('')}</div>`; };
+const bar = (p, color = 'var(--c1)', mk) => `<div class="hb-t"><div class="hb-f" style="width:${Math.max(0, Math.min(100, p * 100))}%;--hc:${color}"></div>${mk != null ? `<span class="hb-m" style="left:${Math.min(100, mk * 100)}%"></span>` : ''}</div>`;
+
+/* pílula de variação */
+const dchip = (d, good = 1, pp) => d == null || !isFinite(d) ? '' : `<span class="d ${Math.abs(d) < .0005 ? 'flat' : d * good > 0 ? 'up' : 'down'}">${d >= 0 ? '+' : ''}${pp ? (d * 100).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' p.p.' : (d * 100).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + '%'}</span>`;
+/* cartão de número: rótulo, valor, pílula de variação, linha de apoio e minigráfico */
+const kpi = (l, v, s = '', o = {}) => `<div class="card k ${o.cls || ''}" ${o.go ? `data-go="${o.go}" role="button" tabindex="0"` : ''}><div class="l">${l}${o.per ? `<span>${o.per}</span>` : ''}</div><div class="v ${o.lg ? 'lg' : ''}" ${o.color ? `style="color:${o.color}"` : ''}>${v}</div>${o.d != null ? dchip(o.d, o.good ?? 1, o.pp) : ''}${s ? `<div class="s">${s}</div>` : ''}${o.spark ? spark(o.spark, o.sc || 'var(--c1)', 132, 30) : ''}${o.extra || ''}${o.go ? '<span class="go">ver detalhe →</span>' : ''}</div>`;
+
+/* funil em fatias curvas com os cartões de cada etapa ao lado: steps [{l, v, prev, goal, convGoal, sub, money}] */
+const funnelViz = (all, cmpLabel = 'comparação') => {
+  const steps = all.filter(s => !s.money), u = vid(), n = steps.length, W = 480, SW = 350, cx = SW / 2 + 6, rowH = 76, gap = 8, H = n * rowH + (n - 1) * gap + 8;
+  const mx = Math.max(...steps.map(s => Math.max(s.v || 0, s.prev || 0)), 1), wOf = v => 64 + (SW - 64) * Math.sqrt(Math.max(0, v || 0) / mx);
+  const slice = (y, wt, wb) => { const xt = cx - wt / 2, xb = cx - wb / 2, k = rowH * .55; return `M${xt},${y} L${xt + wt},${y} C${xt + wt},${y + k} ${xb + wb},${y + rowH - k} ${xb + wb},${y + rowH} L${xb},${y + rowH} C${xb},${y + rowH - k} ${xt},${y + k} ${xt},${y} Z`; };
+  const ys = i => 4 + i * (rowH + gap), temPrev = steps.some(s => s.prev != null);
+  let svg = `<defs><linearGradient id="${u}g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="${H}"><stop offset="0" stop-color="var(--fv-a)"/><stop offset="1" stop-color="var(--fv-b)"/></linearGradient><linearGradient id="${u}s" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><pattern id="${u}h" width="4" height="8" patternUnits="userSpaceOnUse"><rect width="1.1" height="8" fill="#000" opacity=".08"/></pattern><filter id="${u}f" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;
+  if (temPrev) svg += steps.map((s, i) => s.prev != null ? `<path d="${slice(ys(i), wOf(s.prev), i < n - 1 ? wOf(steps[i + 1].prev ?? s.prev) : wOf(s.prev) * .78)}" class="fv-ghost"/>` : '').join('');
+  svg += `<g filter="url(#${u}f)">${steps.map((s, i) => { const d = slice(ys(i), wOf(s.v), i < n - 1 ? wOf(steps[i + 1].v) : wOf(s.v) * .78); return `<g ${tipA(`<b>${s.l}</b>${fN(s.v)}${s.prev != null ? ` · ${cmpLabel}: ${fN(s.prev)}` : ''}`)}><path d="${d}" fill="url(#${u}g)"/><path d="${d}" fill="url(#${u}h)"/><path d="${d}" fill="url(#${u}s)"/></g>`; }).join('')}</g>`;
+  svg += steps.map((s, i) => { const y = ys(i), wt = wOf(s.v); return `<line x1="${cx - wt / 2 + 6}" x2="${cx + wt / 2 - 6}" y1="${y + .5}" y2="${y + .5}" class="fv-edge"/><text x="${cx}" y="${y + rowH / 2 + 1}" text-anchor="middle" class="fv-n">${fN(s.v)}</text><text x="${cx}" y="${y + rowH / 2 + 18}" text-anchor="middle" class="fv-l">${s.l.toUpperCase()}</text>`; }).join('');
+  svg += steps.map((s, i) => { if (!i) return ''; const c = s.v / (steps[i - 1].v || 1), y = ys(i) - gap / 2, xe = cx + Math.max(wOf(s.v), s.prev != null ? wOf(s.prev) : 0) / 2 + 14; return `<g class="fv-cv"><line x1="${xe - 10}" x2="${xe + 6}" y1="${y}" y2="${y}"/><rect x="${xe + 6}" y="${y - 11}" width="62" height="22" rx="11"/><text x="${xe + 37}" y="${y + 4}" text-anchor="middle">${c > 1 ? '>100%' : fP(c, c < .1 ? 1 : 0)}</text></g>`; }).join('');
+  if (temPrev) svg += `<text x="${W - 4}" y="${H - 4}" text-anchor="end" class="fv-lg">tracejado = ${cmpLabel}</text>`;
+  const cards = all.map((s, i) => { const conv = i && !s.money ? s.v / (all[i - 1].v || 1) : null, fm = s.money ? fR : fN, d = s.prev ? (s.v - s.prev) / s.prev : null, tone = Math.round(100 - 100 * Math.min(1, i / Math.max(1, n - 1)));
+    return `<div class="fvc ${s.money ? 'money' : ''}" style="border-left-color:${s.money ? 'var(--good)' : `color-mix(in srgb,var(--fv-a) ${tone}%,var(--fv-b))`}"><div class="fvc-h"><b>${s.l}</b><span class="fvc-v">${fm(s.v)}</span>${s.goal ? `<span class="fvc-g ${s.v >= s.goal ? 'pos' : 'neg'}">${fP(s.v / s.goal, 0)} da meta no ritmo</span>` : ''}</div><div class="fvc-s">${conv != null ? `<span>${conv > 1 ? 'acima de 100%' : fP(conv, conv < .1 ? 1 : 0)} da etapa anterior</span>` : ''}${conv != null && s.convGoal ? `<span class="fvc-g ${conv >= s.convGoal ? 'pos' : 'neg'}">meta ${fP(s.convGoal, 0)} (${conv >= s.convGoal ? '+' : ''}${((conv - s.convGoal) * 100).toLocaleString('pt-BR', { maximumFractionDigits: 1 })} p.p.)</span>` : ''}${s.sub ? `<span>${s.sub}</span>` : ''}</div>${s.prev != null ? `<div class="fvc-s">${dchip(d)}<span>${cmpLabel}: ${fm(s.prev)}</span></div>` : ''}</div>`; }).join('');
+  return `<div class="fviz"><svg viewBox="0 0 ${W} ${H}">${svg}</svg><div class="fviz-cards">${cards}</div></div>`;
+};
+
+/* ponte (cascata): steps [{l, v, total}] */
+const waterfall = (steps, fmt = 'R', h = 260, W = 760) => {
+  const u = vid(), cid = chId('wf', { steps, fmt, h, W }), F = VF(fmt), A = AXF[fmt] || AXF.N, pl = 56, pr = 12, pt = 22, pb = 34, n = steps.length, bw = (W - pl - pr) / n, cw = Math.max(10, Math.min(34, bw * .5));
+  let acc = 0; const segs = steps.map(s => { if (s.total) { acc = s.v; return { ...s, a: 0, b: s.v }; } const a = acc; acc += s.v; return { ...s, a, b: acc }; });
+  const vals = segs.flatMap(s => [s.a, s.b]), mx = Math.max(...vals), mn = Math.min(...vals), lo0 = Math.min(...segs.filter(s => !s.total).flatMap(s => [s.a, s.b]), mx), span = mx - lo0;
+  const cut = segs.some(s => s.total) && lo0 > 0 && span < mx * .25, { y, ticks, step } = scaleY(cut ? [lo0 - span * .6, mx] : [mn, mx], h, pt, pb, !cut);
+  const top = y(ticks[ticks.length - 1]), bot = y(ticks[0]), C = { t: 'var(--c4)', up: 'var(--good)', dn: 'var(--bad)' };
+  let g = `<g class="axis">${ticks.map(t => `<line class="grd" x1="${pl}" x2="${W - pr}" y1="${y(t)}" y2="${y(t)}"/><text x="${pl - 8}" y="${y(t) + 3.5}" text-anchor="end">${A(t, step)}</text>`).join('')}${segs.map((s, i) => `<text x="${pl + bw * i + bw / 2}" y="${h - 18}" text-anchor="middle">${s.l.length > 13 ? s.l.slice(0, 12) + '…' : s.l}</text>`).join('')}</g>`;
+  if (cut) g += `<text x="${pl}" y="${h - 3}" class="axnote">Eixo começa em ${A(ticks[0], step)} para os movimentos aparecerem</text>`;
+  g += segs.map((s, i) => { const x0 = pl + bw * i + (bw - cw) / 2, ya = Math.min(Math.max(y(Math.max(s.a, s.b)), top), bot), yb = Math.min(Math.max(y(Math.min(s.a, s.b)), top), bot), k = s.total ? 't' : s.v >= 0 ? 'up' : 'dn';
+    return `<rect x="${x0}" y="${ya}" width="${cw}" height="${Math.max(1.5, yb - ya)}" rx="5" fill="url(#${u}${k})" ${tipA(`<b>${s.l}</b><div class="r"><span>${s.total ? 'Saldo' : 'Movimento'}</span><span>${F(s.v)}</span></div>${s.total ? '' : `<div class="r"><span>Saldo depois</span><span>${F(s.b)}</span></div>`}`)}/>${i < n - 1 ? `<line x1="${x0 + cw}" x2="${x0 + bw}" y1="${y(s.b)}" y2="${y(s.b)}" class="wfl"/>` : ''}<text x="${x0 + cw / 2}" y="${ya - 6}" text-anchor="middle" class="barl" style="fill:${s.total ? 'var(--fg)' : C[k]}">${(s.total || s.v < 0 ? '' : '+') + F(s.v).replace('R$ ', '')}</text>`; }).join('');
+  return `<div class="chart" data-ch="${cid}">${legendH([{ n: 'Saldo (início e fim)', c: C.t }, { n: 'Aumenta', c: C.up }, { n: 'Diminui', c: C.dn }])}<svg viewBox="0 0 ${W} ${h}" width="100%"><defs>${Object.entries(C).map(([k, c]) => `<linearGradient id="${u}${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="${c}" stop-opacity=".55"/></linearGradient>`).join('')}</defs>${g}</svg></div>`;
+};
+
+/* mix 100% por linha: rows [{l, parts:[v], sub}] */
+const mixBars = (rows, names, colors, fmt = 'N') => { const F = VF(fmt), tots = names.map((_, i) => rows.reduce((t, r) => t + (r.parts[i] || 0), 0)), gt = tots.reduce((a, b) => a + b, 0) || 1;
+  return `<div class="mix">${legendH(names.map((n, i) => ({ n, c: colors[i] })))}${rows.map(r => { const t = r.parts.reduce((a, b) => a + (b || 0), 0) || 1; return `<div class="mx-r"><span class="mx-l">${r.l}<em>${r.sub ?? F(t)}</em></span><div class="mx-t">${r.parts.map((v, i) => v > 0 ? `<div class="mx-s" style="width:${100 * v / t}%;background:linear-gradient(180deg,color-mix(in srgb,${colors[i]} 82%,#fff),${colors[i]})" ${tipA(`<b>${r.l} · ${names[i]}</b>${F(v)} · ${fP(v / t, 0)}`)}>${v / t >= .08 ? `<span>${v / t >= .16 ? F(v) + ' · ' : ''}${fP(v / t, 0)}</span>` : ''}</div>` : '').join('')}</div></div>`; }).join('')}</div>`; };
+
+/* faixa do Pace: um cartão por etapa (anel de marcas, barra-bala, linhas do diário) */
+const toneOf = r => r == null || !isFinite(r) ? 'flat' : r >= 1 ? 'good' : r >= .9 ? 'warn' : 'bad';
+const slP = (r, flat) => r == null || !isFinite(r) ? '<i class="ps-sl flat">—</i>' : `<i class="ps-sl ${flat ? 'flat' : toneOf(r)}">${fP(r, 0)}</i>`;
+const paceStrip = (rows, o = {}) => `<div class="ps">${rows.map(e => { const f = e.money ? fR : fN, r = e.rp, tem = e.meta > 0, w = x => Math.max(0, Math.min((x || 0) / (e.meta || 1), 1)) * 100 + '%';
+  const nec = e.necDia != null ? (e.money ? fR(e.necDia) : (Math.ceil(e.necDia * 10) / 10).toLocaleString('pt-BR')) : '—';
+  return `<div class="ps-k ${toneOf(r)} ${e.go ? 'clk' : ''}" ${e.go ? `data-go="${e.go}"` : ''}><div class="ps-h"><span><b>${e.l}</b><small>${e.def || ''}</small></span><span class="ps-pill ${toneOf(r)}">${r != null ? fP(r, 0) + ' do pace' : 'sem meta'}</span></div>
+    <div class="ps-b"><div><div class="ps-big">${f(e.real)}</div><div class="ps-of">${tem ? `${o.metaNome || 'meta'} ${f(e.meta)}` : 'sem meta'}</div>${e.conv != null ? `<div class="ps-cv"><b>${fP(e.conv, 0)}</b> ${e.convL}</div>` : ''}${e.ant != null ? `<div class="ps-vs">${dchip((e.real - e.ant) / (e.ant || 1))} vs ${o.vsL || 'anterior'} <small>(${f(e.ant)})</small></div>` : ''}</div>${ring(r)}</div>
+    ${tem ? `<div class="ps-bul" style="--bc:var(--${toneOf(r) === 'good' ? 'good' : toneOf(r) === 'warn' ? 'warn' : 'bad'})"><div class="ps-bt"><i class="rit" style="width:${w(e.proj)}"></i><i class="real" style="width:${w(e.real)}"></i><i class="pc" style="left:calc(${w(e.pace)} - 1px)"></i></div><div class="ps-bs"><span>0</span><span>${o.metaNome || 'meta'} ${f(e.meta)}</span></div></div>` : ''}
+    <dl class="ps-rows"><dt>Pace hoje</dt><dd>${f(e.pace)}</dd><dd class="p">${slP(r)}</dd><dt>${o.refL || 'Hoje'} / nec. por dia</dt><dd>${f(e.hoje)} / ${nec}</dd><dd class="p">${slP(e.necDia ? e.hoje / e.necDia : null)}</dd><dt>No ritmo atual</dt><dd>${f(e.proj)}</dd><dd class="p">${slP(tem ? e.proj / e.meta : null)}</dd><dt>Com a meta diária</dt><dd>${f(e.metaDia)}</dd><dd class="p">${slP(tem ? e.metaDia / e.meta : null)}</dd><dt>Falta p/ ${o.metaNome || 'meta'}</dt><dd>${f(Math.max(0, e.meta - e.real))}</dd><dd class="p">${slP(tem ? Math.max(0, e.meta - e.real) / e.meta : null, 1)}</dd></dl>
+    ${e.go ? `<span class="go">ver ${e.k === 'mql' ? 'MQLs' : 'deals'} →</span>` : ''}</div>`; }).join('')}</div>`;
+
+/* dica flutuante única para todos os gráficos (data-tip) */
+(() => { let tip; document.addEventListener('mousemove', (e) => { const t = e.target.closest && e.target.closest('[data-tip]'); if (!tip) { tip = document.createElement('div'); tip.className = 'vtip'; document.body.appendChild(tip); }
+  if (!t) { tip.style.opacity = 0; return; } tip.innerHTML = t.getAttribute('data-tip'); tip.style.opacity = 1; const r = tip.getBoundingClientRect(); let x = e.clientX + 16, y = e.clientY + 14; if (x + r.width > innerWidth - 8) x = e.clientX - r.width - 16; if (y + r.height > innerHeight - 8) y = e.clientY - r.height - 12; tip.style.left = x + 'px'; tip.style.top = y + 'px'; }); })();
+
+/* redesenha cada gráfico na largura real do cartão (como o useWidth do produto): o texto do eixo não cresce com o cartão */
+function fitCharts(root = document) {
+  root.querySelectorAll('[data-ch]').forEach(el => { const c = CHS[el.dataset.ch]; if (!c) return; const w = Math.round(el.clientWidth), cur = c.f === 'wf' ? (c.cfg.W || 760) : (c.cfg.W || 760);
+    if (w < 60 || Math.abs(w - cur) < 6) return; const W = Math.max(280, w);
+    el.outerHTML = c.f === 'line' ? lineChart({ ...c.cfg, W }) : c.f === 'bar' ? barChart({ ...c.cfg, W }) : waterfall(c.cfg.steps, c.cfg.fmt, c.cfg.h, W); });
+}
+let _fitT; window.addEventListener('resize', () => { clearTimeout(_fitT); _fitT = setTimeout(() => fitCharts(), 120); });
+
+/* cartão de tendência: valor atual, variação contra o anterior e a curva */
+const trendCard = (title, labels, vals, fmt = 'P', good = 1, note) => { const last = vals[vals.length - 1], prev = vals[vals.length - 2], d = last - prev, F = fmt === 'P' ? (x) => fP(x, 1) : VF(fmt);
+  return `<div class="card tc"><div class="tc-h"><span>${title}</span><b>${F(last)}</b><em class="${d * good >= 0 ? 'up' : 'down'}">${d >= 0 ? '▲' : '▼'} ${fmt === 'P' ? (Math.abs(d * 100)).toFixed(1).replace('.', ',') + ' p.p.' : F(Math.abs(d))} vs anterior</em></div>${lineChart({ labels, series: [{ name: title, color: '#FF8A3D', vals, area: 1 }], fmt, h: 140, endLabel: false, min0: false, legend: false })}${note ? `<p class="hint">${note}</p>` : ''}</div>`; };
+
+/* ampulheta: à esquerda a aquisição afunila até a venda; à direita, o que a base faz depois (MRR). Cada lado com a própria escala (raiz). */
+const hourglass = (left, right = [], o = {}) => {
+  const W = o.W || 1000, H = o.H || 330, mid = H / 2 + (right.length ? 24 : 6), n = left.length + right.length, cw = W / n, u = vid();
+  const mxL = Math.max(...left.map(s => s.v || 0), 1), mxR = Math.max(...right.map(s => Math.abs(s.v || 0)), 1), hOf = (v, mx) => 22 + (H - 110) * Math.sqrt(Math.abs(v || 0) / mx);
+  const pts = [...left.map((s, i) => ({ ...s, side: 'L', x: cw * i + cw / 2, h: hOf(s.v, mxL) })), ...right.map((s, i) => ({ ...s, side: 'R', x: cw * (left.length + i) + cw / 2, h: hOf(s.v, mxR) }))];
+  let g = `<defs><linearGradient id="${u}L" x1="0" x2="1"><stop offset="0" stop-color="#FFB27A"/><stop offset="1" stop-color="#FF6A00"/></linearGradient><linearGradient id="${u}R" x1="0" x2="1"><stop offset="0" stop-color="#FF6A00"/><stop offset="1" stop-color="#C9B8A6"/></linearGradient><pattern id="${u}H" width="4" height="8" patternUnits="userSpaceOnUse"><rect width="1.2" height="8" fill="#000" opacity=".1"/></pattern><filter id="${u}G" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>`;
+  if (right.length) g += `<text x="${cw * left.length / 2}" y="16" text-anchor="middle" class="hg-t">AQUISIÇÃO · quantidade</text><text x="${cw * left.length + cw * right.length / 2}" y="16" text-anchor="middle" class="hg-t">BASE DE CLIENTES · MRR</text>`;
+  g += `<g filter="url(#${u}G)">${pts.slice(0, -1).map((p, i) => { const q = pts[i + 1], mx = (p.x + q.x) / 2; const d = `M${p.x},${mid - p.h / 2} C${mx},${mid - p.h / 2} ${mx},${mid - q.h / 2} ${q.x},${mid - q.h / 2} L${q.x},${mid + q.h / 2} C${mx},${mid + q.h / 2} ${mx},${mid + p.h / 2} ${p.x},${mid + p.h / 2} Z`; return `<path d="${d}" fill="url(#${u}${q.side})" opacity=".92"/><path d="${d}" fill="url(#${u}H)"/>`; }).join('')}</g>`;
+  g += pts.map((p, i) => `<g ${tipA(`<b>${p.l}</b>${p.money ? fR(p.v) : fN(p.v)}`)}><rect x="${p.x - cw / 2}" y="24" width="${cw}" height="${H - 24}" fill="transparent"/><line x1="${p.x}" x2="${p.x}" y1="${mid - p.h / 2 - 6}" y2="${mid + p.h / 2 + 6}" stroke="#0B0B0A" stroke-width="2.5"/><text x="${p.x}" y="${mid - p.h / 2 - 26}" text-anchor="middle" class="hg-v">${p.lab ?? (p.money ? (p.v < 0 ? '−' : '') + fR(Math.abs(p.v)) : fN(p.v))}</text><text x="${p.x}" y="${mid - p.h / 2 - 12}" text-anchor="middle" class="hg-l">${p.l}</text>${p.sub ? `<text x="${p.x}" y="${mid + p.h / 2 + 20}" text-anchor="middle" class="hg-s">${p.sub}</text>` : ''}${p.sub2 ? `<text x="${p.x}" y="${mid + p.h / 2 + 35}" text-anchor="middle" class="hg-s ${p.tone || ''}">${p.sub2}</text>` : ''}${i > 0 && p.side === 'L' ? `<rect x="${p.x - cw / 2 - 22}" y="${mid - 10}" width="44" height="20" rx="10" class="hg-cb"/><text x="${p.x - cw / 2}" y="${mid + 4}" text-anchor="middle" class="hg-c">${fP(p.v / (pts[i - 1].v || 1), p.v / pts[i - 1].v < .1 ? 1 : 0)}</text>` : ''}</g>`).join('');
+  return `<div class="hg"><svg viewBox="0 0 ${W} ${H}" width="100%">${g}</svg></div>`;
+};
+
 /* Telas: Início, Marketing e Pre-sales & Sales */
 const cap = (t) => t[0].toUpperCase() + t.slice(1);
 const STN = { mql: 'MQL', sql: 'SQL', opp: 'OPP', won: 'WON', bk: 'Bookings' };
@@ -1030,14 +1315,19 @@ const MKT = (o) => screen(Object.assign({ area: 'mkt', nav: true, tabs: 'mkt', c
 MKT({
   id: 'mkt/visao', icon: 'chart', name: 'Visão geral', q: 'A mídia gera MQL a um custo saudável?',
   render() {
-    const c = ctx(), m = mediaSum(c.i, S.seg), mp = mediaSum(c.prev, S.seg), a = D.f(S.seg, c.i), p = D.f(S.seg, c.prev);
-    const cpm = m.inv / a.mql, cpmp = mp.inv / (p.mql * c.pace), roas = a.bk * 12 / m.inv;
-    const days = D.BDAYS.slice(0, c.cur ? D.DU : D.DT), di = days.map(() => m.inv / days.length * (1 + D.N(.18))), dm = c.cur ? D.dailyOf(S.seg, 'mql') : days.map(() => a.mql / days.length * (1 + D.N(.2)));
+    const c = ctx(), sg = S.seg, m = mediaSum(c.i, sg), mp = mediaSum(c.prev, sg), a = D.f(sg, c.i), p = D.f(sg, c.prev), fr = c.pace;
+    const cpm = m.inv / m.mql, cpmp = mp.inv / mp.mql, vend = Math.round(a.won * .58), mrrV = a.bk * .58, payback = m.inv / Math.max(1, mrrV);
+    const days = D.BDAYS.slice(0, c.cur ? D.DU : D.DT), lab = days.map(d => String(d).padStart(2, '0') + '/' + (c.cur ? '11' : '10')), wv = (j, k) => 1 + .22 * Math.sin(j * 1.3 + k) + .1 * Math.cos(j * 2.7);
+    const di = days.map((_, j) => m.inv / days.length * wv(j, 1)), dm = c.cur ? D.dailyOf(sg, 'mql') : days.map((_, j) => a.mql / days.length * wv(j, 2)), dl = dm.map((v, j) => v * (a.leads / a.mql - 1) * wv(j, 3));
+    const sh = (sg === 'all' ? 1 : D.f(sg, c.i).mql / D.f('all', c.i).mql), ch = D.media[c.i].map(x => ({ n: x.n, inv: x.inv * sh, mql: x.mql * sh }));
     return `${filtersBar()}${sec(1, 'Indicadores de marketing', 'A mídia gera MQL a um custo saudável?')}
-    <div class="g g6">${kpi('Media spend', fR(m.inv), dSpan(m.inv / (mp.inv * c.pace) - 1, true) + ' vs mês ant.')}${kpi('Leads', fN(a.leads), dSpan(a.leads / (p.leads * c.pace) - 1))}${kpi('MQL', fN(a.mql), dSpan(a.mql / (p.mql * c.pace) - 1))}${kpi('Custo por MQL', fR(cpm), dSpan(cpm / cpmp - 1, true))}${kpi('Lead → MQL', fP(a.mql / a.leads), 'qualificação')}${kpi('ROAS estimado', nf1.format(roas) + '×', 'booking × 12 ÷ investimento')}</div>
-    <div class="g g2" style="margin-top:12px">${card('Funil da mídia ao MQL', hbars([{ l: 'Impressões', v: m.impr, c: '#3A3936' }, { l: 'Cliques', v: m.clicks, s: fP(m.clicks / m.impr, 2) + ' CTR', c: '#77756F' }, { l: 'Leads de mídia', v: m.leads, s: fP(m.leads / m.clicks) + ' conv.', c: '#E9E7E1' }, { l: 'MQL de mídia', v: m.mql, s: fP(m.mql / m.leads) + ' conv.', c: '#FF6A00' }].map(r => ({ ...r, v: Math.sqrt(r.v), t: fN(r.v ** 1) }))) + '<p class="hint">Barras em escala raiz para caber impressões e MQL na mesma régua.</p>', { sub: `${fR(m.inv / m.clicks)} por clique` })}
-    ${card('Ritmo diário', barChart({ labels: days.map(d => String(d).padStart(2, '0')), series: [{ vals: di, color: '#3A3936', name: 'Investimento (R$)' }], fmt: 'R', h: 170 }), { sub: 'investimento por dia útil' })}</div>
-    ${card('MQL por dia', barChart({ labels: days.map(d => String(d).padStart(2, '0')), series: [{ vals: dm, color: '#FF6A00', name: 'MQL' }], lines: [{ vals: days.map(() => D.cm(S.seg, c.i).mql / D.DT), color: '#E9E7E1', dash: 1, name: 'Meta por dia útil' }], h: 170 }), { cls: '', sub: 'contra a meta diária', r: '' })}`;
+    <div class="g g6">${kpi('Media spend', fR(m.inv), 'vs mês anterior', { d: m.inv / (mp.inv * fr) - 1, good: -1 })}${kpi('Leads', fN(a.leads), fR(m.inv / a.leads) + ' por lead', { d: a.leads / (p.leads * fr) - 1 })}${kpi('MQL', fN(a.mql), 'vs mês anterior', { d: a.mql / (p.mql * fr) - 1 })}${kpi('Cost per MQL', fR(cpm), 'Lead → MQL ' + fP(a.mql / a.leads, 0), { d: cpm / cpmp - 1, good: -1 })}${kpi('Payback da mídia', nf1.format(payback) + ' meses', 'investimento ÷ MRR vendido no período')}${kpi('Vendas de mídia', fN(vend), `${fR(mrrV)} de MRR · CAC ${fR(m.inv / Math.max(1, vend))}`)}</div>
+    <div class="card" style="margin-top:12px"><div class="ch"><div><h3>Funil da mídia ao MQL</h3></div><small class="mu">${fN(m.impr)} impressões · ${fN(m.clicks)} cliques · CTR ${fP(m.clicks / m.impr, 2)} · CPM ${fR(m.inv / m.impr * 1000)}</small></div>
+      ${funnelViz([{ l: 'Impressões', v: m.impr, sub: 'CPM ' + fR(m.inv / m.impr * 1000) }, { l: 'Cliques', v: m.clicks, sub: `CTR ${fP(m.clicks / m.impr, 2)} · CPC ${fR(m.inv / m.clicks)}` }, { l: 'Leads', v: m.leads, sub: fR(m.inv / m.leads) + ' por lead' }, { l: 'MQL', v: m.mql, sub: fR(m.inv / m.mql) + ' por MQL' }])}</div>
+    ${sec(2, 'Ritmo diário', 'O investimento e a geração de MQL andam juntos?')}
+    <div class="g g2">${card('Investimento por dia', barChart({ labels: lab, fmt: 'R', h: 220, series: [{ vals: di, color: '#F3F2EE', name: 'Investimento' }] }))}${card('Leads e MQL por dia', barChart({ labels: lab, h: 220, stacked: true, totals: true, series: [{ name: 'MQL', color: '#FF8A3D', vals: dm }, { name: 'Leads sem MQL', color: '#8C8A84', vals: dl }] }))}</div>
+    ${sec(3, 'Resumo por canal de mídia', 'Em qual canal de mídia cada real investido rende mais?')}
+    <div class="g g2">${card('Investimento por canal', hbars(ch.map(x => ({ l: x.n, v: x.inv, t: fR(x.inv), s: `${fP(x.inv / m.inv, 0)} · ${fN(x.mql)} MQL` }))))}${card('Custo por MQL por canal', hbars(ch.map(x => ({ l: x.n, v: x.inv / x.mql, t: fR(x.inv / x.mql), s: fN(x.mql) + ' MQL' }))))}</div>`;
   },
   ai() { const c = ctx(), m = mediaSum(c.i, S.seg), a = D.f(S.seg, c.i); return [['#E3A84A', `<b>Custo por MQL de ${fR(m.inv / a.mql)}</b> com ${fR(m.inv)} investidos no período.`], ['#4CC38A', `<b>${fP(a.mql / a.leads, 0)} dos leads viram MQL</b>; a mídia responde por cerca de 61% dos MQL.`], ['#F2766B', `<b>MQL abaixo do ritmo</b>: vale olhar Paid media antes de mexer na verba.`]]; }
 });
@@ -1115,21 +1405,54 @@ const VND = (o) => screen(Object.assign({ area: 'vendas', nav: true, tabs: 'vend
 VND({
   id: 'vendas/pace', icon: 'gauge', name: 'Pace', q: 'No ritmo de hoje, batemos a meta?',
   render() {
-    const c = ctx(), sg = S.seg, a = D.f(sg, c.i), g = D.cm(sg, c.i), stg = ['mql', 'sql', 'opp', 'won', 'bk'], k = S.pk || 'sql';
-    const days = D.BDAYS; const dv = c.cur ? D.dailyOf(sg, k) : days.map(() => a[k] / days.length * (1 + D.N(.2)));
-    let acc = 0; const cum = days.map((_, j) => j < dv.length ? (acc += dv[j]) : null);
-    const paceL = days.map((_, j) => g[k] * (j + 1) / D.DT), proj = days.map((_, j) => j >= dv.length - 1 ? acc + (acc / dv.length) * (j - dv.length + 1) : null);
-    const wk = [[0, 4], [4, 9], [9, 11]].map(([x, y], j) => ({ w: `Semana ${j + 1}`, ...Object.fromEntries(stg.map(s => [s, (c.cur ? D.dailyOf(sg, s) : days.map(() => a[s] / D.DT)).slice(x, y).reduce((t, v) => t + v, 0)])), du: y - x }));
-    return `${filtersBar()}${sec(1, 'Pace do período', 'No ritmo de hoje, batemos a meta do período?')}
-    <div class="g g5">${stg.map(s => { const r = a[s] / (g[s] * c.pace); return `<div class="card"><div style="display:flex;justify-content:space-between;align-items:flex-start"><div class="k"><div class="l">${STN[s]}</div><div class="v">${s === 'bk' ? fR(a[s]) : fN(a[s])}</div><div class="s">meta ${s === 'bk' ? fR(g[s]) : fN(g[s])}</div></div>${ring(r, pcol(r))}</div><div class="hint">${s === 'bk' ? 'Projeção ' + fR(a[s] / c.pace) : 'Projeção ' + fN(a[s] / c.pace)} · ${fP(a[s] / c.pace / g[s], 0)} da meta</div></div>`; }).join('')}</div>
+    const c = ctx(), sg = S.seg, a = D.f(sg, c.i), g = D.cm(sg, c.i), pv = D.f(sg, c.i - 1), stg = ['mql', 'sql', 'opp', 'won', 'bk'], k = S.pk || 'sql';
+    const fr = c.cur ? D.DU / D.DT : 1, du = c.cur ? D.DU : D.DT, days = D.BDAYS, money = (s) => s === 'bk', F = (s, v) => money(s) ? fR(v) : fN(v);
+    const dly = (s) => c.cur ? D.dailyOf(sg, s) : days.map((_, j) => a[s] / days.length * (1 + .25 * Math.sin(j * 1.7 + s.length)));
+    const DEF = { mql: 'Leads criados (growth)', sql: 'Entrada em Diagnosticar', opp: 'Entrada em Solucionar', won: 'Negócios ganhos', bk: 'MRR real ganho' };
+    const rows = stg.map((s, j) => { const meta = g[s], pace = meta * c.pace, d = dly(s), hoje = d[d.length - 1] || 0, rest = Math.max(1, D.DT - du + 1), falta = Math.max(0, meta - a[s]);
+      return { k: s, l: STN[s], def: DEF[s], money: money(s), real: a[s], meta, pace, rp: a[s] / pace, hoje, necDia: falta / rest, proj: a[s] / c.pace, metaDia: a[s] + meta / D.DT * (D.DT - du), conv: j && s !== 'bk' ? a[s] / a[stg[j - 1]] : null, convL: j && s !== 'bk' ? 'do ' + STN[stg[j - 1]] : '', ant: pv[s] * fr, go: s === 'mql' ? 'vendas/demanda' : 'vendas/pipeline' }; });
+    const dd = stg.map(s => [s, a[s] / (pv[s] * fr) - 1]).sort((x, y) => x[1] - y[1]), worst = [...rows].sort((x, y) => x.rp - y.rp)[0];
+    const c1 = a.sql / a.mql, c0 = pv.sql / pv.mql;
+    const chips = [['bad', `Maior queda: ${STN[dd[0][0]]} ${fD(dd[0][1])}`, `${F(dd[0][0], pv[dd[0][0]] * fr)} → ${F(dd[0][0], a[dd[0][0]])}`], ['good', `Maior alta: ${STN[dd[4][0]]} ${fD(dd[4][1])}`, `${F(dd[4][0], pv[dd[4][0]] * fr)} → ${F(dd[4][0], a[dd[4][0]])}`], [c1 >= c0 ? 'good' : 'bad', `MQL → SQL ${fP(c1, 0)}`, `${c1 >= c0 ? '+' : ''}${((c1 - c0) * 100).toFixed(1).replace('.', ',')} p.p. vs anterior`], ['', `Canal de conversão que mais caiu: Chat`, `SQL ${fD(-.17)} no período`]];
+    /* evolução */
+    const dv = dly(k); let acc = 0; const cum = days.map((_, j) => j < dv.length ? (acc += dv[j]) : null), real = acc;
+    const paceL = days.map((_, j) => g[k] * (j + 1) / D.DT), lastJ = dv.length - 1;
+    const proj = days.map((_, j) => j >= lastJ ? real + real / dv.length * (j - lastJ) : null), metaD = days.map((_, j) => j >= lastJ ? real + g[k] / D.DT * (j - lastJ) : null);
+    const lab = days.map(d => String(d).padStart(2, '0') + '/' + (c.cur ? '11' : '10'));
+    /* semana a semana */
+    const WK = [[0, 4], [4, 9], [9, 14], [14, 19], [19, 21]].filter(([x]) => x < du).map(([x, y]) => [x, Math.min(y, du)]);
+    const wkv = (s) => { const d = dly(s); return WK.map(([x, y]) => d.slice(x, y).reduce((t, v) => t + v, 0)); };
+    const wkHead = WK.map(([x, y]) => `${String(days[x]).padStart(2, '0')}/${c.cur ? '11' : '10'} · ${y - x} d.u.`);
+    const wkRows = stg.map(s => { const v = wkv(s); return `<tr><td class="l"><b>${STN[s]}</b></td>${v.map((x, j) => { const n = WK[j][1] - WK[j][0], pd = x / n, prev = j ? v[j - 1] / (WK[j - 1][1] - WK[j - 1][0]) : null; return `<td><b>${F(s, x)}</b><div class="sub">${money(s) ? fR(pd) : nf1.format(pd)}/dia útil ${j ? dchip(pd / prev - 1) : ''}</div></td>`; }).join('')}</tr>`; }).join('');
+    const wkT = regT(['Etapa', ...wkHead], stg.map(s => [STN[s], ...wkv(s).map(v => Math.round(v))]), 'semana-a-semana');
+    /* funil da coorte */
+    const coh = { leads: a.leads, mql: a.mql, sql: Math.round(a.sql * .72), opp: Math.round(a.opp * .75), won: Math.round(a.won * .55) }, cohP = { leads: pv.leads * fr, mql: pv.mql * fr, sql: pv.sql * .72 * fr, opp: pv.opp * .75 * fr, won: pv.won * .55 * fr };
+    const fsteps = [{ l: 'Leads', v: coh.leads, prev: Math.round(cohP.leads), sub: 'criados no período' }, { l: 'MQL', v: coh.mql, prev: Math.round(cohP.mql), sub: 'growth · criados no período' }, { l: 'SQL', v: coh.sql, prev: Math.round(cohP.sql), convGoal: g.sql / g.mql, sub: 'desses MQLs, já agendaram' }, { l: 'OPP', v: coh.opp, prev: Math.round(cohP.opp), convGoal: g.opp / g.sql, sub: 'chegaram a Solucionar' }, { l: 'Venda', v: coh.won, prev: Math.round(cohP.won), convGoal: g.won / g.opp, sub: 'ticket ' + fR(a.tk) }, { l: 'Booking da coorte', v: coh.won * a.tk, prev: cohP.won * pv.tk, money: 1 }];
+    const M12 = range(D.CUR - 11, D.CUR), ser = (fn) => M12.map(i => fn(D.f(sg, i)));
+    const tiles = [['SQL (fluxo)', fN(a.sql), a.sql / (pv.sql * fr) - 1, 'comp.: ' + fN(pv.sql * fr), ser(x => x.sql)], ['OPP (fluxo)', fN(a.opp), a.opp / (pv.opp * fr) - 1, 'comp.: ' + fN(pv.opp * fr), ser(x => x.opp)], ['WON (fluxo)', fN(a.won), a.won / (pv.won * fr) - 1, 'comp.: ' + fN(pv.won * fr), ser(x => x.won)], ['Bookings (MRR won)', fR(a.bk), a.bk / (pv.bk * fr) - 1, 'comp.: ' + fR(pv.bk * fr), ser(x => x.bk)], ['Avg. ticket (MRR)', fR(a.tk), a.tk / pv.tk - 1, 'comp.: ' + fR(pv.tk), ser(x => x.tk)], ['OPP → WON', fP(a.won / a.opp, 1), a.won / a.opp - pv.won / pv.opp, 'comp.: ' + fP(pv.won / pv.opp, 1), ser(x => x.won / x.opp), 1]];
+    /* segmento e canal */
+    const segF = (x) => { const f = D.f(x, c.i); return card(x === 'smb' ? 'SMB' : 'Enterprise', hbars([['Leads', f.leads], ['MQL', f.mql], ['SQL', f.sql], ['OPP', f.opp], ['Venda', f.won]].map(([l, v], j, arr) => ({ l, v, t: fN(v), s: j ? fP(v / arr[j - 1][1], 0) : '' }))) + '<p class="hint">% = conversão da etapa anterior</p>', { r: `<small class="mu">${fR(f.bk)} de booking</small>` }); };
+    const SH = { mql: [.93, .05, .02], sql: [.9, .07, .03], opp: [.88, .08, .04], won: [.82, .13, .05], bk: [.8, .15, .05] };
+    return `${filtersBar({ extra: '<span class="fl">Canal <b style="color:var(--txt);margin-left:4px">Todos</b></span>' })}${sec(1, 'Pace do período', 'No ritmo de hoje, batemos a meta do período?')}
+    <div class="card" style="margin-bottom:12px"><div class="ch" style="margin-bottom:8px"><div><h3>Leitura do período <small style="font-weight:400">contra o mesmo período do mês anterior</small></h3></div><span class="pill mu">Meta: Commit (senão Forecast + motions)</span></div>
+      <div class="chips rd">${chips.map(([t, b, s]) => `<div class="chip ${t}"><b>${b}</b><small>${s}</small></div>`).join('')}</div>
+      <p class="hint" style="margin-top:10px">Etapa mais atrás do pace: <b style="color:var(--txt)">${worst.l}</b>, com ${fP(worst.rp, 0)} do pace.</p></div>
+    ${paceStrip(rows, { refL: c.cur ? 'Hoje' : 'Último dia', vsL: 'mesmo período do mês anterior', metaNome: 'meta' })}
     ${sec(2, 'Evolução contra o pace', 'Quanto precisamos fazer por dia útil daqui até o fim para bater a meta?')}
-    <div class="filters">${seg('pk', stg.map(s => [s, STN[s]]), k)}</div>
-    <div class="g g2">${card(`${STN[k]} acumulado no período`, lineChart({ labels: days.map(d => String(d).padStart(2, '0')), fmt: k === 'bk' ? 'R' : 'N', every: 2, series: [{ name: 'Realizado acumulado', color: '#FF6A00', vals: cum, area: 1 }, { name: 'Pace da meta', color: '#E9E7E1', dash: 1, vals: paceL }, { name: 'Projeção no ritmo atual', color: '#77756F', dash: 1, vals: c.cur ? proj : days.map(() => null), noEnd: !c.cur }] }), { sub: `falta ${k === 'bk' ? fR(Math.max(0, g[k] - acc)) : fN(Math.max(0, g[k] - acc))} · ${k === 'bk' ? fR(Math.max(0, g[k] - acc) / Math.max(1, D.DT - D.DU)) : nf1.format(Math.max(0, g[k] - acc) / Math.max(1, D.DT - D.DU))} por dia útil` })}
-    ${card(`${STN[k]} por dia`, barChart({ labels: days.slice(0, dv.length).map(d => String(d).padStart(2, '0')), fmt: k === 'bk' ? 'R' : 'N', series: [{ name: `${STN[k]} do dia`, color: '#FF6A00', vals: dv }], lines: [{ name: 'Meta por dia útil', color: '#E9E7E1', dash: 1, vals: dv.map(() => g[k] / D.DT) }] }))}</div>
+    ${card(`${STN[k]} acumulado no período`, lineChart({ labels: lab, fmt: money(k) ? 'R' : 'N', h: 300, mark: lastJ, series: [{ name: 'Realizado acumulado', color: '#FF8A3D', vals: cum, area: 1 }, { name: 'Pace da meta', color: '#F3F2EE', dash: 1, vals: paceL }, ...(c.cur ? [{ name: 'Fecha cumprindo a meta diária', color: '#C9B8A6', dash: 1, vals: metaD }, { name: 'Fecha no ritmo atual', color: '#8C8A84', dash: 1, vals: proj }] : [])], bars: { name: 'Volume do dia', color: '#F3F2EE', vals: days.map((_, j) => dv[j] ?? null) } }), { r: `<div class="pills" data-seg="pk">${stg.map(s => `<button data-v="${s}" class="${k === s ? 'on' : ''}">${STN[s]}</button>`).join('')}</div>`, sub: `falta ${F(k, Math.max(0, g[k] - real))} · ${money(k) ? fR(Math.max(0, g[k] - real) / Math.max(1, D.DT - du)) : nf1.format(Math.max(0, g[k] - real) / Math.max(1, D.DT - du))} por dia útil` })}
+    <div style="margin-top:12px">${card(`${STN[k]} por dia`, barChart({ labels: lab.slice(0, dv.length), fmt: money(k) ? 'R' : 'N', h: 230, series: [{ name: `${STN[k]} do dia`, color: '#FF8A3D', vals: dv }], lines: [{ name: 'Meta por dia útil', color: '#F3F2EE', dash: 1, vals: dv.map(() => g[k] / D.DT) }] }), { sub: 'linha = meta por dia útil' })}</div>
     ${sec(3, 'Semana a semana', 'Em qual semana o ritmo caiu?')}
-    ${table([{ k: 'w', l: 'Semana', l2: 1 }, { k: 'du', l: 'Dias úteis' }, ...stg.map(s => ({ k: s, l: STN[s], f: (v, r) => `${s === 'bk' ? fR(v) : fN(v)}<span class="sub">${s === 'bk' ? fR(v / r.du) : nf1.format(v / r.du)}/dia útil</span>`, raw: (v) => Math.round(v) }))], wk, { name: 'semanas' })}
+    <div class="card">${wkT}<div class="tw"><table><thead><tr><th class="l">Etapa</th>${wkHead.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${wkRows}</tbody></table></div></div>
     ${sec(4, 'Resumo SMB e Enterprise', 'Qual segmento puxa o resultado pra baixo?')}
-    <div class="g g2">${['smb', 'ent'].map(x => { const aa = D.f(x, c.i), gg = D.cm(x, c.i); return card(x === 'smb' ? 'SMB · Commit' : 'Enterprise · Forecast', hbars(stg.map(s => ({ l: STN[s], v: aa[s] / (gg[s] * c.pace), t: fP(aa[s] / (gg[s] * c.pace), 0), s: s === 'bk' ? fR(aa[s]) : fN(aa[s]), c: pcol(aa[s] / (gg[s] * c.pace)), mk: null })), { max: 1.3 }), { sub: '% do pace por etapa' }); }).join('')}</div>`;
+    <div class="g g2">${['smb', 'ent'].map(x => { const aa = D.f(x, c.i), gg = D.cm(x, c.i); return card(x === 'smb' ? 'SMB · Commit' : 'Enterprise · Forecast', hbars(stg.map(s => ({ l: STN[s], v: aa[s] / (gg[s] * c.pace), t: fP(aa[s] / (gg[s] * c.pace), 0), s: s === 'bk' ? fR(aa[s]) : fN(aa[s]), c: pcol(aa[s] / (gg[s] * c.pace)), mk: 1 / 1.3 })), { max: 1.3 }), { sub: '% do pace por etapa · traço = 100%' }); }).join('')}</div>
+    ${sec(5, 'Funil do período · coorte', 'Dos leads que entraram no período, quantos já avançaram?')}
+    <div class="card">${funnelViz(fsteps, 'mesma coorte na comparação')}</div>
+    <div class="g g6" style="margin-top:12px">${tiles.map(([l, v, d, sub, sp, pp]) => kpi(l, v, sub, { d, pp, spark: sp })).join('')}</div>
+    ${sec(6, 'Por segmento e por canal', 'Onde o funil vaza: no segmento ou no canal?')}
+    <div class="g g2">${segF('smb')}${segF('ent')}</div>
+    <div style="margin-top:12px">${card('Mix por canal em cada etapa · todos os canais', mixBars(stg.map(s => ({ l: STN[s], sub: F(s, a[s]), parts: SH[s].map(x => x * a[s]) })), ['Digital', 'Outbound', 'Alavancas'], ['#FF8A3D', '#F3F2EE', '#8C8A84']))}</div>
+    ${sec(7, 'Conversões e origem do SQL', 'A conversão entre as etapas está melhorando?')}
+    <div class="tcs">${trendCard('MQL → SQL', M12.map(i => D.months[i].l), ser(x => x.sql / x.mql))}${trendCard('SQL → OPP', M12.map(i => D.months[i].l), ser(x => x.opp / x.sql))}${trendCard('OPP → WON', M12.map(i => D.months[i].l), ser(x => x.won / x.opp))}</div>`;
   },
   ai() { const c = ctx(), a = D.f(S.seg, c.i), g = D.cm(S.seg, c.i); const worst = ['mql', 'sql', 'opp', 'won', 'bk'].map(s => [s, a[s] / (g[s] * c.pace)]).sort((x, y) => x[1] - y[1]);
     return [['#F2766B', `<b>Maior queda: ${STN[worst[0][0]]} em ${fP(worst[0][1], 0)} do pace.</b>`], ['#4CC38A', `<b>Melhor etapa: ${STN[worst[4][0]]}</b>, em ${fP(worst[4][1], 0)} do pace.`], ['#E3A84A', `Para bater a meta de booking, faltam <b>${fR(Math.max(0, g.bk - a.bk))}</b>: ${fR(Math.max(0, g.bk - a.bk) / (D.DT - D.DU))} por dia útil.`]]; }
@@ -1162,31 +1485,63 @@ VND({
 VND({
   id: 'vendas/pipeline', icon: 'layers', name: 'Sales & Pipeline', q: 'Receita do período, pipeline e fechamento previsto',
   render() {
-    const c = ctx(), a = D.f(S.seg, c.i), dl = D.deals.filter(d => S.seg === 'all' || d.sg === S.seg);
-    const pipe = dl.reduce((t, d) => t + d.mrr, 0), fecha = dl.filter(d => d.closeThis).reduce((t, d) => t + d.mrr, 0);
-    return `${filtersBar()}${sec(1, 'Receita do período', 'Quanto já entrou e quanto ainda pode entrar?')}
-    <div class="g g5">${kpi('Booking do período', fR(a.bk), `${fN(a.won)} vendas`)}${kpi('Ticket médio', fR(a.tk), 'MRR por venda')}${kpi('Pipeline aberto', fR(pipe), `${fN(dl.length)} negócios`)}${kpi('Previsto para fechar no mês', fR(fecha), `${fN(dl.filter(d => d.closeThis).length)} negócios`)}${kpi('OPP → WON', fP(a.won / a.opp), 'no período')}</div>
-    <div class="g g2" style="margin-top:12px">${card('Pipe por etapa', hbars(D.STAGES.map(s => { const x = dl.filter(d => d.stage === s); return { l: s, v: x.reduce((t, d) => t + d.mrr, 0), t: fR(x.reduce((t, d) => t + d.mrr, 0)), s: x.length + ' negócios' }; })))}
-    ${card('Pipe por temperatura', hbars(D.TEMPS.map((s, j) => { const x = dl.filter(d => d.temp === s); return { l: s, v: x.reduce((t, d) => t + d.mrr, 0), t: fR(x.reduce((t, d) => t + d.mrr, 0)), s: x.length + ' negócios', c: ['#F2766B', '#E3A84A', '#83A9F0', '#5A5853'][j] }; })))}</div>
-    ${sec(2, 'Top negócios abertos', 'Ranqueados por MRR')}
-    ${table([{ k: 'cli', l: 'Conta', l2: 1 }, { k: 'stage', l: 'Etapa' }, { k: 'temp', l: 'Temperatura', f: (v) => v === 'Quente' ? pill('bad', v) : v === 'Morno' ? pill('warn', v) : v === 'Frio' ? pill('info', v) : pill('mu', v) }, { k: 'owner', l: 'Executivo' }, { k: 'close', l: 'Fechamento' }, { k: 'dOpp', l: 'Dias desde a OPP', f: fN }, { k: 'mrr', l: 'MRR', f: fR }], dl.slice(0, 15), { name: 'pipeline' })}`;
+    const c = ctx(), sg = S.seg, a = D.f(sg, c.i), pv = D.f(sg, c.i - 1), fr = c.cur ? D.DU / D.DT : 1, dl = D.deals.filter(d => sg === 'all' || d.sg === sg);
+    const nm = a.bk * .67, slip = a.bk - nm, WR = { Quente: .42, Morno: .24, Frio: .09, 'Sem temperatura': .17 }, sum = (x) => x.reduce((t, d) => t + d.mrr, 0);
+    const CW = [26, 24, 18, 8, 16, 8], cw = CW.reduce((x, y) => x + y, 0), canais = D.CANAIS_CONV.map((n, j) => { const v = a.bk * CW[j] / cw * (1 + .18 * Math.sin(j * 2.1)), r = pv.bk * fr * CW[j] / cw * (1 + .12 * Math.cos(j * 1.3)); return { l: n, v, ref: r, t: fR(v), s: `antes ${fR(r)} ${dchip(v / r - 1)}` }; }).sort((x, y) => y.v - x.v);
+    const wg = S.wg || 'dia', dly = c.cur ? D.dailyOf(sg, 'bk') : D.BDAYS.map((_, j) => a.bk / D.DT * (1 + .3 * Math.sin(j))), sp = (j) => .58 + .2 * Math.sin(j * 1.9);
+    let wl, wn, ws; if (wg === 'mes') { const M6 = range(c.i - 5, c.i); wl = M6.map(i => D.months[i].l); wn = M6.map(i => D.f(sg, i).bk * .67); ws = M6.map(i => D.f(sg, i).bk * .33); }
+    else if (wg === 'semana') { const W = [[0, 4], [4, 9], [9, 14], [14, 19], [19, 21]].filter(([x]) => x < dly.length); wl = W.map(([x]) => String(D.BDAYS[x]).padStart(2, '0') + '/' + (c.cur ? '11' : '10')); wn = W.map(([x, y]) => dly.slice(x, y).reduce((t, v, k) => t + v * sp(x + k), 0)); ws = W.map(([x, y]) => dly.slice(x, y).reduce((t, v, k) => t + v * (1 - sp(x + k)), 0)); }
+    else { wl = dly.map((_, j) => String(D.BDAYS[j]).padStart(2, '0') + '/' + (c.cur ? '11' : '10')); wn = dly.map((v, j) => v * sp(j)); ws = dly.map((v, j) => v * (1 - sp(j))); }
+    const ae = D.AE.filter(x => sg === 'all' || x.sg === sg), wonL = Array.from({ length: 15 }, (_, j) => ({ cli: `Cliente ${8811 + j * 37}`, ex: ae[(j * 3) % ae.length].n, canal: D.CANAIS_CONV[(j * 5) % 4], dia: `${String(D.BDAYS[Math.min(D.BDAYS.length - 1, (j * 7) % (c.cur ? D.DU : D.DT))]).padStart(2, '0')}/${c.cur ? '11' : '10'}`, mrr: a.tk * (2.3 - j * .09) }));
+    const win = S.win || 'per', inWin = (d) => win === 'all' ? 1 : win === 'venc' ? d.dOpp > 75 && d.stage !== 'Fechar' : win === '7' ? d.closeThis && +d.close.split('/')[0] <= 24 : d.closeThis, wd = dl.filter(inWin);
+    const prevP = a.bk + sum(wd.filter(d => d.temp === 'Quente')) * .6, pond = a.bk + wd.reduce((t, d) => t + d.mrr * WR[d.temp], 0);
+    const rev = [['fechamento vencido', dl.filter(d => d.dOpp > 75 && d.stage !== 'Fechar')], ['fecha em até 7 dias ainda em etapa inicial', dl.filter(d => d.closeThis && d.stage === 'Solucionar' && +d.close.split('/')[0] <= 24)], ['sem temperatura', dl.filter(d => d.temp === 'Sem temperatura')]];
+    const revL = [...new Set([...rev[0][1], ...rev[1][1], ...rev[2][1]])].sort((x, y) => y.mrr - x.mrr).slice(0, 10);
+    const tp = (v) => v === 'Quente' ? pill('bad', v) : v === 'Morno' ? pill('warn', v) : v === 'Frio' ? pill('info', v) : pill('mu', v);
+    return `${filtersBar({ extra: '<span class="fl">Canal <b style="color:var(--txt);margin-left:4px">Todos</b></span>' })}${sec(1, 'Receita do período', 'Quanto vendemos, de onde veio e quanto foi OPP do próprio mês?')}
+    <div class="g g4">${kpi('Bookings (MRR WON)', fR(a.bk), `${fN(a.won)} vendas · comp.: ${fR(pv.bk * fr)}`, { d: a.bk / (pv.bk * fr) - 1 })}${kpi('New MRR (same-month OPP)', fR(nm), `${fP(nm / a.bk, 0)} do booking`)}${kpi('Slipped', fR(slip), 'OPP de meses anteriores')}${kpi('Avg. ticket (MRR)', fR(a.tk), 'comp.: ' + fR(pv.tk), { d: a.tk / pv.tk - 1 })}</div>
+    <div class="g g12" style="margin-top:12px">${card('Ganhos por canal', hbars(canais), { r: '<small class="mu">contra a comparação</small>' })}${card('WON novo × escorregou', barChart({ labels: wl, fmt: 'R', h: 220, stacked: true, totals: true, series: [{ name: 'MRR novo', color: '#FF8A3D', vals: wn }, { name: 'Escorregou', color: '#F3F2EE', vals: ws }] }), { r: `<div class="pills" data-seg="wg">${[['dia', 'Dia'], ['semana', 'Semana'], ['mes', 'Mês']].map(([v, l]) => `<button data-v="${v}" class="${wg === v ? 'on' : ''}">${l}</button>`).join('')}</div>` })}</div>
+    <div style="margin-top:12px">${table([{ k: 'cli', l: 'Negócio', l2: 1 }, { k: 'ex', l: 'Executivo' }, { k: 'canal', l: 'Canal' }, { k: 'dia', l: 'Ganho em' }, { k: 'mrr', l: 'MRR', f: fR }], wonL, { name: 'top-vendas', title: 'Top 15 vendas do período', sub: 'maior MRR' })}</div>
+    ${sec(2, 'Fechamento previsto', 'Quanto vamos fechar até o fim do período com o pipe que existe?')}
+    <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px"><span class="mu" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase">Janela</span><div class="pills" data-seg="win">${[['7', 'Próx. 7 dias'], ['per', 'Período do filtro'], ['venc', 'Vencidos'], ['all', 'Todo o pipe aberto']].map(([v, l]) => `<button data-v="${v}" class="${win === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
+    <div class="g g4">${kpi('Pipe na janela', fR(sum(wd)), `${fN(wd.length)} negócios`)}${kpi('Previsão do período', fR(prevP), `ganho ${fR(a.bk)} + quentes da janela`)}${kpi('Previsão ponderada (histórico)', fR(pond), 'ganho + pipe × taxa de ganho por temperatura (180 dias)')}${kpi('Bookings + full pipeline', fR(a.bk + sum(wd)), 'teto: ganho + todos os abertos da janela')}</div>
+    <div class="g g2" style="margin-top:12px">${card('Por etapa', hbars(D.STAGES.map(st => { const x = wd.filter(d => d.stage === st); return { l: st, v: sum(x), t: fR(sum(x)), s: x.length + ' negócios' }; })))}${card('Por temperatura', hbars(D.TEMPS.map((st, j) => { const x = wd.filter(d => d.temp === st); return { l: st, v: sum(x), t: fR(sum(x)), s: x.length + ' negócios', c: ['#F2766B', '#E3A84A', '#83A9F0', '#8C8A84'][j] }; })))}</div>
+    <div style="margin-top:12px">${table([{ k: 't', l: 'Temperatura', l2: 1, f: (v) => tp(v) }, { k: 'fe', l: 'OPPs fechadas', f: fN }, { k: 'ga', l: 'Ganhos', f: fN }, { k: 'tx', l: 'Taxa de ganho', f: (v) => fP(v, 0) }, { k: 'pi', l: 'Pipe até o fim do período', f: fR }, { k: 'po', l: 'Ponderado', f: fR }], D.TEMPS.map((t, j) => { const fe = [118, 164, 97, 210][j], x = wd.filter(d => d.temp === t); return { t, fe, ga: Math.round(fe * WR[t]), tx: WR[t], pi: sum(x), po: sum(x) * WR[t] }; }), { name: 'taxa-temperatura', title: 'Taxa de ganho por temperatura · últimos 180 dias' })}</div>
+    <div class="card" style="margin-top:12px"><div class="ch"><div><h3>Fechamentos a revisar</h3></div><small class="mu">${fN(dl.length)} negócios abertos</small></div><div class="chips rd" style="margin-bottom:10px">${rev.map(([l, x]) => `<div class="chip"><b>${l}: ${x.length}</b></div>`).join('')}</div>
+    ${table([{ k: 'cli', l: 'Conta', l2: 1 }, { k: 'stage', l: 'Etapa' }, { k: 'owner', l: 'Executivo' }, { k: 'mrr', l: 'MRR', f: fR }, { k: 'close', l: 'Fechamento' }, { k: 'q', l: 'Por que revisar', f: (v, r) => `<span class="mu">${r.dOpp > 75 && r.stage !== 'Fechar' ? 'fechamento vencido' : r.temp === 'Sem temperatura' ? 'sem temperatura' : 'etapa inicial, fecha em 7 dias'}</span>` }], revL, { name: 'revisar' })}</div>
+    ${sec(3, 'Executivos', 'Cada executivo tem pipe para bater a própria meta?')}
+    ${table([{ k: 'n', l: 'Executivo', l2: 1 }, { k: 'bk', l: 'Vendido (MRR)', f: fR }, { k: 'meta', l: 'Meta', f: fR }, { k: 'pm', l: '% da meta', f: (v, r) => fP(r.bk / r.meta, 0) }, { k: 'pp', l: '% do pace', f: (v, r) => `<span style="color:${pcol(r.bk / (r.meta * c.pace))}">${fP(r.bk / (r.meta * c.pace), 0)}</span>` }, { k: 'opp', l: 'OPP', f: fN }, { k: 'od', l: 'OPP/dia útil', f: (v, r) => nf1.format(r.opp / (c.cur ? D.DU : D.DT)) }, { k: 'won', l: 'Ganhos', f: fN }, { k: 'cv', l: 'Conversão', f: (v, r) => fP(r.won / Math.max(1, r.opp), 0) }, { k: 'np', l: 'Deals no pipe', f: (v, r) => fN(dl.filter(d => d.owner === r.n).length) }, { k: 'pa', l: 'Pipe aberto', f: (v, r) => fR(sum(dl.filter(d => d.owner === r.n))) }], ae, { name: 'executivos' })}`;
   }
 });
 VND({
   id: 'vendas/cockpit', icon: 'terminal', name: 'Cockpit de vendas', q: 'O mês do time e de cada pessoa contra o Commit',
   render() {
-    const c = ctx(), t = S.team, a = D.f(t, c.i), g = t === 'smb' ? D.cm('smb', c.i) : D.fc('ent', c.i), team = D.AE.filter(x => x.sg === t);
+    const c = ctx(), t = S.team, a = D.f(t, c.i), pv = D.f(t, c.i - 1), fr = c.cur ? D.DU / D.DT : 1, g = t === 'smb' ? D.cm('smb', c.i) : D.fc('ent', c.i), team = D.AE.filter(x => x.sg === t);
     const days = D.BDAYS; const dv = c.cur ? D.dailyOf(t, 'bk') : days.map(() => a.bk / days.length); let acc = 0; const cum = days.map((_, j) => j < dv.length ? (acc += dv[j]) : null);
-    const dl = D.deals.filter(d => d.sg === t); const venc = dl.filter(d => d.dOpp > 75 && d.stage !== 'Fechar'), q7 = dl.filter(d => d.temp === 'Quente' && d.closeThis), semT = dl.filter(d => d.temp === 'Sem temperatura');
-    return `<div class="card" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px"><span class="logo" style="width:36px;height:36px">${ic('terminal')}</span><div><b style="font-size:14px">Time · Cockpit · ${t === 'smb' ? 'Vendas SMB' : 'Vendas Enterprise'}</b><div class="mu" style="font-size:11px"><span class="up">●</span> ao vivo · ${c.cur ? '17/11/2026' : 'outubro fechado'} · ${team.length} executivos</div></div><div style="margin-left:auto">${seg('team', [['smb', 'Vendas · SMB'], ['ent', 'Vendas · Enterprise']], t)}</div></div>
-    <div class="g g5">${kpi('MRR ganho no mês', fR(a.bk), `${fP(a.bk / g.bk, 0)} da meta`)}${kpi(t === 'smb' ? 'Commit do mês' : 'Forecast do mês', fR(g.bk), `pace hoje ${fR(g.bk * c.pace)}`)}${kpi('Ganhos · ticket', fN(a.won), `ticket ${fR(a.tk)}`)}${kpi('Conversão OPP → ganho', fP(a.won / a.opp, 0), `${fN(a.opp)} OPP no período`)}${kpi('Ciclo mediano', t === 'smb' ? '19 dias' : '47 dias', 'OPP até o ganho · 90 dias')}</div>
-    <div class="g g21" style="margin-top:12px">${card('MRR ganho no mês', lineChart({ labels: days.map(d => String(d).padStart(2, '0')), fmt: 'R', every: 2, series: [{ name: 'Ganho acumulado', color: '#FF6A00', vals: cum, area: 1 }, { name: 'Pace da meta', color: '#E9E7E1', dash: 1, vals: days.map((_, j) => g.bk * (j + 1) / D.DT) }] }), { sub: 'acumulado × pace da meta (dias úteis)' })}
-    ${card('Meta', gauge(a.bk / g.bk, 'da meta do mês', `pace hoje ${fP(c.pace, 0)}`))}</div>
-    <div class="g g2" style="margin-top:12px">${card('Pipe por temperatura', hbars(D.TEMPS.map((s, j) => { const x = dl.filter(d => d.temp === s); return { l: s, v: x.reduce((u, d) => u + d.mrr, 0), t: fR(x.reduce((u, d) => u + d.mrr, 0)), s: x.length + ' deals', c: ['#F2766B', '#E3A84A', '#83A9F0', '#5A5853'][j] }; })), { sub: 'em aberto' })}
-    ${card('Deals que pedem ação', `<div class="g g3">${kpi('Fechamento vencido', fN(venc.length), fR(venc.reduce((u, d) => u + d.mrr, 0)), { cls: 'flat-k' })}${kpi('Quentes no mês', fN(q7.length), fR(q7.reduce((u, d) => u + d.mrr, 0)))}${kpi('Sem temperatura', fN(semT.length), 'preencher depois da reunião')}</div>`)}</div>
-    ${sec(1, 'Por executivo', 'Quem está no pace da meta?')}
-    ${table([{ k: 'n', l: 'Executivo', l2: 1 }, { k: 'bk', l: 'Vendido', f: fR }, { k: 'meta', l: 'Meta', f: fR }, { k: 'pm', l: '% meta', f: (v, r) => fP(r.bk / r.meta, 0) }, { k: 'pp', l: '% pace', f: (v, r) => `<span style="color:${pcol(r.bk / (r.meta * c.pace))}">${fP(r.bk / (r.meta * c.pace), 0)}</span>` }, { k: 'opp', l: 'OPP', f: fN }, { k: 'won', l: 'Ganhos', f: fN }, { k: 'cv', l: 'Conversão', f: (v, r) => fP(r.won / Math.max(1, r.opp), 0) }], team, { name: 'executivos' })}
-    ${sec(2, 'Leitura da IA para o 1:1', '')}
+    const dl = D.deals.filter(d => d.sg === t), sum = (x) => x.reduce((u, d) => u + d.mrr, 0); const venc = dl.filter(d => d.dOpp > 75 && d.stage !== 'Fechar'), q7 = dl.filter(d => d.temp === 'Quente' && d.closeThis), semT = dl.filter(d => d.temp === 'Sem temperatura');
+    const M6 = range(c.i - 5, c.i), tp = (v) => v === 'Quente' ? pill('bad', v) : v === 'Morno' ? pill('warn', v) : v === 'Frio' ? pill('info', v) : pill('mu', v);
+    const coh = M6.map((i, k) => { const opps = Math.round(D.f(t, i).opp * 1.1), open = c.i - i; return { l: D.months[i].l, opps, v: [0, 1, 2, 3].map(j => j <= open ? .14 + j * .035 + .02 * Math.sin(k + j) : null) }; });
+    const lost = D.lostDeals.filter(x => x.sg === t), lc = D.LOSS.slice(0, 4).map(([m]) => [m, lost.filter(x => x.motivo === m).length]), lt = Math.max(1, lost.length);
+    return `<div class="card" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px"><span class="logo" style="width:36px;height:36px">${ic('terminal')}</span><div><b style="font-size:14px">Time · Cockpit · ${t === 'smb' ? 'Vendas · SMB' : 'Vendas · Enterprise'}</b><div class="mu" style="font-size:11px"><span class="up">●</span> LIVE · ${c.cur ? '17/11/2026' : 'outubro fechado'} · ${team.length} executivos</div></div><div style="margin-left:auto;display:flex;gap:10px;align-items:center"><div class="pills" data-seg="team">${[['smb', 'Vendas · SMB'], ['ent', 'Vendas · Enterprise']].map(([v, l]) => `<button data-v="${v}" class="${t === v ? 'on' : ''}">${l}</button>`).join('')}</div><span class="fl">Pessoa <b style="color:var(--txt);margin-left:4px">Todo o time</b></span></div></div>
+    <div class="g g5">${kpi('MRR ganho no mês', fR(a.bk), `vs ${fR(pv.bk * fr)} até o mesmo dia do mês anterior`, { d: a.bk / (pv.bk * fr) - 1 })}${kpi(t === 'smb' ? 'Commit do mês' : 'Forecast do mês', fR(g.bk), `${fP(a.bk / g.bk, 0)} atingido · pace hoje ${fR(g.bk * c.pace)}`)}${kpi('Ganhos · ticket', fN(a.won), `ticket médio ${fR(a.tk)}`)}${kpi('Conversão OPP → ganho', fP(a.won / a.opp, 0), `${fN(a.won)} de ${fN(a.opp)} fechados em 90 dias`)}${kpi('Ciclo mediano', t === 'smb' ? '19 d' : '47 d', 'OPP até o ganho · 90 dias')}</div>
+    <div class="g g21" style="margin-top:12px">${card('MRR ganho no mês', lineChart({ labels: days.map(d => String(d).padStart(2, '0') + '/11'), fmt: 'R', h: 230, series: [{ name: 'Ganho', color: '#FF8A3D', vals: cum, area: 1 }, { name: 'Pace da meta', color: '#F3F2EE', dash: 1, vals: days.map((_, j) => g.bk * (j + 1) / D.DT) }] }), { sub: 'acumulado × pace da meta (dias úteis)' })}
+    ${card('Pipe por temperatura', hbars(D.TEMPS.map((s, j) => { const x = dl.filter(d => d.temp === s); return { l: s, v: sum(x), t: fR(sum(x)), s: `${x.length} deals · ${fP(sum(x) / sum(dl), 0)}`, c: ['#F2766B', '#E3A84A', '#83A9F0', '#8C8A84'][j] }; })), { sub: `${fR(sum(dl))} em aberto` })}</div>
+    <div class="g g3" style="margin-top:12px">${card('Meta', gauge(a.bk / g.bk, 'da meta do mês', `pace hoje ${fP(c.pace, 0)}`), { sub: '% atingido no mês' })}
+    ${card('Coorte de OPP', `<div class="tw"><table><thead><tr><th class="l">Coorte</th><th>OPPs</th><th>M0</th><th>M1</th><th>M2</th><th>M3</th></tr></thead><tbody>${coh.map(r => `<tr><td class="l">${r.l}</td><td>${fN(r.opps)}</td>${r.v.map(v => v == null ? '<td class="mu">–</td>' : `<td><span class="hc" style="${heatO(v - .1, .18)}">${fP(v, 0)}</span></td>`).join('')}</tr>`).join('')}</tbody></table></div>`, { sub: '% ganho até o mês' })}
+    ${card('Vendido por mês', barChart({ labels: M6.map(i => D.months[i].l), fmt: 'R', h: 200, series: [{ name: 'Vendido', color: '#FF8A3D', vals: M6.map(i => D.f(t, i).bk) }], lines: [{ name: 'Meta', color: '#F3F2EE', dash: 1, vals: M6.map(i => (t === 'smb' ? D.cm('smb', i) : D.fc('ent', i)).bk) }] }), { sub: '6 meses + meta' })}</div>
+    <div class="g g2" style="margin-top:12px">${card('Perdas · 90 dias', `<div class="g g4">${lc.map(([m, n]) => `<div class="mini"><b>${fP(n / lt, 0)}</b><span>${m}</span><small>${n} negócios</small></div>`).join('')}</div>`, { sub: 'motivo e peso', r: `<small class="mu">${lost.length} perdas</small>` })}
+    ${card('Higiene e reuniões', `<div class="g g4"><div class="mini bad"><b>${venc.length}</b><span>Fechamento vencido</span><small>${fR(sum(venc))}</small></div><div class="mini"><b>${semT.length}</b><span>Sem data ou temperatura</span><small>preencher no CRM</small></div><div class="mini"><b>${fP(.07, 0)}</b><span>No-show</span><small>16 de 240 reuniões</small></div><div class="mini"><b>58</b><span>Reuniões realizadas</span><small>2 reagendadas</small></div></div>`, { sub: 'pipe e diagnóstico (30 dias)' })}</div>
+    <div style="margin-top:12px">${table([{ k: 'cli', l: 'Conta', l2: 1 }, { k: 'stage', l: 'Etapa' }, { k: 'temp', l: 'Temperatura', f: tp }, { k: 'close', l: 'Fechamento' }, { k: 'dOpp', l: 'Dias desde a OPP', f: fN }, { k: 'mrr', l: 'MRR', f: fR }], [...dl].sort((x, y) => y.mrr - x.mrr).slice(0, 12), { name: 'top-negocios', title: 'Top negócios abertos', sub: 'ranqueados por MRR' })}</div>
+    ${sec(1, 'Contra a média do time', 'Onde o time está acima ou abaixo da própria média?')}
+    <div class="g g4">${kpi('OPP no período', fN(a.opp), `${nf1.format(a.opp / (c.cur ? D.DU : D.DT))} por dia útil`)}${kpi('Conversão', fP(a.won / a.opp, 0), `${fN(a.won)} ganhos · média de 90 dias ${fP(pv.won / pv.opp, 0)}`)}${kpi('Avg. ticket (MRR)', fR(a.tk), 'média do time ' + fR(pv.tk))}${kpi('Pipeline que fecha no período', fR(sum(dl.filter(d => d.closeThis))), `cobre ${fP(sum(dl.filter(d => d.closeThis)) / Math.max(1, g.bk - a.bk), 0)} do que falta`)}</div>
+    ${sec(2, 'Deals que pedem ação', '')}
+    <div class="g g3">${kpi('Fechamento vencido', fN(venc.length), fR(sum(venc)))}${kpi('Quentes no mês', fN(q7.length), fR(sum(q7)))}${kpi('Sem temperatura', fN(semT.length), 'preencher depois da reunião')}</div>
+    <div style="margin-top:12px">${table([{ k: 'cli', l: 'Conta', l2: 1 }, { k: 'stage', l: 'Etapa' }, { k: 'mrr', l: 'MRR', f: fR }, { k: 'close', l: 'Fechamento' }, { k: 'q', l: 'Por quê', f: (v, r) => `<span class="mu">${r.temp === 'Quente' ? 'quente, fecha em até 7 dias' : r.temp === 'Sem temperatura' ? 'sem temperatura' : 'fechamento vencido'}</span>` }], [...venc, ...q7, ...semT].sort((x, y) => y.mrr - x.mrr).slice(0, 10), { name: 'acao' })}</div>
+    ${sec(3, 'Pipe por etapa e vendido por semana', '')}
+    <div class="g g2">${card('Pipe por etapa', hbars(D.STAGES.map(s => { const x = dl.filter(d => d.stage === s); return { l: s, v: sum(x), t: fR(sum(x)), s: x.length + ' deals' }; })))}${card('Vendido por semana', barChart({ labels: ['03/11', '10/11', '17/11', '24/11'], fmt: 'R', h: 200, stacked: true, totals: true, series: [{ name: 'MRR novo', color: '#FF8A3D', vals: [0, 1, 2, 3].map(w => w < 3 ? cum[Math.min(cum.length - 1, w * 5 + 4)] * .22 * (1 + .3 * Math.sin(w)) : null) }, { name: 'Escorregou', color: '#F3F2EE', vals: [0, 1, 2, 3].map(w => w < 3 ? cum[Math.min(cum.length - 1, w * 5 + 4)] * .1 : null) }] }), { sub: 'MRR novo + escorregou' })}</div>
+    ${sec(4, 'Por executivo', 'Quem está no pace da meta?')}
+    ${table([{ k: 'n', l: 'Executivo', l2: 1 }, { k: 'bk', l: 'Vendido', f: fR }, { k: 'meta', l: 'Meta', f: fR }, { k: 'pm', l: '% meta', f: (v, r) => fP(r.bk / r.meta, 0) }, { k: 'pp', l: '% pace', f: (v, r) => `<span style="color:${pcol(r.bk / (r.meta * c.pace))}">${fP(r.bk / (r.meta * c.pace), 0)}</span>` }, { k: 'opp', l: 'OPP', f: fN }, { k: 'won', l: 'Ganhos', f: fN }, { k: 'cv', l: 'Conversão', f: (v, r) => fP(r.won / Math.max(1, r.opp), 0) }, { k: 'tk', l: 'Ticket', f: (v, r) => fR(r.bk / Math.max(1, r.won)) }], team, { name: 'executivos' })}
+    ${sec(5, 'Leitura da IA para o 1:1', '')}
     <div class="card"><button class="btn pri" id="ai11">${ic('spark')}Gerar leitura do time</button><div id="ai11o" style="margin-top:10px"></div></div>`;
   },
   after() { const b = $('#ai11'); if (b) b.onclick = () => { b.disabled = true; $('#ai11o').innerHTML = '<div class="typing"><i></i><i></i><i></i></div>'; setTimeout(() => { const t = D.AE.filter(x => x.sg === S.team).sort((x, y) => y.bk / y.meta - x.bk / x.meta); $('#ai11o').innerHTML = `<div class="ai-l"><ul><li class="in" style="--c:#4CC38A"><b>${t[0].n}</b> lidera com ${fP(t[0].bk / t[0].meta, 0)} da meta. Vale entender o que está funcionando e levar para o time.</li><li class="in" style="--c:#F2766B"><b>${t[t.length - 1].n}</b> está em ${fP(t[t.length - 1].bk / t[t.length - 1].meta, 0)} da meta. Revisar os negócios quentes no 1:1.</li><li class="in" style="--c:#E3A84A">Os negócios sem temperatura escondem o pipe real. Preencher depois de cada reunião.</li></ul></div>`; b.disabled = false; }, 900); }; }
@@ -1235,7 +1590,8 @@ CS({
     <div class="g g21" style="margin-top:12px">${card('MRR da carteira · 12 meses', barChart({ labels: L.map(i => D.months[i].l), fmt: 'R', mark: 11, series: [{ name: 'Expansão', color: '#4CC38A', vals: L.map(i => D.mrr(S.seg, i).expansion * share) }, { name: 'Churn', color: '#F2766B', vals: L.map(i => -D.mrr(S.seg, i).churn * share) }, { name: 'Redução', color: '#E3A84A', vals: L.map(i => -D.mrr(S.seg, i).reduction * share) }] }))}
     ${card('MRR saudável', gauge(sau / Math.max(1, mrrC), 'do MRR em clientes saudáveis', `${fR(sau)} de ${fR(mrrC)}`))}</div>
     <div class="g g2" style="margin-top:12px">${card('Saúde da carteira', hbars(Object.keys(healthC).map(s => { const x = cl.filter(y => y.saude === s); return { l: s, v: x.reduce((t, y) => t + y.mrr, 0), t: fR(x.reduce((t, y) => t + y.mrr, 0)), s: x.length + ' clientes', c: healthC[s] }; })), { sub: 'MRR por faixa' })}
-    ${card('Sinais de atenção', sig.map(([l, v, col]) => `<div class="hb" style="grid-template-columns:1fr auto"><div><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${col};margin-right:8px"></span>${l}</div><div class="vl" style="font-size:16px">${fN(v)}</div></div>`).join(''), { sub: 'o que pede contato esta semana' })}</div>
+    ${card('MRR por plano', hbars(D.PLANOS.map(pl => { const x = cl.filter(y => y.plano === pl); return { l: pl, v: x.reduce((t, y) => t + y.mrr, 0), t: fR(x.reduce((t, y) => t + y.mrr, 0)), s: x.length + ' clientes' }; }).sort((x, y) => y.v - x.v).slice(0, 8)), { sub: 'planos da carteira' })}</div>
+    <div class="card" style="margin-top:12px"><div class="ch"><div><h3>Sinais de atenção</h3><small>o que pede contato esta semana</small></div></div><div class="g g5">${sig.map(([l, v, col]) => `<div class="mini" style="border-bottom-color:${col}"><b style="color:${col}">${fN(v)}</b><span>${l}</span></div>`).join('')}</div></div>
     ${sec(1, 'Top clientes', 'Ranqueados por MRR, com a próxima ação')}
     ${table([{ k: 'n', l: 'Cliente', l2: 1 }, { k: 'plano', l: 'Plano' }, { k: 'saude', l: 'Saúde', f: hp }, { k: 'score', l: 'Score' }, { k: 'csm', l: 'CSM' }, { k: 'acao', l: 'Próxima ação' }, { k: 'mrr', l: 'MRR', f: fR }], cl.slice(0, 14), { name: 'top-clientes' })}`;
   }
@@ -1273,10 +1629,27 @@ CS({
 CS({
   id: 'cs/churn', icon: 'refresh', name: 'Churn & Retention', q: 'Quanto saiu, por quê e o que foi retido',
   render() {
-    const c = ctx(), m = D.mrr(S.seg, c.i), L = last12(c.i);
-    return `${filtersBar()}<div class="g g5">${kpi('Churn de MRR', fR(m.churn), fP(-m.churn / m.start, 2) + ' do Starting MRR', { color: '#F2766B' })}${kpi('Churn de logos', fN(m.lostCli), fP(m.lostCli / m.cliStart, 2) + ' dos clientes')}${kpi('GRR do mês', fP((m.start + m.reduction + m.churn) / m.start), 'sem expansão')}${kpi('NRR do mês', fP((m.start + m.expansion + m.reduction + m.churn) / m.start), 'com expansão')}${kpi('Cancelamentos revertidos', fN(Math.round(m.lostCli * .38)), 'pela retenção')}</div>
-    <div class="g g2" style="margin-top:12px">${card('Churn de MRR · % do Starting', lineChart({ labels: L.map(i => D.months[i].l), fmt: 'P', min0: false, series: [{ name: 'Churn %', color: '#F2766B', vals: L.map(i => { const x = D.mrr(S.seg, i); return -x.churn / x.start / (i === D.CUR ? D.PACE : 1); }) }, { name: 'Limite do Budget', color: '#E9E7E1', dash: 1, vals: L.map(i => -D.mrrB(S.seg, i).churn / D.mrr(S.seg, i).start) }], mark: 11 }) + '<p class="hint">Mês atual anualizado pelo ritmo dos dias úteis.</p>')}
-    ${card('Motivos de churn', hbars([['Baixo uso do produto', 27], ['Preço', 19], ['Migrou para concorrente', 16], ['Fechou a empresa', 13], ['Insatisfação com suporte', 9], ['Mudança de estratégia', 9], ['Sem retorno', 7]].map(([l, w]) => ({ l, v: w, t: fP(w / 100, 0), c: '#F2766B' }))), { sub: 'MRR cancelado nos últimos 90 dias' })}</div>`;
+    const c = ctx(), sg = S.seg, m = D.mrr(sg, c.i), p = D.mrr(sg, c.i - 1), est = isEst(), L = range(c.i - 12, c.i), lab = L.map(i => D.months[i].l), MM = (i) => D.mrr(sg, i);
+    const rev = (x) => Math.abs(x.churn) * .18, net = (x) => x.churn + x.reduction, grr = (x) => (x.start + x.reduction + x.churn) / x.start, nrr = (x) => (x.start + x.expansion + x.reduction + x.churn) / x.start, nn = (x) => x.bookings + x.expansion + x.reduction + x.churn;
+    const tiles = [['Ending MRR', fR(m.end), m.end / p.end - 1, 1, 'comp.: ' + fR(p.end)], ['Net churn', fR(net(m)), net(m) / net(p) - 1, -1, `bruto ${fR(m.churn - rev(m))} · revertido ${fR(rev(m))}`], ['Net churn %', fP(-net(m) / m.start, 2), -net(m) / m.start + net(p) / p.start, -1, 'sobre o Starting MRR', 1], ['GRR', fP(grr(m), 1), grr(m) - grr(p), 1, 'comp.: ' + fP(grr(p), 1), 1], ['NRR', fP(nrr(m), 1), nrr(m) - nrr(p), 1, 'comp.: ' + fP(nrr(p), 1), 1], ['Net new MRR', fR(nn(m)), nn(m) / Math.abs(nn(p)) - 1, 1, 'comp.: ' + fR(nn(p))]];
+    const ponte = [['Starting MRR', m.start, p.start, 'hl'], ['New MRR (billed)', m.bookings, p.bookings], ['Expansion', m.expansion, p.expansion], ['Reactivation', 0, 0], ['Reduction', m.reduction, p.reduction], ['Gross Churn', m.churn - rev(m), p.churn - rev(p)], ['Reversed Churn', rev(m), rev(p)], ['Ending MRR', m.end, p.end, 'hl'], ['One-shot', m.oneshot, p.oneshot], ['Bookings (billed)', m.bookings, p.bookings]];
+    const pT = regT(['Movimento', 'Atual', 'Comparação'], ponte.map(r => [r[0], Math.round(r[1]), Math.round(r[2])]), 'ponte-de-mrr');
+    const f = D.mrrF(sg, c.i), bg = D.mrrB(sg, c.i), afb = [['Net Churn', net(m), net(f), net(bg)], ['Ending MRR', m.end, f.end ?? m.start + nn(f), bg.end ?? m.start + nn(bg)], ['Net New MRR', nn(m), nn(f), nn(bg)]];
+    const top = D.clients.filter((_, j) => j % 7 === 3).slice(0, 15).map(x => ({ n: x.n, v: -x.mrr * (.6 + (x.score % 7) / 10) })).sort((a, b) => a.v - b.v);
+    const porPlano = D.PLANOS.map((pl, j) => { const cl = D.clients.filter(x => x.plano === pl), cart = cl.reduce((t, x) => t + x.mrr, 0) * 9; const ch = -cart * (.006 + (j % 4) * .007); return { pl, ch, n: Math.max(1, Math.round(cl.length * .2)), cart, tx: -ch / cart }; }).sort((a, b) => a.ch - b.ch);
+    const evo = [['Starting MRR', x => fR(x.start)], ['Gross Churn', x => fR(x.churn - rev(x))], ['Reversed Churn', x => fR(rev(x))], ['Net Churn', x => fR(net(x))], ['Net Churn %', x => fP(-net(x) / x.start, 2)], ['Reduction', x => fR(x.reduction)], ['GRR', x => fP(grr(x), 1)], ['NRR', x => fP(nrr(x), 1)], ['Ending MRR', x => fR(x.end)]], L6 = L.slice(-6);
+    return `${filtersBar()}<div class="g g6">${tiles.map(([l, v, d, good, sub, pp]) => kpi(l, v, sub, { d, good, pp })).join('')}</div>
+    <div class="g g2" style="margin-top:12px">
+      ${card('Ponte de MRR do período', `<div class="card flat">${pT}<div class="tw"><table><thead><tr><th class="l">Movimento</th><th>Atual</th><th>Comparação</th></tr></thead><tbody>${ponte.map(r => `<tr class="${r[3] || ''}"><td class="l">${r[3] ? `<b>${r[0]}</b>` : r[0]}</td><td>${fR(r[1])}</td><td class="mu">${fR(r[2])}</td></tr>`).join('')}<tr><td class="l">Churn líquido %</td><td>${fP(-net(m) / m.start, 2)}</td><td class="mu">${fP(-net(p) / p.start, 2)}</td></tr><tr><td class="l">GRR</td><td>${fP(grr(m), 1)}</td><td class="mu">${fP(grr(p), 1)}</td></tr><tr><td class="l">NRR</td><td>${fP(nrr(m), 1)}</td><td class="mu">${fP(nrr(p), 1)}</td></tr></tbody></table></div></div>`, { r: `<small class="mu">${D.months[c.i].l} vs ${D.months[c.i - 1].l}</small>` })}
+      ${card(`Actual × Forecast × Budget · ${D.months[c.i].l}`, `<div class="tw"><table><thead><tr><th class="l">Métrica</th><th>Real</th><th>Forecast</th><th>Gap FCT</th><th>Budget</th><th>Gap BGT</th><th>% BGT</th></tr></thead><tbody>${afb.map(([n, r, fc, b]) => `<tr><td class="l">${n}</td><td>${fR(r)}</td><td>${fR(fc)}</td><td class="${r - fc >= 0 ? 'up' : 'dn'}">${fR(r - fc, true)}</td><td>${est ? fR(b) : '<span class="mu">restrito</span>'}</td><td class="${r - b >= 0 ? 'up' : 'dn'}">${est ? fR(r - b, true) : '—'}</td><td>${est ? fP(r / b, 0) : '—'}</td></tr>`).join('')}</tbody></table></div><p class="hint">Mês atual ainda parcial: o real vai crescendo até o fechamento.</p>`, { r: '<small class="mu">total</small>' })}
+    </div>
+    <div style="margin-top:12px">${card('Ponte de MRR do período', waterfall([{ l: 'Starting MRR', v: m.start, total: 1 }, { l: 'New MRR', v: m.bookings }, { l: 'Expansion', v: m.expansion }, { l: 'Reactivation', v: 0 }, { l: 'Reduction', v: m.reduction }, { l: 'Net Churn', v: m.churn }, { l: 'Outros', v: m.end - (m.start + m.bookings + m.expansion + m.reduction + m.churn) }, { l: 'Ending MRR', v: m.end, total: 1 }], 'R', 270), { r: `<small class="mu">${D.months[c.i].l}</small>` })}</div>
+    <div class="g g2" style="margin-top:12px">${card('Ending MRR · 13 meses', lineChart({ labels: lab, fmt: 'R', min0: false, h: 220, series: [{ name: 'Ending MRR', color: '#FF8A3D', vals: L.map(i => MM(i).end) }] }))}${card('NRR e GRR · 13 meses', lineChart({ labels: lab, fmt: 'P', min0: false, h: 220, series: [{ name: 'NRR', color: '#FF8A3D', vals: L.map(i => nrr(MM(i))) }, { name: 'GRR', color: '#F3F2EE', vals: L.map(i => grr(MM(i))), noEnd: 1 }] }))}</div>
+    <div style="margin-top:12px">${card('Logo churn × revenue churn · 13 meses', barChart({ labels: lab, h: 240, series: [{ name: 'Logos perdidos', color: '#F2766B', vals: L.map(i => MM(i).lostCli) }] }) + `<div class="tw" style="margin-top:6px"><table><thead><tr><th class="l"></th>${L.slice(-8).map(i => `<th>${D.months[i].l}</th>`).join('')}</tr></thead><tbody><tr><td class="l">Logos perdidos</td>${L.slice(-8).map(i => `<td>${fN(MM(i).lostCli)}</td>`).join('')}</tr><tr><td class="l">Churn líquido (MRR)</td>${L.slice(-8).map(i => `<td>${fR(net(MM(i)))}</td>`).join('')}</tr><tr><td class="l">MRR médio por logo perdido</td>${L.slice(-8).map(i => `<td>${fR(MM(i).churn / Math.max(1, MM(i).lostCli))}</td>`).join('')}</tr><tr><td class="l">Revenue churn %</td>${L.slice(-8).map(i => `<td>${fP(-net(MM(i)) / MM(i).start, 2)}</td>`).join('')}</tr></tbody></table></div>`, { r: '<small class="mu">quantidade de clientes e MRR</small>' })}</div>
+    <div class="g g21" style="margin-top:12px">${card('Evolução mensal · 6 meses', `<div class="tw"><table><thead><tr><th class="l">Métrica</th>${L6.map(i => `<th>${D.months[i].l}</th>`).join('')}</tr></thead><tbody>${evo.map(([n, fn]) => `<tr><td class="l">${n}</td>${L6.map(i => `<td>${fn(MM(i))}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`)}
+      ${card('Top 15 churn', `<div class="tw"><table><thead><tr><th class="l">Cliente</th><th>MRR</th></tr></thead><tbody>${top.map(x => `<tr><td class="l">${x.n}</td><td class="dn">${fR(x.v)}</td></tr>`).join('')}</tbody></table></div>`, { r: '<small class="mu">churn líquido</small>' })}</div>
+    <div class="g g2" style="margin-top:12px">${card('Churn por plano', `<div class="tw"><table><thead><tr><th class="l">Plano</th><th>Churn</th><th>Clientes</th><th>Carteira do plano</th><th>Taxa</th></tr></thead><tbody>${porPlano.map(x => `<tr><td class="l">${x.pl}</td><td class="dn">${fR(x.ch)}</td><td>${x.n}</td><td>${fR(x.cart)}</td><td style="color:${x.tx > .03 ? 'var(--bad-ink)' : 'var(--fg-2)'};font-weight:600">${fP(x.tx, 1)}</td></tr>`).join('')}</tbody></table></div>`, { r: `<small class="mu">${D.months[c.i].l}</small>` })}
+      ${card('Motivos de churn', hbars([['Baixo uso do produto', 27], ['Preço', 19], ['Migrou para concorrente', 16], ['Fechou a empresa', 13], ['Insatisfação com suporte', 9], ['Mudança de estratégia', 9], ['Sem retorno', 7]].map(([l, w]) => ({ l, v: w, t: fP(w / 100, 0), c: '#F2766B' }))), { sub: 'MRR cancelado nos últimos 90 dias' })}</div>`;
   }
 });
 CS({ id: 'cs/atendimento', icon: 'headset', navName: 'Atendimento', name: 'Atendimento ao cliente', tag: 'EM OBRA', q: 'Em construção', render: () => `<div class="lockpage"><div>${ic('headset')}<b>Tela em construção</b>No produto real, esta área está marcada como "em obra" no menu. Ela entra quando a fonte de atendimento for conectada.</div></div>` });
@@ -1337,12 +1710,29 @@ RV({
 RV({
   id: 'receita', icon: 'dollar', name: 'Consolidado', q: 'A jornada inteira, do lead à carteira',
   render() {
-    const c = ctx(), a = D.f(S.seg, c.i), m = D.mrr(S.seg, c.i), stg = [['Leads', a.leads], ['MQL', a.mql], ['SQL', a.sql], ['OPP', a.opp], ['WON', a.won]];
-    return `${filtersBar()}${sec(1, 'A jornada inteira', 'Do lead que chegou ao MRR que ficou na carteira')}
-    <div class="card"><div class="fun">${stg.map(([l, v], j) => `<div class="st"><div class="l">${l}</div><div class="v">${fN(v)}</div>${j ? `<div class="cv">${fP(v / stg[j - 1][1], 0)} da etapa anterior</div>` : '<div class="s">entraram no período</div>'}</div>`).join('')}</div>
-    <div class="g g4" style="margin-top:12px">${kpi('Bookings', fR(m.bookings), `${fN(a.won)} clientes novos`)}${kpi('Base movimentada', fR(m.expansion + m.reduction + m.churn, true), 'expansão, redução e churn')}${kpi('Ending MRR', fR(m.end), `${fD(m.end / m.start - 1)} no mês`)}${kpi('Clientes ativos', fN(m.clients), `${fN(m.newCli)} entraram · ${fN(m.lostCli)} saíram`)}</div></div>
-    ${sec(2, 'Lead → MRR em 12 meses', 'O topo do funil e a base crescem juntos?')}
-    ${card('', lineChart({ labels: last12(c.i).map(i => D.months[i].l), min0: false, fmt: 'R', series: [{ name: 'Ending MRR', color: '#FF6A00', vals: last12(c.i).map(i => D.mrr(S.seg, i).end), area: 1 }], mark: 11 }))}`;
+    const c = ctx(), sg = S.seg, a = D.f(sg, c.i), pv = D.f(sg, c.i - 1), m = D.mrr(sg, c.i), p = D.mrr(sg, c.i - 1), fr = c.pace, est = isEst(), L = range(c.i - 12, c.i), lab = L.map(i => D.months[i].l), MM = (i) => D.mrr(sg, i);
+    const Y = range(12, c.i), yr = (k) => Y.reduce((t, i) => t + D.f(sg, i)[k], 0), mY = (k) => Y.reduce((t, i) => t + MM(i)[k], 0), start0 = MM(12).start;
+    const entrou = mY('bookings') + mY('expansion'), saiu = mY('reduction') + mY('churn'), cli0 = MM(12).cliStart;
+    const nn = (x) => x.bookings + x.expansion + x.reduction + x.churn, cpm = mediaSum(c.i, sg);
+    const metas = [['Bookings vs Forecast (com motions)', fP(a.bk / (D.fc(sg, c.i).bk * fr), 0), `${fR(a.bk)} de ${fR(D.fc(sg, c.i).bk)} no mês`], ['Bookings vs Budget', est ? fP(a.bk / (D.bg(sg, c.i).bk * fr), 0) : 'restrito', est ? `${fR(D.bg(sg, c.i).bk)} no Budget` : 'só no nível estratégico'], ['Media spend', fR(cpm.inv), `${fP(cpm.inv / (mediaSum(c.prev, sg).inv * fr), 0)} do mês anterior no ritmo`], ['CAC de mídia', fR(cpm.inv / Math.max(1, a.won * .58)), 'investimento ÷ vendas de mídia'], ['MQL → SQL', fP(a.sql / a.mql, 1), `meta ${fP(D.cm(sg, c.i).sql / D.cm(sg, c.i).mql, 1)}`], ['SQL → OPP', fP(a.opp / a.sql, 1), `meta ${fP(D.cm(sg, c.i).opp / D.cm(sg, c.i).sql, 1)}`], ['OPP → WON', fP(a.won / a.opp, 1), `meta ${fP(D.cm(sg, c.i).won / D.cm(sg, c.i).opp, 1)}`], ['Payback da mídia', nf1.format(cpm.inv / Math.max(1, a.bk * .58)) + ' meses', 'investimento ÷ MRR de mídia']];
+    const bkm = S.bkm || 'bk', BK = { bk: ['Bookings', x => D.f(sg, x).bk, x => D.fc(sg, x).bk, x => D.bg(sg, x).bk], exp: ['Expansion', x => MM(x).expansion, x => D.mrrF(sg, x).expansion, x => D.mrrB(sg, x).expansion], nn: ['Net New MRR', x => nn(MM(x)), x => nn(D.mrrF(sg, x)), x => nn(D.mrrB(sg, x))] }, B = BK[bkm];
+    const OT = [['Créditos avulsos', .34], ['Consultoria', .22], ['Setup de implantação', .18], ['Treinamento', .11], ['Templates e automações', .09], ['Outros', .06]];
+    const plC = D.PLANOS.map(pl => ({ pl, v: D.clients.filter(x => x.plano === pl && (sg === 'all' || x.sg === sg)).reduce((t, x) => t + x.mrr, 0) * 11 })).sort((x, y) => y.v - x.v);
+    return `${filtersBar()}${sec(1, 'Jornada completa · do lead à carteira', 'Do lead que chegou ao MRR que ficou: a base cresce, ou o churn come o que entra?')}
+    <div class="g g4">${kpi('Carteira ativa hoje', fR(m.end), `${fN(m.clients)} clientes · ${fD(m.end / start0 - 1)} desde ${D.months[12].l}`)}${kpi('Entrou no ano', '+' + fR(entrou), 'bookings + expansão', { color: 'var(--good-ink)' })}${kpi('Saiu no ano', fR(saiu), 'redução + churn', { color: 'var(--bad-ink)' })}${kpi('Ritmo de saída', fP(-saiu / entrou, 1), 'do que entra, quanto sai no ano')}</div>
+    <div class="g g31" style="margin-top:12px">${card('Funil completo · do lead ao cliente de hoje', hourglass([{ l: 'Leads', v: yr('leads') }, { l: 'MQL', v: yr('mql') }, { l: 'SQL', v: yr('sql') }, { l: 'OPP', v: yr('opp') }, { l: 'Vendas', v: yr('won') }], [{ l: 'MRR vendido', v: mY('bookings'), money: 1, sub: 'bookings do ano' }, { l: 'Expansão', v: mY('expansion'), money: 1, sub2: '+ upsell', tone: 'up' }, { l: 'Churn + redução', v: saiu, money: 1, sub2: fP(-saiu / start0, 1) + ' da base', tone: 'down' }, { l: 'Carteira hoje', v: m.end, money: 1, sub: fN(m.clients) + ' clientes' }]), { r: `<small class="mu">${D.months[12].l} a ${D.months[c.i].l}</small>` })}
+      <div class="card"><div class="ch"><div><h3>O lado dos clientes aparece no lead</h3></div></div><p style="font-size:12.5px;color:var(--fg-2);line-height:1.6">Para seguir as mesmas vendas até hoje, a ampulheta junta as duas pontas: a aquisição afunila até a venda e, depois dela, a base expande ou sai. Se o churn come o que entra, a carteira para de crescer mesmo com o funil cheio.</p><div class="sstat" style="margin-top:12px"><div><span>Clientes no início</span><b>${fN(cli0)}</b></div><div><span>Clientes hoje</span><b>${fN(m.clients)}</b></div></div></div></div>
+    <div class="g g2" style="margin-top:12px">${card(`Carteira total · ${D.months[12].l} a ${D.months[c.i].l}`, waterfall([{ l: 'Início', v: start0, total: 1 }, { l: 'Vendas', v: mY('bookings') }, { l: 'Expansão', v: mY('expansion') }, { l: 'Redução', v: mY('reduction') }, { l: 'Churn', v: mY('churn') }, { l: 'Hoje', v: m.end, total: 1 }], 'R', 250))}${card('Entrou × saiu · por mês', lineChart({ labels: lab, fmt: 'R', h: 250, series: [{ name: 'Entrou (vendas + expansão)', color: '#4CC38A', vals: L.map(i => MM(i).bookings + MM(i).expansion) }, { name: 'Saiu (churn + redução)', color: '#F2766B', vals: L.map(i => -(MM(i).churn + MM(i).reduction)) }] }))}</div>
+    ${sec(2, 'Receita do período', 'Quanto vendemos, de onde veio e quanto foi OPP do próprio mês?')}
+    <div class="g g6">${kpi('Bookings (MRR won)', fR(a.bk), 'comp.: ' + fR(pv.bk * fr), { d: a.bk / (pv.bk * fr) - 1 })}${kpi('WON', fN(a.won), 'comp.: ' + fN(pv.won * fr), { d: a.won / (pv.won * fr) - 1 })}${kpi('Avg. ticket (MRR)', fR(a.tk), 'comp.: ' + fR(pv.tk), { d: a.tk / pv.tk - 1 })}${kpi('Net New MRR', fR(nn(m)), 'bookings + expansão − redução − churn', { d: nn(m) / Math.abs(nn(p)) - 1 })}${kpi('Total revenue', fR(m.end + m.oneshot), 'MRR + one-shot do mês')}${kpi('Net revenue', fR(m.end + m.oneshot + m.churn), 'depois do churn')}</div>
+    <div class="card" style="margin-top:12px"><div class="ch"><div><h3>Metas do mês, conversões e custo</h3></div><small class="mu">${D.months[c.i].l} · ${c.dia}</small></div><div class="sstat">${metas.map(([l, v, s]) => `<div><span>${l}</span><b>${v}</b><small>${s}</small></div>`).join('')}</div></div>
+    <div class="card" style="margin-top:12px"><div class="ch"><div><h3>${B[0]} por mês · real × Forecast × Budget</h3></div><div class="pills" data-seg="bkm">${Object.entries(BK).map(([k, x]) => `<button data-v="${k}" class="${bkm === k ? 'on' : ''}">${x[0]}</button>`).join('')}</div></div>
+      <div class="g g4" style="margin-bottom:10px">${kpi('Ano até agora', fR(Y.reduce((t, i) => t + B[1](i), 0)), 'real, com o mês parcial')}${kpi('Forecast do ano', fR(Y.reduce((t, i) => t + B[2](i), 0)), 'jan a ' + D.months[c.i].l)}${kpi('Budget do ano', est ? fR(Y.reduce((t, i) => t + B[3](i), 0)) : 'restrito', est ? fP(Y.reduce((t, i) => t + B[1](i), 0) / Y.reduce((t, i) => t + B[3](i), 0), 0) + ' atingido' : 'só no nível estratégico')}${kpi('Média mensal', fR(Y.reduce((t, i) => t + B[1](i), 0) / Y.length), Y.length + ' meses')}</div>
+      ${barChart({ labels: lab, fmt: 'R', h: 260, mark: 12, hatchFrom: c.cur ? 12 : null, series: [{ name: B[0] + ' realizado', color: '#FF8A3D', vals: L.map(i => B[1](i)) }], lines: [{ name: 'Forecast', color: '#F3F2EE', vals: L.map(i => B[2](i)) }, ...(est ? [{ name: 'Budget', color: '#8C8A84', dash: 1, vals: L.map(i => B[3](i)) }] : [])] })}</div>
+    ${sec(3, 'One-shot por tipo', 'O que entra fora do MRR?')}
+    <div class="g g2">${card('One-shot do período por tipo', hbars(OT.map(([l, w]) => ({ l, v: m.oneshot * w, t: fR(m.oneshot * w), s: fP(w, 0) }))), { r: `<small class="mu">${fR(m.oneshot)}</small>` })}${card('One-shot por tipo · 13 meses', barChart({ labels: lab, fmt: 'R', h: 220, stacked: true, series: OT.slice(0, 4).map(([l, w], j) => ({ name: l, color: ['#FF8A3D', '#F3F2EE', '#C9B8A6', '#8C8A84'][j], vals: L.map(i => MM(i).oneshot * w) })) }))}</div>
+    ${sec(4, 'Carteira por plano', 'Onde está o MRR da base?')}
+    ${card(`Ending MRR por plano · ${D.months[c.i].l}`, hbars(plC.map(x => ({ l: x.pl, v: x.v, t: fR(x.v), s: fP(x.v / plC.reduce((t, y) => t + y.v, 0), 0) }))))}`;
   }
 });
 RV({
@@ -1599,7 +1989,7 @@ function openTV() {
   el.innerHTML = `<div class="tv-top"><span class="logo">${ic('pulse')}</span><div class="t"><small>Pulsar · Vendas SMB</small><b>Placar de novembro/26</b></div><div class="tv-tabs">${TVLIST.map(([k, n]) => `<button data-tv="${k}">${n}</button>`).join('')}</div><button class="tb" id="tvP" aria-label="Pausar">${ic('pause')}</button><div class="mu" style="font-size:11px;text-align:right;line-height:1.2"><b style="color:var(--txt);font-size:15px">${D.DT - D.DU}</b> dias úteis<br>restantes</div><div class="clock" id="tvC"></div><button class="tb" id="tvX">${ic('x')}<span class="t">Sair</span></button></div><div class="tv-prog"><i id="tvPr"></i></div><div class="tv-body"><div class="tv-main" id="tvM"></div><div class="tv-side"><h4>Últimas vendas ${pill('ok', '● ao vivo')}</h4><div class="g g2" style="margin-bottom:10px"><div class="box" style="padding:10px"><div class="l">Hoje</div><div class="v" style="font-size:20px">${fR(D.dailyOf('smb', 'bk')[D.DU - 1])}</div></div><div class="box" style="padding:10px"><div class="l">No mês</div><div class="v" style="font-size:20px">${fR(D.f('smb', D.CUR).bk)}</div></div></div><div class="list">${SALES.slice(0, 9).map(s => `<div class="sale"><span class="av" style="background:${s.c}">${D.ini(s.n)}</span><div><b>${s.n}</b><small>${s.d}/11 · ${s.ch}</small></div><span class="v">+${fR(s.v)}</span></div>`).join('')}</div></div></div>`;
   document.body.appendChild(el);
   TVS = { k: 0, t0: Date.now(), paused: false, D: 10000 };
-  const show = (k) => { TVS.k = k; TVS.t0 = Date.now(); $('#tvM').innerHTML = tvMain(TVLIST[k][0]); $$('[data-tv]', el).forEach((b, j) => b.classList.toggle('on', j === k)); requestAnimationFrame(() => $$('.bar i[data-w]', el).forEach(b => b.style.width = b.dataset.w + '%')); };
+  const show = (k) => { TVS.k = k; TVS.t0 = Date.now(); $('#tvM').innerHTML = tvMain(TVLIST[k][0]); requestAnimationFrame(() => fitCharts($('#tvM'))); $$('[data-tv]', el).forEach((b, j) => b.classList.toggle('on', j === k)); requestAnimationFrame(() => $$('.bar i[data-w]', el).forEach(b => b.style.width = b.dataset.w + '%')); };
   $$('[data-tv]', el).forEach((b, j) => b.onclick = () => show(j));
   $('#tvX').onclick = closeTV;
   $('#tvP').onclick = () => { TVS.paused = !TVS.paused; $('#tvP').innerHTML = ic(TVS.paused ? 'play' : 'pause'); TVS.t0 = Date.now() - (TVS.el || 0); };
