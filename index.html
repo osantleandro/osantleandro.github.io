@@ -808,7 +808,7 @@ const toaster=el=>(t,s,ic='check')=>{el.innerHTML=icon(ic)+'<div>'+t+(s?`<small>
 const demo = $('#ygg'), page = $('#yPage'), tEl = $('#yToast');
 const yt = (t, s, i = 'check') => { tEl.innerHTML = icon(i) + '<div>' + t + (s ? `<small>${s}</small>` : '') + '</div>'; tEl.classList.add('show'); clearTimeout(tEl._t); tEl._t = setTimeout(() => tEl.classList.remove('show'), 2800); };
 const fmt = (n) => Math.round(n).toLocaleString('pt-BR');
-const PF = { EL: { n: 'Entrelinhas', c: '#1E8E5A' }, RP: { n: 'Retrato do Poder', c: '#D23B2E' }, EN: { n: 'Encarte', c: '#E8730C' }, OI: { n: 'Opiniões Impopulares', c: '#7C4DDB' }, LS: { n: 'Leandro Santana', c: '#3B5BDB' } };
+const PF = { EL: { n: 'Arquibancada', c: '#1E8E5A' }, RP: { n: 'Panorama', c: '#D23B2E' }, EN: { n: 'Faixa Bônus', c: '#E8730C' }, OI: { n: 'Contraponto', c: '#7C4DDB' }, LS: { n: 'Leandro Santana', c: '#3B5BDB' } };
 const ST = [['ras', 'Rascunho', 'pencil'], ['rev', 'Em revisão', 'redo'], ['agu', 'Aguardando aprovação', 'thumb'], ['age', 'Agendado', 'cal'], ['pub', 'Publicado', 'check'], ['rep', 'Reprovado', 'x']];
 const SC = { ras: '#8B8F98', rev: '#2F5BD6', agu: '#B8570F', age: '#7B5CF0', pub: '#1C7C54', rep: '#C62828' };
 const av = (p, s = 26) => `<span class="y-av" style="background:${PF[p].c};width:${s}px;height:${s}px">${p}</span>`;
@@ -820,15 +820,15 @@ const SLOTS = ['18 nov · 12:00', '18 nov · 18:30', '19 nov · 12:30', '19 nov 
 let posts = [
   { id: 1, p: 'LS', t: 'LinkedIn: como estamos no mês? (painel com IA)', f: 'Post', s: 'agu', d: '1 dez' },
   { id: 2, p: 'RP', t: 'Como um projeto vira lei: o caminho em 5 etapas', f: 'Vídeo', s: 'agu', d: '2 dez' },
-  { id: 3, p: 'OI', t: 'Vikings é top 10 da história. E eu sustento', f: 'Vídeo narrado', s: 'ras', d: '—', work: 'Thor produzindo' },
+  { id: 3, p: 'OI', t: 'A série que todo mundo largou merece outra chance', f: 'Vídeo narrado', s: 'ras', d: '—', work: 'Thor produzindo' },
   { id: 4, p: 'EN', t: 'Um disco, uma história: o lado B que virou hino', f: 'Carrossel', s: 'ras', d: '—' },
   { id: 5, p: 'EL', t: 'O que o convidado quis dizer com aquela resposta', f: 'Reels', s: 'rev', d: '—', work: 'Thor revisando' },
-  { id: 6, p: 'EL', t: 'Juca Kfouri queria um narrador que não gritasse gol', f: 'Reels', s: 'age', d: '17 nov · 12:30' },
+  { id: 6, p: 'EL', t: 'O narrador que não gritava gol', f: 'Reels', s: 'age', d: '17 nov · 12:30' },
   { id: 7, p: 'LS', t: 'Pipeline não é dinheiro', f: 'Carrossel', s: 'age', d: '17 nov · 18:00' },
-  { id: 8, p: 'EN', t: 'O encarte que ninguém leu', f: 'Reels', s: 'age', d: '17 nov · 20:00' },
-  { id: 9, p: 'EL', t: 'O Vasco de 2027 pode ser o Botafogo de 2024?', f: 'Reels', s: 'pub', d: '15 nov', v: 1352 },
+  { id: 8, p: 'EN', t: 'O disco que ninguém ouviu inteiro', f: 'Reels', s: 'age', d: '17 nov · 20:00' },
+  { id: 9, p: 'EL', t: 'O time que gastou pouco e chegou longe', f: 'Reels', s: 'pub', d: '15 nov', v: 1352 },
   { id: 10, p: 'RP', t: 'Três votos que mudaram uma eleição', f: 'Reels', s: 'pub', d: '14 nov', v: 412 },
-  { id: 11, p: 'OI', t: 'Ronaldo não é top 5 da história', f: 'Vídeo narrado', s: 'pub', d: '13 nov', v: 388 },
+  { id: 11, p: 'OI', t: 'O craque que a gente supervaloriza', f: 'Vídeo narrado', s: 'pub', d: '13 nov', v: 388 },
   { id: 12, p: 'LS', t: 'Forecast não é pesquisa de opinião', f: 'Post', s: 'pub', d: '12 nov', v: 296 },
 ];
 const cnt = (s) => BASE[s] + posts.filter(x => x.s === s && (pperfil === 'all' || x.p === pperfil)).length * 1;
@@ -837,24 +837,24 @@ let pedidos = [
   { p: 'EL', t: 'A homenagem que ninguém esperava no estádio', tp: 'Revisão', s: 'fila', em: '17 nov 13:11', n: 'Observação do Leandro aguardando o Thor.' },
   { p: 'RP', t: 'O que muda com a nova regra do orçamento', tp: 'Vídeo narrado', s: 'fila', em: '17 nov 13:10', n: 'Na fila da próxima rodada.' },
   { p: 'EL', t: '"A avaliação do meu trabalho não é só resultado"', tp: 'Corte', s: 'fila', em: '17 nov 13:10', n: 'Corte quente, passa na frente.' },
-  { p: 'OI', t: 'Vikings é top 10 da história', tp: 'Vídeo narrado', s: 'prod', em: '17 nov 12:58', n: 'Thor montando as cenas.' },
+  { p: 'OI', t: 'A série que todo mundo largou', tp: 'Vídeo narrado', s: 'prod', em: '17 nov 12:58', n: 'Thor montando as cenas.' },
   { p: 'EN', t: 'Um disco, uma história', tp: 'Carrossel', s: 'fila', em: '17 nov 12:41', n: 'Na fila da próxima rodada.' },
   { p: 'RP', t: 'Três votos que mudaram uma eleição', tp: 'Corte', s: 'erro', em: '17 nov 01:12', n: 'Vídeo fora do ar no YouTube. Tentar outro link.' },
-  { p: 'EL', t: 'O Vasco de 2027 pode ser o Botafogo de 2024?', tp: 'Corte', s: 'ok', em: '15 nov 00:41', n: 'Entregue pra aprovação.' },
+  { p: 'EL', t: 'O time que gastou pouco e chegou longe', tp: 'Corte', s: 'ok', em: '15 nov 00:41', n: 'Entregue pra aprovação.' },
   { p: 'LS', t: 'Pipeline não é dinheiro', tp: 'Carrossel', s: 'ok', em: '14 nov 16:20', n: 'Entregue pra aprovação.' },
 ];
 const PED_BASE = { ok: 88 };
 const AG = [
   { k: 'Thor', r: 'Produção do conteúdo', d: 'Você cria um post, manda um corte ou peça pra produção ou volta um post pra Rascunho.', q: 'De 4 em 4 h, 08:17 às 22:17', w: 'hub', m: 'Sonnet 5.5', teto: 3, g: 5.48, on: true },
   { k: 'Bragi', r: 'Pautas da semana', d: 'Semana seguinte, de segunda a domingo. Lê o Slack e as reuniões.', q: 'Sexta 17:47', w: 'claude', fix: 'claude', m: 'Plano do Claude', teto: null, g: null, on: true },
-  { k: 'Sindri', r: 'Cortes da madrugada', d: 'Entrelinhas e Retrato do Poder.', q: 'Todo dia 00:30', w: 'hub', m: 'Sonnet 5.5', teto: 3, g: 1.70, on: true },
+  { k: 'Sindri', r: 'Cortes da madrugada', d: 'Perfis de esporte e de política.', q: 'Todo dia 00:30', w: 'hub', m: 'Sonnet 5.5', teto: 3, g: 1.70, on: true },
   { k: 'Heimdall', r: 'Radar semanal', d: 'Agenda dos podcasts da semana.', q: 'Segunda 02:33', w: 'hub', m: 'Sonnet 5.5', teto: .8, g: .06, on: true },
   { k: 'Brokk', r: 'Montagem do Opiniões', d: 'Só pautas com todas as imagens na pasta.', q: 'Todo dia 07:23', w: 'hub', m: 'Sonnet 5.5', teto: 1, g: .09, on: true },
   { k: 'Hermod', r: 'Publicador · código', d: 'Agenda os aprovados e publica na hora marcada.', q: 'A cada minuto', w: 'hub', fix: 'hub', m: 'Sem IA', teto: null, g: 0, on: true },
   { k: 'Mímir', r: 'Métricas · código', d: 'Coleta as métricas e a foto das primeiras 24 h.', q: 'Todo dia 06:47', w: 'hub', fix: 'hub', m: 'Sem IA', teto: null, g: 0, on: true },
 ];
 let execs = [{ ok: 1, a: 'Thor', h: '17 nov 08:18', d: 'Produziu 3 posts da fila e devolveu 1 revisão.', c: 1.78 }, { ok: 1, a: 'Brokk', h: '17 nov 07:23', d: 'Nenhuma pauta completa pra montar hoje.', c: .02 }, { ok: 1, a: 'Mímir', h: '17 nov 06:47', d: 'Coletou métricas de 29 posts publicados.', c: 0 }, { ok: 0, a: 'Sindri', h: '17 nov 01:12', d: '1 corte com erro: vídeo fora do ar.', c: .31 }, { ok: 1, a: 'Sindri', h: '17 nov 00:30', d: 'Entregou 6 cortes de 2 episódios.', c: 1.39 }];
-let avisos = [{ h: '06:47', a: 'Mímir', t: 'Métricas de 29 posts coletadas. Melhor post: Entrelinhas.' }, { h: '01:12', a: 'Sindri', t: '1 corte com erro: o vídeo saiu do ar. Pedido marcado pra revisão.' }, { h: '00:52', a: 'Sindri', t: 'Entregou 6 cortes de 2 episódios. 4 quentes, 2 atemporais.' }];
+let avisos = [{ h: '06:47', a: 'Mímir', t: 'Métricas de 29 posts coletadas. Melhor post: Arquibancada.' }, { h: '01:12', a: 'Sindri', t: '1 corte com erro: o vídeo saiu do ar. Pedido marcado pra revisão.' }, { h: '00:52', a: 'Sindri', t: 'Entregou 6 cortes de 2 episódios. 4 quentes, 2 atemporais.' }];
 const now = () => new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
 const aviso = (a, t) => { avisos.unshift({ h: now(), a, t, nw: 1 }); if (cur !== 'caixa') newN++; badges(); };
 const badges = () => { const esp = cnt('agu') + cnt('rev') + cnt('ras'); $('#yHomeN').textContent = esp || ''; $('#yFila').textContent = pedidos.filter(x => x.s === 'fila' || x.s === 'prod').length || ''; $('#yNew').textContent = newN || ''; $('#yBellN').textContent = newN || ''; };
@@ -874,14 +874,14 @@ const V = {
       <button class="y-card y-k y-kb" data-go="pipeline"><div class="l">Agendados</div><div class="v">${cnt('age')}</div><div class="s">${posts.filter(x => x.s === 'age' && x.d.startsWith('17')).length + 3} vão ao ar hoje</div></button>
       <button class="y-card y-k y-kb" data-go="relatorios"><div class="l">Publicados</div><div class="v" style="color:var(--st-pub)">${cnt('pub')}</div><div class="s">3.802 views somadas</div></button>
     </div>
-    <div class="y-card" style="margin-top:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">${th('EL').replace('y-th', 'y-th" style="width:52px;height:66px;--c:#1E8E5A')}<div style="flex:1;min-width:200px"><div style="font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--y-or-t)">POST DO PERÍODO</div><b style="font-size:14px;font-weight:600">${top.t}</b><div style="font-size:11px;color:var(--y-muted)">Entrelinhas · Reels · publicado 15 nov</div></div><div style="text-align:right"><b style="font-size:20px;font-weight:600">${fmt(top.v)}</b> <span style="color:#1C7C54;font-size:18px;font-weight:600;margin-left:10px">35,6%</span><div style="font-size:10.5px;color:var(--y-muted)">views · das 3.802 views de 29 posts</div></div></div>
+    <div class="y-card" style="margin-top:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap">${th('EL').replace('y-th', 'y-th" style="width:52px;height:66px;--c:#1E8E5A')}<div style="flex:1;min-width:200px"><div style="font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--y-or-t)">POST DO PERÍODO</div><b style="font-size:14px;font-weight:600">${top.t}</b><div style="font-size:11px;color:var(--y-muted)">Arquibancada · Reels · publicado 15 nov</div></div><div style="text-align:right"><b style="font-size:20px;font-weight:600">${fmt(top.v)}</b> <span style="color:#1C7C54;font-size:18px;font-weight:600;margin-left:10px">35,6%</span><div style="font-size:10.5px;color:var(--y-muted)">views · das 3.802 views de 29 posts</div></div></div>
     <div class="y-card" style="margin-top:10px"><div style="display:flex;justify-content:space-between;font-size:12.5px"><b style="font-weight:600">Fluxo de conteúdo</b><span style="color:var(--y-muted);font-size:11px">do rascunho à publicação · clique numa etapa</span></div>
       <div class="y-flow">${ST.map(([k]) => `<i data-go="pipeline" data-open="${k}" style="flex:${Math.max(.6, cnt(k))};background:${SC[k]}" title="${k}"></i>`).join('')}</div>
       <div class="y-leg">${ST.map(([k, n]) => `<button data-go="pipeline" data-open="${k}"><span class="y-dot" style="background:${SC[k]}"></span>${n} <b>${cnt(k)}</b></button>`).join('')}</div></div>
     <div class="y-g y-g2" style="margin-top:10px"><div class="y-card"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><b style="font-size:12.5px;font-weight:600">Precisa de você <span style="color:var(--y-faint);font-weight:400">${need.length}</span></b><button class="y-btn ghost" data-go="pipeline" style="height:22px;color:var(--st-rev)">Abrir o pipeline</button></div>
       ${need.map(x => `<div class="y-row">${th(x.p)}<div class="t"><b>${x.t}</b><small>${PF[x.p].n} · ${x.f}</small></div>${x.s === 'agu' ? `<span class="y-pill" style="background:#FFF1E6;color:var(--st-agu)">Aguardando aprovação</span><button class="y-btn ok" data-ok="${x.id}">Aprovar</button>` : `<span class="y-pill" style="background:#EAF0FF;color:var(--st-rev)"><span class="y-spin"></span>Thor revisando</span>`}</div>`).join('') || '<div style="color:var(--y-muted);font-size:12px;padding:14px 0">Nada esperando você. Bom trabalho.</div>'}</div>
       <div class="y-card"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><b style="font-size:12.5px;font-weight:600">No ar hoje</b><button class="y-btn ghost" data-go="pipeline" data-view="cal" style="height:22px;color:var(--st-rev)">Calendário</button></div>
-      ${[['12:00', 'RP', 'Como um projeto vira lei em Brasília'], ['12:30', 'EL', 'Juca Kfouri queria um narrador que não gritasse gol'], ['18:00', 'LS', 'Pipeline não é dinheiro'], ['20:00', 'EN', 'O encarte que ninguém leu']].map(([h, p, t]) => `<div class="y-row"><b style="font-size:11.5px;font-weight:600;width:38px">${h}</b>${th(p)}<div class="t"><b>${t}</b><small>${PF[p].n} · Reels</small></div></div>`).join('')}</div></div>`;
+      ${[['12:00', 'RP', 'Como um projeto vira lei em Brasília'], ['12:30', 'EL', 'O narrador que não gritava gol'], ['18:00', 'LS', 'Pipeline não é dinheiro'], ['20:00', 'EN', 'O disco que ninguém ouviu inteiro']].map(([h, p, t]) => `<div class="y-row"><b style="font-size:11.5px;font-weight:600;width:38px">${h}</b>${th(p)}<div class="t"><b>${t}</b><small>${PF[p].n} · Reels</small></div></div>`).join('')}</div></div>`;
   },
   pipeline: () => {
     const vis = posts.filter(x => pperfil === 'all' || x.p === pperfil);
@@ -895,7 +895,7 @@ const V = {
   },
   estudio: () => {
     const c = { all: pedidos.length + PED_BASE.ok, fila: pedidos.filter(x => x.s === 'fila' || x.s === 'prod').length, mat: 0, erro: pedidos.filter(x => x.s === 'erro').length, ok: pedidos.filter(x => x.s === 'ok').length + PED_BASE.ok };
-    const tabs = `<div class="y-tabs">${[['fila', 'Fila de pedidos'], ['cortes', 'Cortes com IA'], ['narrado', 'Vídeo narrado'], ['musica', 'Música · Encarte']].map(([k, n]) => `<button data-st="${k}" class="${stab === k ? 'on' : ''}">${n}</button>`).join('')}</div>`;
+    const tabs = `<div class="y-tabs">${[['fila', 'Fila de pedidos'], ['cortes', 'Cortes com IA'], ['narrado', 'Vídeo narrado'], ['musica', 'Música']].map(([k, n]) => `<button data-st="${k}" class="${stab === k ? 'on' : ''}">${n}</button>`).join('')}</div>`;
     const hd = head('', 'Estúdio', 'Os pedidos aos agentes e as ferramentas de produção num lugar só.', `<div style="display:flex;gap:8px"><button class="y-btn" data-st="cortes">Editar um vídeo</button><button class="y-btn dark" data-st="cortes">+ Pedir pra IA</button></div>`);
     if (stab === 'fila') {
       const lst = pedidos.filter(x => sfil === 'all' || (sfil === 'fila' ? (x.s === 'fila' || x.s === 'prod') : x.s === sfil));
@@ -904,7 +904,7 @@ const V = {
       <div class="y-card" style="padding:0;margin-top:10px"><div class="y-tw"><table class="y-tbl"><thead><tr><th>Pedido</th><th>Tipo</th><th>Situação</th><th>Pedido em</th><th>Nota do agente</th></tr></thead><tbody>${lst.map(x => `<tr><td><div class="pd">${th(x.p)}<div><b>${x.t}</b><small>${PF[x.p].n}</small></div></div></td><td>${x.tp}</td><td><span class="y-pill" style="background:${SP[x.s][1]};color:${SP[x.s][2]}">${x.s === 'prod' ? '<span class="y-spin"></span>' : ''}${SP[x.s][0]}</span></td><td style="white-space:nowrap">${x.em}</td><td style="color:var(--y-muted)">${x.n}</td></tr>`).join('') || '<tr><td colspan="5" style="color:var(--y-muted)">Nenhum pedido nessa situação.</td></tr>'}</tbody></table></div></div>`;
     }
     if (stab === 'cortes') return hd + tabs + `<div class="y-card"><b style="font-size:13px;font-weight:600">Novo corte</b><p style="font-size:11.5px;color:var(--y-muted);margin:2px 0 10px">Cole o link de um episódio. O Hub baixa, transcreve, acha os trechos com gancho e entrega os cortes em 9:16, todos com mais de 1 minuto.</p><div style="display:flex;gap:8px"><input class="y-input" id="yLink" value="https://youtube.com/watch?v=episodio-exemplo" aria-label="Link do vídeo"><select class="y-sel" id="yLp" style="height:36px">${['EL', 'RP'].map(k => `<option value="${k}">${PF[k].n}</option>`).join('')}</select><button class="y-btn dark" id="yGen" style="height:36px">${icon('scissors')}Gerar cortes</button></div><ul class="y-steps" id="ySteps"></ul><div id="yCuts"></div></div>`;
-    const txt = stab === 'narrado' ? ['Vídeo narrado', 'A pauta vira roteiro, a voz sai do ElevenLabs, o worker busca imagens e clipes reais e o render roda no GitHub Actions. O post volta pra aprovação já montado.'] : ['Música · Encarte', 'Cada post do Encarte é um disco: capa, contracapa e a história contada em carrossel ou vídeo, com transições na batida da música.'];
+    const txt = stab === 'narrado' ? ['Vídeo narrado', 'A pauta vira roteiro, a voz sai do ElevenLabs, o worker busca imagens e clipes reais e o render roda no GitHub Actions. O post volta pra aprovação já montado.'] : ['Música', 'Cada post de música é um disco: capa, contracapa e a história contada em carrossel ou vídeo, com transições na batida da música.'];
     return hd + tabs + `<div class="y-card"><b style="font-size:14px;font-weight:600">${txt[0]}</b><p style="font-size:12.5px;color:var(--y-ink2);margin:6px 0 12px;max-width:62ch">${txt[1]}</p><button class="y-btn dark" data-st="fila">Ver os pedidos desse tipo na fila</button></div>`;
   },
   agentes: () => {
@@ -926,7 +926,7 @@ const V = {
       return hd + tabs + `<div class="y-g y-g6">${[['Seguidores', '1.284', '+96 no período'], ['Visualizações', '3.797', '+18% vs. anterior'], ['Alcance', '3.076', '+11% vs. anterior'], ['Interações', '183', '+9% vs. anterior'], ['Taxa de engajamento', '5,9%', 'interações ÷ alcance'], ['Mediana de views', '113', '28 posts no período']].map(([l, v, s]) => `<div class="y-card y-k"><div class="l">${l}</div><div class="v">${v}</div><div class="s">${s}</div></div>`).join('')}</div>
       <div class="y-card" style="margin-top:10px"><b style="font-size:12.5px;font-weight:600">Views por post, na data de publicação</b><p style="font-size:11px;color:var(--y-muted)">Cada ponto é um post. A linha tracejada é a mediana do período. Passe o mouse num ponto pra ver o post.</p>
       <div class="y-leg" style="margin:8px 0">${Object.entries(PF).map(([k, v]) => `<span><span class="y-dot" style="background:${v.c};border-radius:50%"></span>${v.n}</span>`).join('')}</div>
-      <svg viewBox="0 0 ${W} ${H}" width="100%">${[0, 100, 500, 1500].map(v => `<line x1="40" x2="${W - 20}" y1="${y(v)}" y2="${y(v)}" stroke="#ECECF0"/><text x="32" y="${y(v) + 3}" text-anchor="end" font-size="9" fill="#9A9AA6">${fmt(v)}</text>`).join('')}<line x1="40" x2="${W - 20}" y1="${y(med)}" y2="${y(med)}" stroke="#9A9AA6" stroke-dasharray="4 4"/>${pts.map(t => `<circle cx="${x(t.d)}" cy="${y(t.v)}" r="${t.v > 1000 ? 6 : 4.5}" fill="${PF[t.p].c}" opacity=".85"><title>${PF[t.p].n} · ${fmt(t.v)} views</title></circle>`).join('')}<text x="${x(25) - 10}" y="${y(1352) + 4}" text-anchor="end" font-size="10.5" font-weight="600" fill="#16161D">O Vasco de 2027 pode ser o Botafogo de 2024? · 1.352</text></svg></div>`;
+      <svg viewBox="0 0 ${W} ${H}" width="100%">${[0, 100, 500, 1500].map(v => `<line x1="40" x2="${W - 20}" y1="${y(v)}" y2="${y(v)}" stroke="#ECECF0"/><text x="32" y="${y(v) + 3}" text-anchor="end" font-size="9" fill="#9A9AA6">${fmt(v)}</text>`).join('')}<line x1="40" x2="${W - 20}" y1="${y(med)}" y2="${y(med)}" stroke="#9A9AA6" stroke-dasharray="4 4"/>${pts.map(t => `<circle cx="${x(t.d)}" cy="${y(t.v)}" r="${t.v > 1000 ? 6 : 4.5}" fill="${PF[t.p].c}" opacity=".85"><title>${PF[t.p].n} · ${fmt(t.v)} views</title></circle>`).join('')}<text x="${x(25) - 10}" y="${y(1352) + 4}" text-anchor="end" font-size="10.5" font-weight="600" fill="#16161D">O time que gastou pouco e chegou longe · 1.352</text></svg></div>`;
     }
     if (rtab === 'horarios') {
       const dias = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'], hs = ['08h', '10h', '12h', '14h', '16h', '18h', '20h', '22h'];
