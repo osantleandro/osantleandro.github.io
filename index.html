@@ -229,7 +229,7 @@ footer b{color:#F3F2EE;font-weight:800}
 @media(max-width:700px){.pstats{grid-template-columns:1fr 1fr}.pstats div:nth-child(3){border-left:0}.pstats div:nth-child(n+3){border-top:1px solid var(--line)}}
 .appframe{margin-top:24px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0B0B0A;box-shadow:0 30px 80px -40px rgba(255,106,0,.35)}
 .appframe iframe{display:block;width:100%;height:760px;border:0;background:#0B0B0A}
-.appframe .d-btn{text-decoration:none}
+.appframe .d-btn{text-decoration:none}.appframe .demo-bar{gap:8px}#pReplay{cursor:pointer;font-family:inherit}
 @media(max-width:760px){.appframe iframe{height:680px}}
 /* ================= moldura das demos ================= */
 .demo{margin-top:24px;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px;box-shadow:0 30px 80px -40px rgba(255,106,0,.35)}
@@ -581,8 +581,8 @@ footer b{color:#F3F2EE;font-weight:800}
           <div class="chips"><span class="chip">React</span><span class="chip">Python · FastAPI</span><span class="chip">Postgres</span><span class="chip">HubSpot API</span><span class="chip">BigQuery</span><span class="chip">SSO por convite</span><span class="chip">Leitura por IA</span><span class="chip">Docker · GitLab CI</span></div>
 
           <div class="appframe">
-            <div class="demo-bar"><div class="demo-dots"><span></span><span></span><span></span></div><div class="demo-url">pulsar · demonstração com dados fictícios</div><a class="d-btn on" href="pulsar.html" target="_blank" rel="noopener"><svg class="ic"><use href="#i-arrow"/></svg>Abrir em tela cheia</a></div>
-            <iframe src="pulsar.html?embed=1#/overview" title="Pulsar · demonstração interativa" loading="lazy" allow="fullscreen; clipboard-write"></iframe>
+            <div class="demo-bar"><div class="demo-dots"><span></span><span></span><span></span></div><div class="demo-url">pulsar · demonstração com dados fictícios</div><button class="d-btn" id="pReplay" type="button"><svg class="ic"><use href="#i-play"/></svg>Ver abertura</button><a class="d-btn on" href="pulsar.html" target="_blank" rel="noopener"><svg class="ic"><use href="#i-arrow"/></svg>Abrir em tela cheia</a></div>
+            <iframe id="pFrame" src="pulsar.html?embed=1#/overview" title="Pulsar · demonstração interativa" loading="lazy" allow="fullscreen; clipboard-write"></iframe>
           </div>
           <div class="demo-note"><svg class="ic"><use href="#i-user"/></svg><span><b>38 telas, dados 100% fictícios.</b> Navegue pelo menu, troque Período e Painel, abra os alertas, a Leitura IA, o Modo TV e o "Ver como" no canto de baixo. Em tela cheia a experiência fica completa.</span></div>
         </div>
@@ -993,6 +993,13 @@ new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !starte
 /* entrada suave */
 (()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el))})();
+
+/* Pulsar: a abertura do produto toca quando a demo aparece na tela (uma vez) e pelo botão "Ver abertura" */
+(() => { const f = document.getElementById('pFrame'), b = document.getElementById('pReplay'); if (!f) return; let done = false, ready = false, want = false;
+  const play = () => { if (ready) f.contentWindow.postMessage('pulsar-intro', '*'); else want = true; };
+  f.addEventListener('load', () => { ready = true; if (want) { want = false; setTimeout(play, 150); } });
+  new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && e.intersectionRatio > .55 && !done) { done = true; play(); } }), { threshold: [.55] }).observe(f);
+  if (b) b.onclick = play; })();
 </script>
 </body>
 </html>

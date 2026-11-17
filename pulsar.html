@@ -300,18 +300,44 @@ td .sub{display:block;font-size:10px;color:var(--mute)}
 .lockpage b{display:block;color:var(--txt);font-size:16px;margin-bottom:4px}
 
 /* abertura */
-.intro{position:fixed;inset:0;z-index:200;background:radial-gradient(ellipse at 50% 35%,#1E1208 0%,#0B0B0A 60%);display:grid;place-items:center;transition:opacity .6s}
-.intro.out{opacity:0;pointer-events:none}
-.intro .in{text-align:center;animation:rise 1s cubic-bezier(.2,.8,.2,1)}
-@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.97)}}
-.intro .logo{width:72px;height:72px;border-radius:18px;margin:0 auto 18px;box-shadow:0 0 60px rgba(255,106,0,.45)}
-.intro .logo .ic{width:40px;height:40px}
-.intro h1{font-size:56px;font-weight:800;letter-spacing:-.05em}
-.intro p{color:var(--dim);font-size:14px;margin-top:6px}
-.intro .line{width:240px;height:2px;background:#232321;border-radius:2px;margin:26px auto 0;overflow:hidden}
-.intro .line i{display:block;height:100%;background:var(--or);width:0;animation:load 2.4s ease forwards}
-@keyframes load{to{width:100%}}
-.intro .skip{position:absolute;right:22px;bottom:22px}
+/* abertura: a mesma do produto (ponto de luz, anéis de pulso, símbolo, nome com brilho, chão em perspectiva), na paleta Ygg */
+.ab-splash{position:fixed;inset:0;z-index:1000;overflow:hidden;background:#0B0B0A;color:#F3F2EE;font-family:Poppins,system-ui,sans-serif}
+.ab-splash.run{animation:abFade .7s ease 5.45s forwards}.ab-splash.out{animation:abOut .26s ease forwards}
+.ab-stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;overflow:hidden;background:radial-gradient(1500px 1000px at 30% 15%,#2A1A0C 0%,#151210 50%,#0B0B0A 100%)}
+.ab-stage *{position:absolute}
+.ab-black{inset:0;background:#000;animation:abHide .6s linear forwards}
+.ab-floor{left:-540px;width:3000px;height:1300px;top:560px;transform-origin:50% 0;transform:perspective(700px) rotateX(74deg);opacity:0;background-image:linear-gradient(rgba(255,138,61,.16) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(255,138,61,.16) 1.5px,transparent 1.5px);background-size:90px 90px;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 30%,#000 100%);animation:abFloor 6.2s linear forwards,abShow 1.5s ease .3s forwards}
+.ab-pt{width:4px;height:4px;border-radius:50%;background:#FFD2B0;opacity:0;animation:abPt 9s linear infinite}
+.ab-zoom{inset:0;animation:abZoom .7s cubic-bezier(.65,0,.35,1) 5.45s forwards}
+.ab-flare{left:0;top:0;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;opacity:0;background:radial-gradient(circle,#fff 0%,rgba(255,200,160,.85) 10%,rgba(255,106,0,0) 60%);transform:translate(960px,540px) scale(.3);animation:abFlare 1.9s cubic-bezier(.65,0,.35,1) .4s forwards}
+.ab-flash{inset:0;opacity:0;background:radial-gradient(circle at 50% 50%,#fff,rgba(255,200,160,.6) 30%,rgba(255,106,0,0) 70%);animation:abFlash .45s linear 2.1s forwards}
+.ab-ring{left:960px;top:540px;width:300px;height:300px;margin:-150px 0 0 -150px;border-radius:50%;border:2.5px solid #FF8A3D;opacity:0;animation:abRing 1.5s linear forwards}
+.ab-ring.r0{animation-delay:2.1s}.ab-ring.r1{animation-delay:2.26s}.ab-ring.r2{animation-delay:2.42s}
+.ab-glow{left:660px;top:120px;width:600px;height:600px;border-radius:50%;opacity:0;background:radial-gradient(circle,rgba(255,106,0,.35),rgba(255,106,0,0) 65%);animation:abShow .5s ease 2.1s forwards,abPulse 2s ease-in-out 2.6s infinite}
+.ab-logo{left:880px;top:330px;width:160px;height:160px;opacity:0;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));animation:abLogo .9s cubic-bezier(.22,1,.36,1) 2.1s forwards}
+.ab-logo svg{position:static;display:block;filter:blur(14px);animation:abBlur .9s cubic-bezier(.22,1,.36,1) 2.1s forwards}
+.ab-name{left:0;width:1920px;top:520px;font-size:150px;line-height:1;font-weight:700;text-align:center;white-space:nowrap;letter-spacing:30px;animation:abLs 1.6s cubic-bezier(.65,0,.35,1) 2.6s forwards}
+.ab-name span{position:relative;display:inline-block;opacity:0;transform:translateY(80px);animation:abUp .65s cubic-bezier(.22,1,.36,1) forwards}
+.ab-sheen{color:#fff;text-shadow:0 0 30px rgba(255,138,61,.9);opacity:0;animation:abLs 1.6s cubic-bezier(.65,0,.35,1) 2.6s forwards,abSheen 1s cubic-bezier(.65,0,.35,1) 3.75s forwards;-webkit-mask-image:linear-gradient(100deg,transparent 42%,#000 50%,transparent 58%);mask-image:linear-gradient(100deg,transparent 42%,#000 50%,transparent 58%);-webkit-mask-size:300% 100%;mask-size:300% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:130% 0;mask-position:130% 0}
+.ab-tag{left:0;width:1920px;top:705px;text-align:center;font-size:26px;font-weight:600;letter-spacing:14px;color:#FF8A3D;opacity:0;transform:translateY(20px);animation:abTag .7s cubic-bezier(.22,1,.36,1) 3.9s forwards}
+.ab-line{left:730px;top:760px;width:460px;height:2px;transform:scaleX(0);background:linear-gradient(90deg,rgba(255,106,0,0),#FF8A3D,rgba(255,106,0,0));animation:abLine .9s cubic-bezier(.65,0,.35,1) 4s forwards}
+.ab-splash:not(.run) *{animation-play-state:paused!important}
+.ab-ctl{position:absolute;right:24px;bottom:22px;display:flex;gap:10px;z-index:2}
+.ab-ctl button{font:500 14px Poppins,system-ui,sans-serif;color:#F3F2EE;background:rgba(20,20,19,.6);border:1px solid rgba(255,138,61,.4);border-radius:999px;padding:8px 16px;cursor:pointer}.ab-ctl button:hover{background:rgba(255,106,0,.16)}
+@keyframes abHide{to{opacity:0}}@keyframes abShow{to{opacity:1}}@keyframes abFade{to{opacity:0;visibility:hidden}}@keyframes abOut{to{opacity:0}}
+@keyframes abFloor{from{background-position:0 0}to{background-position:0 210px}}
+@keyframes abPt{0%{opacity:0;transform:translateY(0)}20%{opacity:.45}80%{opacity:.3}100%{opacity:0;transform:translateY(-160px)}}
+@keyframes abZoom{to{transform:scale(1.55);opacity:0}}
+@keyframes abFlare{0%{opacity:0;transform:translate(960px,540px) scale(.3)}89.5%{opacity:1;transform:translate(960px,540px) scale(2.8)}100%{opacity:0;transform:translate(960px,540px) scale(2.8)}}
+@keyframes abFlash{0%{opacity:.75}100%{opacity:0}}
+@keyframes abRing{0%{opacity:.75;transform:scale(.25)}10%{opacity:.675;transform:scale(1.334)}25%{opacity:.562;transform:scale(2.562)}40%{opacity:.45;transform:scale(3.386)}55%{opacity:.337;transform:scale(3.885)}70%{opacity:.225;transform:scale(4.142)}85%{opacity:.113;transform:scale(4.236)}100%{opacity:0;transform:scale(4.25)}}
+@keyframes abPulse{0%,100%{opacity:.65}50%{opacity:1}}
+@keyframes abLogo{0%{opacity:0;transform:scale(1.6)}28%{opacity:1}100%{opacity:1;transform:scale(1)}}
+@keyframes abBlur{to{filter:blur(0)}}@keyframes abLs{to{letter-spacing:-1px}}@keyframes abUp{to{opacity:1;transform:translateY(0)}}
+@keyframes abSheen{0%{opacity:1;-webkit-mask-position:130% 0;mask-position:130% 0}99%{opacity:1}100%{opacity:0;-webkit-mask-position:-30% 0;mask-position:-30% 0}}
+@keyframes abTag{to{opacity:1;transform:none;letter-spacing:7px}}@keyframes abLine{to{transform:scaleX(1)}}
+@media (prefers-reduced-motion:reduce){.ab-splash{display:none!important}}
+@media (orientation:portrait) and (max-width:768px){.ab-stage{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 18%,#000 82%,transparent)}}
 
 /* ---------- TV ---------- */
 .tv{position:fixed;inset:0;z-index:150;background:#0B0B0A;display:flex;flex-direction:column;font-size:15px}
@@ -613,7 +639,7 @@ tr.grp td{background:rgba(243,242,238,.04);font-weight:600;color:var(--fg-2)}
 <button class="fb-btn" id="fbBtn"><i><svg class="ic"><use href="#i-msg"/></svg></i><div><b>Feedback</b><small>Fale com o RevOps</small></div></button>
 <div class="toast" id="toast" role="status"></div>
 <div class="demo-tag">Demonstração · dados fictícios</div>
-<div class="intro" id="intro"><div class="in"><span class="logo"><svg class="ic"><use href="#i-pulse"/></svg></span><h1>Pulsar</h1><p>Marketing · Vendas · CS · Produto · Receita</p><p style="color:var(--or-2);font-weight:700;margin-top:10px">A inteligência que guia a receita.</p><div class="line"><i></i></div></div><button class="btn skip" id="skip">Pular</button></div>
+<div class="ab-splash" id="intro" hidden><div class="ab-stage" id="abStage"><div class="ab-floor"></div><i class="ab-pt" style="left:0px;top:0px;animation-delay:0.0s"></i><i class="ab-pt" style="left:137px;top:263px;animation-delay:-1.3s"></i><i class="ab-pt" style="left:274px;top:526px;animation-delay:-2.6s"></i><i class="ab-pt" style="left:411px;top:789px;animation-delay:-3.9000000000000004s"></i><i class="ab-pt" style="left:548px;top:1052px;animation-delay:-5.2s"></i><i class="ab-pt" style="left:685px;top:235px;animation-delay:-6.5s"></i><i class="ab-pt" style="left:822px;top:498px;animation-delay:-7.800000000000001s"></i><i class="ab-pt" style="left:959px;top:761px;animation-delay:0.0s"></i><i class="ab-pt" style="left:1096px;top:1024px;animation-delay:-1.3s"></i><i class="ab-pt" style="left:1233px;top:207px;animation-delay:-2.6s"></i><i class="ab-pt" style="left:1370px;top:470px;animation-delay:-3.9000000000000004s"></i><i class="ab-pt" style="left:1507px;top:733px;animation-delay:-5.2s"></i><i class="ab-pt" style="left:1644px;top:996px;animation-delay:-6.5s"></i><i class="ab-pt" style="left:1781px;top:179px;animation-delay:-7.800000000000001s"></i><i class="ab-pt" style="left:1918px;top:442px;animation-delay:0.0s"></i><i class="ab-pt" style="left:135px;top:705px;animation-delay:-1.3s"></i><i class="ab-pt" style="left:272px;top:968px;animation-delay:-2.6s"></i><i class="ab-pt" style="left:409px;top:151px;animation-delay:-3.9000000000000004s"></i><div class="ab-zoom"><div class="ab-flare"></div><div class="ab-ring r0"></div><div class="ab-ring r1"></div><div class="ab-ring r2"></div><div class="ab-glow"></div><div class="ab-logo"><svg viewBox="0 0 64 64" width="100%" height="100%"><rect width="64" height="64" rx="17" fill="#FF6A00"/><path d="M9 35h11l5-13 8 22 6-15 4 6h12" fill="none" stroke="#0B0B0A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="ab-name"><span style="animation-delay:2.600s">P</span><span style="animation-delay:2.675s">u</span><span style="animation-delay:2.750s">l</span><span style="animation-delay:2.825s">s</span><span style="animation-delay:2.900s">a</span><span style="animation-delay:2.975s">r</span></div><div class="ab-name ab-sheen">Pulsar</div><div class="ab-tag">O PAINEL DE REVOPS</div><div class="ab-line"></div><div class="ab-flash"></div></div><div class="ab-black"></div></div><div class="ab-ctl"><button type="button" id="skip">Pular</button></div></div>
 
 <script>
 /* Gerador de dados 100% fictícios do Pulsar demonstração.
@@ -642,8 +668,8 @@ const D = (() => {
 
   // ---------- funil por segmento ----------
   const P = {
-    smb: { mql: 560, g: 0.011, c1: 0.42, c2: 0.62, c3: 0.21, tk: 1280, mrr0: 2.4e6, cli0: 1870, exp: [0.010, 0.016], red: [0.005, 0.009], chu: [0.014, 0.022] },
-    ent: { mql: 62, g: 0.014, c1: 0.47, c2: 0.71, c3: 0.13, tk: 4300, mrr0: 0.9e6, cli0: 210, exp: [0.015, 0.025], red: [0.004, 0.009], chu: [0.005, 0.011] },
+    smb: { mql: 240, g: 0.011, c1: 0.42, c2: 0.62, c3: 0.21, tk: 690, mrr0: 5.2e5, cli0: 760, exp: [0.010, 0.016], red: [0.005, 0.009], chu: [0.014, 0.022] },
+    ent: { mql: 30, g: 0.014, c1: 0.47, c2: 0.71, c3: 0.13, tk: 2600, mrr0: 2.1e5, cli0: 70, exp: [0.015, 0.025], red: [0.004, 0.009], chu: [0.005, 0.011] },
   };
   const PERF = { smb: { mql: .78, sql: .86, opp: .93, won: .88, bk: .84 }, ent: { mql: .91, sql: .95, opp: 1.02, won: .82, bk: .80 } };
   const F = { smb: [], ent: [] }, FC = { smb: [], ent: [] }, BG = { smb: [], ent: [] }, MR = { smb: [], ent: [] }, MRF = { smb: [], ent: [] }, MRB = { smb: [], ent: [] };
@@ -739,7 +765,7 @@ const D = (() => {
   const TEMPS = ['Quente', 'Morno', 'Frio', 'Sem temperatura'];
   const CANAIS_CONV = ['Formulário', 'Chat', 'Demo agendada', 'Trial', 'Outbound', 'Indicação'];
   const deals = [];
-  for (let j = 0; j < 128; j++) {
+  for (let j = 0; j < 48; j++) {
     const sg = R() < .78 ? 'smb' : 'ent';
     const owner = pick(AE.filter(a => a.sg === sg));
     const stage = wpick(STAGES, [30, 34, 25, 11]);
@@ -753,12 +779,12 @@ const D = (() => {
   // ---------- perdas ----------
   const LOSS = [['Não é prioridade agora', 21], ['Lead não retorna', 18], ['Sem budget', 16], ['Optou por outra ferramenta', 14], ['Sem fit / fora do ICP', 11], ['Timing', 8], ['Funcionalidade faltando', 7], ['Preço', 5]];
   const lostDeals = [];
-  for (let j = 0; j < 40; j++) { const sg = R() < .8 ? 'smb' : 'ent'; lostDeals.push({ cli: `Cliente ${9100 + j * 13}`, sg, owner: pick(AE.filter(a => a.sg === sg)).n, motivo: wpick(LOSS.map(x => x[0]), LOSS.map(x => x[1])), quando: R() < .38 ? 'Antes da OPP' : 'Depois da OPP', mrr: P[sg].tk * Math.exp(N(.4)), dia: `${pick(BDAYS.slice(0, DU))}/11`, canal: wpick(CANAIS_CONV, [26, 24, 18, 8, 16, 8]) }); }
+  for (let j = 0; j < 24; j++) { const sg = R() < .8 ? 'smb' : 'ent'; lostDeals.push({ cli: `Cliente ${9100 + j * 13}`, sg, owner: pick(AE.filter(a => a.sg === sg)).n, motivo: wpick(LOSS.map(x => x[0]), LOSS.map(x => x[1])), quando: R() < .38 ? 'Antes da OPP' : 'Depois da OPP', mrr: P[sg].tk * Math.exp(N(.4)), dia: `${pick(BDAYS.slice(0, DU))}/11`, canal: wpick(CANAIS_CONV, [26, 24, 18, 8, 16, 8]) }); }
   lostDeals.sort((a, b) => b.mrr - a.mrr);
 
   // ---------- canais e mídia ----------
   const MQL_CH = [['Google Ads', .36], ['Meta Ads', .18], ['LinkedIn Ads', .07], ['Orgânico', .21], ['Direto', .08], ['E-mail', .05], ['Indicação', .05]];
-  const MEDIA = [{ n: 'Google Ads', inv: 48000, cpm: 22, ctr: .031, cvr: .055 }, { n: 'Meta Ads', inv: 24000, cpm: 9, ctr: .012, cvr: .07 }, { n: 'LinkedIn Ads', inv: 15000, cpm: 48, ctr: .006, cvr: .04 }];
+  const MEDIA = [{ n: 'Google Ads', inv: 7800, cpm: 22, ctr: .031, cvr: .055 }, { n: 'Meta Ads', inv: 3900, cpm: 9, ctr: .012, cvr: .07 }, { n: 'LinkedIn Ads', inv: 2400, cpm: 48, ctr: .006, cvr: .04 }];
   const MSH = { 'Google Ads': .36, 'Meta Ads': .18, 'LinkedIn Ads': .07 };
   const media = months.map((mo, i) => MEDIA.map(c => {
     let inv = c.inv * (1 + .01 * i) * SEAS[mo.m] * (1 + N(.05)); if (i === CUR) inv *= PACE * 1.03;
@@ -767,10 +793,10 @@ const D = (() => {
     const clicks = leads / (c.cvr * (1 + N(.06))), impr = clicks / (c.ctr * (1 + N(.05)));
     return { n: c.n, inv, impr, clicks, leads, mql };
   }));
-  const site = months.map((mo, i) => { let ses = 118000 * (1 + .008 * i) * SEAS[mo.m] * (1 + N(.04)); if (i === CUR) ses *= PACE * 1.0; return { ses, users: ses * .78, conv: ses * .021, gscClicks: ses * .34, gscImpr: ses * 9.8, pos: 14.2 - i * .12 + N(.3) }; });
-  const email = months.map((mo, i) => { let env = 260000 * (1 + .005 * i) * (1 + N(.08)); if (i === CUR) env *= PACE; return { env, open: .31 + N(.012), click: .026 + N(.002), bounce: .008 + N(.0008), unsub: .0021 + N(.0003) }; });
+  const site = months.map((mo, i) => { let ses = 21000 * (1 + .008 * i) * SEAS[mo.m] * (1 + N(.04)); if (i === CUR) ses *= PACE * 1.0; return { ses, users: ses * .78, conv: ses * .021, gscClicks: ses * .34, gscImpr: ses * 9.8, pos: 14.2 - i * .12 + N(.3) }; });
+  const email = months.map((mo, i) => { let env = 48000 * (1 + .005 * i) * (1 + N(.08)); if (i === CUR) env *= PACE; return { env, open: .31 + N(.012), click: .026 + N(.002), bounce: .008 + N(.0008), unsub: .0021 + N(.0003) }; });
   const EMAILS = ['Newsletter de novembro', 'Convite: webinar de automação', 'Reativação de base inativa', 'Novidades do produto', 'Case de cliente: varejo', 'Nutrição: trial dia 3', 'Nutrição: trial dia 7', 'Black Friday: plano anual'];
-  const emailCamp = EMAILS.map(n => { const env = rd(U(8000, 42000)); const op = U(.22, .44), cl = U(.012, .05); return { n, env, op, cl, mql: rd(env * cl * U(.04, .11)) }; });
+  const emailCamp = EMAILS.map(n => { const env = rd(U(1500, 8000)); const op = U(.22, .44), cl = U(.012, .05); return { n, env, op, cl, mql: rd(env * cl * U(.04, .11)) }; });
   const campaigns = (() => {
     const raw = Array.from({ length: 22 }, (_, j) => { const ch = wpick(['Google Ads', 'Meta Ads', 'LinkedIn Ads'], [55, 30, 15]); return { n: `Campanha ${String(j + 1).padStart(2, '0')}`, ch, w: Math.exp(N(.7)), e: Math.exp(N(.45)) }; });
     const invT = media[PREV].reduce((t, c) => t + c.inv, 0) * .92, mqlT = (F.smb[PREV].mql + F.ent[PREV].mql) * .58;
@@ -789,9 +815,9 @@ const D = (() => {
     return { n: `Cliente ${5001 + j}`, sg, plano: pick(PLANOS), mrr: P[sg].tk * Math.exp(N(.5)), score, saude, csm: pick(CSM), acao: pick(ACOES), uso: U(.25, .98), cont, usa };
   }).sort((a, b) => b.mrr - a.mrr);
   const ONB = ['Kickoff', 'Configuração', 'Treinamento', 'Go-live'];
-  const onboarding = Array.from({ length: 64 }, (_, j) => { const et = wpick(ONB, [14, 24, 14, 12]); const prazo = rd(U(10, 45)); const dias = rd(U(2, 52)); return { n: `Cliente ${11800 + j * 3}`, et, dias, prazo, venc: dias > prazo, resp: pick(CSM), sg: R() < .8 ? 'smb' : 'ent' }; });
+  const onboarding = Array.from({ length: 22 }, (_, j) => { const et = wpick(ONB, [14, 24, 14, 12]); const prazo = rd(U(10, 45)); const dias = rd(U(2, 52)); return { n: `Cliente ${11800 + j * 3}`, et, dias, prazo, venc: dias > prazo, resp: pick(CSM), sg: R() < .8 ? 'smb' : 'ent' }; });
   const modules = MODS.map((n, j) => { const cont = U(.25, .9); const uso = cont * U(.55, .92); return { n, cont, uso, chUsa: U(.006, .013), chNao: U(.016, .034) }; });
-  const ia = months.map((mo, i) => ({ req: 42000 * Math.pow(1.11, Math.max(0, i - 8)) * (i < 8 ? .3 + i * .08 : 1) * (i === CUR ? PACE : 1) * (1 + N(.05)), cli: rd(Math.min(780, 60 + Math.pow(1.13, i) * 22)) }));
+  const ia = months.map((mo, i) => ({ req: 7800 * Math.pow(1.11, Math.max(0, i - 8)) * (i < 8 ? .3 + i * .08 : 1) * (i === CUR ? PACE : 1) * (1 + N(.05)), cli: rd(Math.min(210, 16 + Math.pow(1.13, i) * 6)) }));
 
   // ---------- coortes ----------
   const salesCoh = months.slice(-11).map((mo, k) => { const i = months.length - 11 + k; const mql = F.smb[i].mql + F.ent[i].mql; const tot = mql * U(.028, .036); const share = [.45, .30, .14, .07, .04]; const open = CUR - i; const v = share.map((s, j) => j <= open ? rd(tot * s * (1 + N(.12)) * (j === open && i === CUR ? PACE : 1)) : null); return { l: mo.l, mql, v }; });
@@ -799,10 +825,10 @@ const D = (() => {
 
   // ---------- motions e alertas ----------
   const motions = [
-    { n: 'Reativação de base inativa', area: 'Marketing', dono: 'Marketing', seg: 'smb', etapa: 'MQL', canal: 'Digital', linha: 'Plano Pro', nov: 3800, dez: 6200, jan: 5400, st: 'Em andamento', add: { mql: 60, sql: 18, opp: 12, won: 4 } },
-    { n: 'Upgrade de plano na base', area: 'CS', dono: 'Customer Success', seg: 'smb', etapa: 'WON', canal: 'Base', linha: 'Upgrade de plano', nov: 5200, dez: 7400, jan: 7400, st: 'Em andamento', add: { won: 9 } },
-    { n: 'Parcerias com agências', area: 'Vendas', dono: 'Vendas SMB', seg: 'smb', etapa: 'SQL', canal: 'Parceiros', linha: 'Plano Pro', nov: 0, dez: 4100, jan: 6000, st: 'Planejada', add: {} },
-    { n: 'Outbound Enterprise', area: 'Vendas', dono: 'Vendas Enterprise', seg: 'ent', etapa: 'SQL', canal: 'Outbound', linha: 'Enterprise', nov: 6900, dez: 13800, jan: 13800, st: 'Em andamento', add: { sql: 14, opp: 9, won: 2 } },
+    { n: 'Reativação de base inativa', area: 'Marketing', dono: 'Marketing', seg: 'smb', etapa: 'MQL', canal: 'Digital', linha: 'Plano Pro', nov: 700, dez: 1100, jan: 1000, st: 'Em andamento', add: { mql: 14, sql: 4, opp: 3, won: 1 } },
+    { n: 'Upgrade de plano na base', area: 'CS', dono: 'Customer Success', seg: 'smb', etapa: 'WON', canal: 'Base', linha: 'Upgrade de plano', nov: 900, dez: 1300, jan: 1300, st: 'Em andamento', add: { won: 2 } },
+    { n: 'Parcerias com agências', area: 'Vendas', dono: 'Vendas SMB', seg: 'smb', etapa: 'SQL', canal: 'Parceiros', linha: 'Plano Pro', nov: 0, dez: 700, jan: 1000, st: 'Planejada', add: {} },
+    { n: 'Outbound Enterprise', area: 'Vendas', dono: 'Vendas Enterprise', seg: 'ent', etapa: 'SQL', canal: 'Outbound', linha: 'Enterprise', nov: 1500, dez: 2600, jan: 2600, st: 'Em andamento', add: { sql: 3, opp: 2, won: 1 } },
   ];
 
   return { R, U, N, rd, MES, MESL, months, CUR, PREV, DT, DU, PACE, BDAYS, P, f, fc, bg, cm, mrr, mrrF, mrrB, proj, dailyOf, AE, SDR, CSM, ini, deals, STAGES, TEMPS, LOSS, lostDeals, CANAIS_CONV, MQL_CH, media, site, email, emailCamp, campaigns, clients, onboarding, modules, MODS, ia, salesCoh, baseCoh, motions, PLANOS };
@@ -1381,7 +1407,7 @@ MKT({
     return `${filtersBar({ noSeg: 1 })}${sec(1, 'Resultado dos envios', 'Os e-mails estão chegando e sendo lidos?')}
     <div class="g g5">${kpi('Enviados', fN(e.env), dSpan(e.env / (ep.env * c.pace) - 1))}${kpi('Abertura', fP(e.open), fPP(e.open - ep.open))}${kpi('Clique', fP(e.click, 2), fPP(e.click - ep.click))}${kpi('Bounce', fP(e.bounce, 2), fPP(e.bounce - ep.bounce))}${kpi('Descadastro', fP(e.unsub, 2), fPP(e.unsub - ep.unsub))}</div>
     <div class="g g2" style="margin-top:12px">${card('Abertura e clique por mês', lineChart({ labels: L.map(i => D.months[i].l), fmt: 'P', series: [{ name: 'Abertura', color: '#FF6A00', vals: L.map(i => D.email[i].open) }, { name: 'Clique', color: '#83A9F0', vals: L.map(i => D.email[i].click * 8) }], mark: 11 }) + '<p class="hint">Clique em escala ×8 para caber no mesmo gráfico.</p>')}
-    ${card('Saúde da base', hbars([{ l: 'Ativos (abriram em 90 dias)', v: 58200, c: '#4CC38A' }, { l: 'Inativos 90+ dias', v: 31400, c: '#E3A84A' }, { l: 'Bounce permanente', v: 2900, c: '#F2766B' }, { l: 'Descadastrados', v: 4100, c: '#77756F' }]), { sub: 'contatos com e-mail válido' })}</div>
+    ${card('Saúde da base', hbars([{ l: 'Ativos (abriram em 90 dias)', v: 10800, c: '#4CC38A' }, { l: 'Inativos 90+ dias', v: 5900, c: '#E3A84A' }, { l: 'Bounce permanente', v: 540, c: '#F2766B' }, { l: 'Descadastrados', v: 760, c: '#77756F' }]), { sub: 'contatos com e-mail válido' })}</div>
     ${sec(2, 'E-mails do período', 'Qual envio puxou MQL?')}
     ${table([{ k: 'n', l: 'E-mail', l2: 1 }, { k: 'env', l: 'Enviados', f: fN }, { k: 'op', l: 'Abertura', f: (v) => fP(v) }, { k: 'cl', l: 'Clique', f: (v) => fP(v, 2) }, { k: 'mql', l: 'MQL', f: fN }], D.emailCamp, { name: 'emails' })}`;
   }
@@ -1506,7 +1532,7 @@ VND({
     <div style="display:flex;gap:10px;align-items:center;margin-bottom:12px"><span class="mu" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase">Janela</span><div class="pills" data-seg="win">${[['7', 'Próx. 7 dias'], ['per', 'Período do filtro'], ['venc', 'Vencidos'], ['all', 'Todo o pipe aberto']].map(([v, l]) => `<button data-v="${v}" class="${win === v ? 'on' : ''}">${l}</button>`).join('')}</div></div>
     <div class="g g4">${kpi('Pipe na janela', fR(sum(wd)), `${fN(wd.length)} negócios`)}${kpi('Previsão do período', fR(prevP), `ganho ${fR(a.bk)} + quentes da janela`)}${kpi('Previsão ponderada (histórico)', fR(pond), 'ganho + pipe × taxa de ganho por temperatura (180 dias)')}${kpi('Bookings + full pipeline', fR(a.bk + sum(wd)), 'teto: ganho + todos os abertos da janela')}</div>
     <div class="g g2" style="margin-top:12px">${card('Por etapa', hbars(D.STAGES.map(st => { const x = wd.filter(d => d.stage === st); return { l: st, v: sum(x), t: fR(sum(x)), s: x.length + ' negócios' }; })))}${card('Por temperatura', hbars(D.TEMPS.map((st, j) => { const x = wd.filter(d => d.temp === st); return { l: st, v: sum(x), t: fR(sum(x)), s: x.length + ' negócios', c: ['#F2766B', '#E3A84A', '#83A9F0', '#8C8A84'][j] }; })))}</div>
-    <div style="margin-top:12px">${table([{ k: 't', l: 'Temperatura', l2: 1, f: (v) => tp(v) }, { k: 'fe', l: 'OPPs fechadas', f: fN }, { k: 'ga', l: 'Ganhos', f: fN }, { k: 'tx', l: 'Taxa de ganho', f: (v) => fP(v, 0) }, { k: 'pi', l: 'Pipe até o fim do período', f: fR }, { k: 'po', l: 'Ponderado', f: fR }], D.TEMPS.map((t, j) => { const fe = [118, 164, 97, 210][j], x = wd.filter(d => d.temp === t); return { t, fe, ga: Math.round(fe * WR[t]), tx: WR[t], pi: sum(x), po: sum(x) * WR[t] }; }), { name: 'taxa-temperatura', title: 'Taxa de ganho por temperatura · últimos 180 dias' })}</div>
+    <div style="margin-top:12px">${table([{ k: 't', l: 'Temperatura', l2: 1, f: (v) => tp(v) }, { k: 'fe', l: 'OPPs fechadas', f: fN }, { k: 'ga', l: 'Ganhos', f: fN }, { k: 'tx', l: 'Taxa de ganho', f: (v) => fP(v, 0) }, { k: 'pi', l: 'Pipe até o fim do período', f: fR }, { k: 'po', l: 'Ponderado', f: fR }], D.TEMPS.map((t, j) => { const fe = [42, 58, 34, 74][j], x = wd.filter(d => d.temp === t); return { t, fe, ga: Math.round(fe * WR[t]), tx: WR[t], pi: sum(x), po: sum(x) * WR[t] }; }), { name: 'taxa-temperatura', title: 'Taxa de ganho por temperatura · últimos 180 dias' })}</div>
     <div class="card" style="margin-top:12px"><div class="ch"><div><h3>Fechamentos a revisar</h3></div><small class="mu">${fN(dl.length)} negócios abertos</small></div><div class="chips rd" style="margin-bottom:10px">${rev.map(([l, x]) => `<div class="chip"><b>${l}: ${x.length}</b></div>`).join('')}</div>
     ${table([{ k: 'cli', l: 'Conta', l2: 1 }, { k: 'stage', l: 'Etapa' }, { k: 'owner', l: 'Executivo' }, { k: 'mrr', l: 'MRR', f: fR }, { k: 'close', l: 'Fechamento' }, { k: 'q', l: 'Por que revisar', f: (v, r) => `<span class="mu">${r.dOpp > 75 && r.stage !== 'Fechar' ? 'fechamento vencido' : r.temp === 'Sem temperatura' ? 'sem temperatura' : 'etapa inicial, fecha em 7 dias'}</span>` }], revL, { name: 'revisar' })}</div>
     ${sec(3, 'Executivos', 'Cada executivo tem pipe para bater a própria meta?')}
@@ -1530,7 +1556,7 @@ VND({
     ${card('Coorte de OPP', `<div class="tw"><table><thead><tr><th class="l">Coorte</th><th>OPPs</th><th>M0</th><th>M1</th><th>M2</th><th>M3</th></tr></thead><tbody>${coh.map(r => `<tr><td class="l">${r.l}</td><td>${fN(r.opps)}</td>${r.v.map(v => v == null ? '<td class="mu">–</td>' : `<td><span class="hc" style="${heatO(v - .1, .18)}">${fP(v, 0)}</span></td>`).join('')}</tr>`).join('')}</tbody></table></div>`, { sub: '% ganho até o mês' })}
     ${card('Vendido por mês', barChart({ labels: M6.map(i => D.months[i].l), fmt: 'R', h: 200, series: [{ name: 'Vendido', color: '#FF8A3D', vals: M6.map(i => D.f(t, i).bk) }], lines: [{ name: 'Meta', color: '#F3F2EE', dash: 1, vals: M6.map(i => (t === 'smb' ? D.cm('smb', i) : D.fc('ent', i)).bk) }] }), { sub: '6 meses + meta' })}</div>
     <div class="g g2" style="margin-top:12px">${card('Perdas · 90 dias', `<div class="g g4">${lc.map(([m, n]) => `<div class="mini"><b>${fP(n / lt, 0)}</b><span>${m}</span><small>${n} negócios</small></div>`).join('')}</div>`, { sub: 'motivo e peso', r: `<small class="mu">${lost.length} perdas</small>` })}
-    ${card('Higiene e reuniões', `<div class="g g4"><div class="mini bad"><b>${venc.length}</b><span>Fechamento vencido</span><small>${fR(sum(venc))}</small></div><div class="mini"><b>${semT.length}</b><span>Sem data ou temperatura</span><small>preencher no CRM</small></div><div class="mini"><b>${fP(.07, 0)}</b><span>No-show</span><small>16 de 240 reuniões</small></div><div class="mini"><b>58</b><span>Reuniões realizadas</span><small>2 reagendadas</small></div></div>`, { sub: 'pipe e diagnóstico (30 dias)' })}</div>
+    ${card('Higiene e reuniões', `<div class="g g4"><div class="mini bad"><b>${venc.length}</b><span>Fechamento vencido</span><small>${fR(sum(venc))}</small></div><div class="mini"><b>${semT.length}</b><span>Sem data ou temperatura</span><small>preencher no CRM</small></div><div class="mini"><b>${fP(.07, 0)}</b><span>No-show</span><small>6 de 88 reuniões</small></div><div class="mini"><b>22</b><span>Reuniões realizadas</span><small>2 reagendadas</small></div></div>`, { sub: 'pipe e diagnóstico (30 dias)' })}</div>
     <div style="margin-top:12px">${table([{ k: 'cli', l: 'Conta', l2: 1 }, { k: 'stage', l: 'Etapa' }, { k: 'temp', l: 'Temperatura', f: tp }, { k: 'close', l: 'Fechamento' }, { k: 'dOpp', l: 'Dias desde a OPP', f: fN }, { k: 'mrr', l: 'MRR', f: fR }], [...dl].sort((x, y) => y.mrr - x.mrr).slice(0, 12), { name: 'top-negocios', title: 'Top negócios abertos', sub: 'ranqueados por MRR' })}</div>
     ${sec(1, 'Contra a média do time', 'Onde o time está acima ou abaixo da própria média?')}
     <div class="g g4">${kpi('OPP no período', fN(a.opp), `${nf1.format(a.opp / (c.cur ? D.DU : D.DT))} por dia útil`)}${kpi('Conversão', fP(a.won / a.opp, 0), `${fN(a.won)} ganhos · média de 90 dias ${fP(pv.won / pv.opp, 0)}`)}${kpi('Avg. ticket (MRR)', fR(a.tk), 'média do time ' + fR(pv.tk))}${kpi('Pipeline que fecha no período', fR(sum(dl.filter(d => d.closeThis))), `cobre ${fP(sum(dl.filter(d => d.closeThis)) / Math.max(1, g.bk - a.bk), 0)} do que falta`)}</div>
@@ -2016,10 +2042,19 @@ function closeTV() { if (!TVS) return; clearInterval(TVS.iv); TVS = null; $('.tv
   const id = location.hash.replace(/^#\//, '') || 'overview';
   S.route = scr(id) ? id : 'overview';
   render();
-  // abertura: uma vez por sessão, com opção de pular; não roda quando a página está embutida no portfólio
-  const intro = $('#intro'); let seen = false; try { seen = sessionStorage.getItem('pulsar-intro') === '1'; } catch { }
-  const done = () => { intro.classList.add('out'); setTimeout(() => intro.remove(), 650); try { sessionStorage.setItem('pulsar-intro', '1'); } catch { } };
-  if (seen || q.has('embed')) intro.remove(); else { $('#skip').onclick = done; setTimeout(done, 2900); }
+  // abertura (a mesma do produto): uma vez por sessão em tela cheia; embutida no portfólio, toca quando a moldura aparece na tela
+  const intro = $('#intro'); let seen = false, playing = false; try { seen = sessionStorage.getItem('pulsar-intro') === '1'; } catch { }
+  const fit = () => { const stage = $('#abStage'); if (stage) stage.style.transform = `translate(-50%,-50%) scale(${innerWidth < innerHeight ? Math.max(innerWidth / 1920 * 1.3, .18) : Math.max(innerWidth / 1920, innerHeight / 1080)})`; };
+  const reset = () => { const o = $('#intro'), n = o.cloneNode(true); o.replaceWith(n); return n; };
+  window.playIntro = () => {
+    if (playing || matchMedia('(prefers-reduced-motion: reduce)').matches) return; playing = true;
+    const el = reset(); el.hidden = false; fit(); addEventListener('resize', fit); el.classList.add('run');
+    let fim = false; const end = (fast) => { if (fim) return; fim = true; try { sessionStorage.setItem('pulsar-intro', '1'); } catch { } if (fast) el.classList.add('out'); setTimeout(() => { el.hidden = true; el.classList.remove('run', 'out'); playing = false; removeEventListener('resize', fit); }, fast ? 260 : 0); };
+    const t = setTimeout(() => end(false), 6150); el.querySelector('#skip').onclick = () => { clearTimeout(t); end(true); };
+    const key = (e) => { if (e.key === 'Escape' || e.key === 'Enter') { clearTimeout(t); end(true); removeEventListener('keydown', key); } }; addEventListener('keydown', key);
+  };
+  window.addEventListener('message', (e) => { if (e.data === 'pulsar-intro') playIntro(); });
+  if (!q.has('embed') && !seen) playIntro();
   if (q.has('embed')) document.body.classList.add('embed');
 })();
 
