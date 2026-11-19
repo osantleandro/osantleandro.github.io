@@ -106,7 +106,7 @@ section{padding:96px 0;position:relative}
 .hero h1{font-size:clamp(46px,7vw,92px);letter-spacing:-.055em;line-height:.94;margin-bottom:28px}
 .hero h1 span{display:block;color:var(--or)}
 .hero .lead{margin-bottom:32px}
-.stage{position:relative;padding:0 0 110px 40px}
+.stage{position:relative;padding:0 0 0 40px}
 .stage .photo{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:#2b1406}
 .stage .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 .stage .tag{position:absolute;left:0;top:34px;display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:11px 14px;box-shadow:var(--shadow);font-size:12.5px;max-width:250px}
@@ -384,10 +384,8 @@ section{padding:96px 0;position:relative}
 .fab-wa svg{width:24px;height:24px;fill:#fff}
 .ask-pop{position:fixed;right:20px;bottom:84px;z-index:71;width:min(370px,calc(100vw - 32px));transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;transition:all .22s}
 .ask-pop.open{transform:none;opacity:1;pointer-events:auto}
-.home .fab-btn{display:none}
 body:has(.ask-pop.open) .fab-wa{opacity:0;pointer-events:none}
 .fab-wa{transition:transform .2s,opacity .2s}
-.home.scrolled .fab-btn{display:flex}
 @media(max-width:560px){.fab-btn span{display:none}.fab-btn{padding:0 6px}}
 
 /* ---------- busca ctrl+k ---------- */

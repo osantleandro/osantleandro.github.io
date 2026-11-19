@@ -133,14 +133,7 @@ function openAsk() { pop.classList.add('open'); const l = $('.ask-log', pop); l.
 function closeAsk() { pop.classList.remove('open'); }
 $('.fab-btn', fab).onclick = () => { autoOpened = false; pop.classList.contains('open') ? closeAsk() : openAsk(); };
 $$('[data-ask]').forEach(b => b.onclick = e => { e.preventDefault(); openAsk(); });
-/* Na home o assistente da entrada acompanha a página: quando ele sai da tela,
-   aparece o botão flutuante e, se já tem conversa, ela continua na janela flutuante. */
-if (inline && 'IntersectionObserver' in window) {
-  new IntersectionObserver(([e]) => {
-    const vis = e.isIntersecting;
-    B.classList.toggle('scrolled', !vis);
-    if (!vis && history.length && !pop.classList.contains('open')) { autoOpened = true; openAsk(); }
-    if (vis && autoOpened) { autoOpened = false; closeAsk(); }
-  }, { threshold: 0.25 }).observe(inline);
-} else B.classList.add('scrolled');
+/* O assistente fica fixo no canto e acompanha a página. Na home, no computador, ele já começa aberto. */
+if (B.classList.contains('home') && innerWidth >= 900) { let shut = false; try { shut = sessionStorage.getItem('askShut') === '1'; } catch (e) {} if (!shut) setTimeout(() => pop.classList.add('open'), 700); }
+$('.x', pop).addEventListener('click', () => { try { sessionStorage.setItem('askShut', '1'); } catch (e) {} });
 })();
