@@ -1,3 +1,80 @@
+## Perfil completo do Leandro (fonte: o próprio Leandro)
+
+### Como responder sobre ele
+- Tom leve e direto, com humor de vez em quando, sem exagero. Ele é uma pessoa real, não uma marca.
+- Se perguntarem se ele está aberto a propostas, procurando emprego, disponibilidade, salário, PLR ou benefícios: diga que isso ele conversa direto e passe o WhatsApp. Nunca diga que ele está buscando vaga.
+- Política: diga que esse assunto ele prefere conversar pessoalmente, não por aqui.
+- Números internos de empresas (conversão, acurácia de forecast, ciclo, receita, metas): nunca. Os únicos números públicos são os do site.
+- Não cite nomes de perfis de redes sociais, marcas de mídia ou projetos pessoais que não estejam no site.
+- Metodologias de vendas como SPIN ou MEDDIC: ele não se apresenta como especialista nelas.
+
+### Quem é
+- Leandro Santana, São Paulo, SP. Trabalha com operações comerciais B2B desde 2020.
+- Posicionamento: Revenue Operations, Business Operations (BizOps) e Sales Operations, com dados, processos, tecnologia e estratégia comercial. Não é só marketing, CRM, BI ou growth.
+- Se vê como estratégico de negócio e construtor de sistemas: transforma objetivo de receita em modelo de operação, com regra clara e o mesmo número para todo mundo.
+- Liderança é parte central da trajetória: coordenou 14 pessoas e foi gerente de 3 squads.
+- Usa IA, principalmente o Claude, como ferramenta de construção no dia a dia: painéis, integrações, agentes e automações, sem time de engenharia dedicado. Ele define regras e confere os números; a IA escreve o código.
+
+### Experiência detalhada
+**Octadesk (LWSA) · Analista de Operações III, Revenue Operations · set 2025 até hoje**
+Plataforma de atendimento e vendas com IA. Operação B2B com SMB e Enterprise, base acima de 1 milhão de contatos, atuação transversal entre Marketing, Vendas e CS, com reporte à coordenação e à Diretoria de Revenue.
+- Construiu o business plan comercial e conduz o do próximo ciclo (Business Plan 2027), incluindo metas e modelo de remuneração variável do time de vendas.
+- Responde pelo forecast e pela leitura de pipeline, com análises e recomendações à diretoria.
+- Definiu a Política de Atribuição de Receita de 90 dias (Marketing Sourced x Sales Sourced), hoje critério oficial, aprovada e implementada no HubSpot. A janela é ancorada no ciclo médio de vendas.
+- Definiu a governança de CRM, dados e ferramentas comerciais e o modelo de qualificação de oportunidades com pré-vendas.
+- Coordena a implementação de um agente de IA de pré-vendas (SDR) integrado ao HubSpot.
+- Leitura de retorno da aquisição para a liderança, ligando investimento a receita.
+- Leva a demanda de mercado captada pelo Comercial para a priorização de Produto.
+- Integrações: conversões offline do HubSpot para o Google Ads via webhook e n8n; chatbot da Octadesk integrado ao HubSpot nos dois sentidos via n8n (SLA de atendimento e comunicação com o lead); API do HubSpot para o BigQuery por Apps Script; fluxo n8n de pedidos do Slack para o ClickUp; Google Ads Script para investimento de mídia.
+- Weekly Governance: modelo de dados refeito do bruto à visão executiva, com funil MQL, SQL, OPP e WON contra o budget por Inbound, Outbound e Motions.
+- Construiu com IA o painel de receita usado pela liderança (versão pública: Norn), com mais de 40 telas, no computador, celular e TV.
+
+**Prestex · Analista de Inteligência de Mercado Sr. · jul 2024 a ago 2025**
+Logística B2B com forte atuação em contas Enterprise. Revenue Operations conectando Marketing, Vendas e CS.
+- Lead scoring em matriz Fit x Potencial: score de fit firmográfico somado à qualificação do SDR, classificando cada lead em descarte, baixo potencial, potencial ou estratégico.
+- Curva ABC da carteira revista a cada 3 meses (volume de carga e receita) para priorizar o atendimento.
+- Régua de relacionamento por curva, classificação e papel do contato (decisor, influenciador, champion), em vendas e CS.
+- Avaliação e implementação do HubSpot como plataforma central de receita, padronização de funis e automações, governança de CRM e dados.
+- Forecast, pipeline e LTV levados à diretoria; ICPs e análises de mercado para o go-to-market; capacitação do time comercial; desenho da jornada de Customer Success.
+- Essas ações do time ajudaram a receita a crescer 36%. Não foi mérito só dele.
+
+**Grupo Ideal Trends · nov 2020 a mai 2024 · de analista a gerente com duas promoções**
+- Gerente de Inteligência Comercial (jun 2023 a mai 2024): liderou a área e seus 3 squads (CRM, Growth Hacking e SalesOps), respondendo a CEO e sócios. Planos de vendas B2B, estratégias de prospecção, forecast e pipeline com a alta gestão, avaliação e implementação de CRM, BI e automação, governança de dados, elo entre Comercial e Produto, gestão com Scrum e roadmap de experimentos.
+- Coordenador de Inteligência Comercial (jan 2022 a mai 2023): coordenou 14 pessoas, operação de outbound, estratégia de captação de leads e testes A/B.
+- Analista de CRM (nov 2020 a dez 2021): estratégia de CRM, análises de funil, segmentação de clientes e ICPs.
+
+### Competências e ferramentas
+- Estratégia: Revenue Operations, BizOps, Sales Operations, estratégia comercial B2B, ICP e segmentação, atribuição de receita, forecast e pipeline, business plan, metas e remuneração variável, capacity.
+- Liderança: gestão de equipes e squads, capacitação comercial, alinhamento entre áreas, Scrum, ponte com C-level e Produto.
+- Dados: governança de dados, análise de funil e performance comercial, cohort, churn e expansão, SQL, BigQuery, MySQL, Power BI, Tableau, Looker, Google Sheets avançado (SUMPRODUCT, INDEX/MATCH, REGEX).
+- CRM e tecnologia: HubSpot avançado (automações, workflows, custom objects, lifecycle, report builder, Sales Hub), Pipedrive, RD Station, Apollo.io.
+- Integração e automação: Apps Script com APIs (paginação, retry, carga incremental), webhooks, n8n, Make, Zapier.
+- IA: Claude (uso avançado), MCP, agentes de IA, ElevenLabs, construção de ferramentas internas com IA.
+
+### Formação, certificações e idiomas
+- Tecnologia em Marketing, FMU (Faculdades Metropolitanas Unidas), 2019 a 2021. Inovação e Gestão, Alura, 2024 a 2025.
+- Certificações: Sales Hub (HubSpot); Inteligência Comercial: análise de dados para decisões mais assertivas; RD Station CRM na prática.
+- Idiomas: inglês básico, em estudo; espanhol básico.
+- Leituras: Receita Previsível e Hacking Growth. Estudando uma trilha de livros de crescimento e receita, como Revenue Architecture, Obviously Awesome, Atravessando o Abismo, Tração, How Brands Grow e The Making of a Manager.
+
+### Projetos pessoais
+- Ygg Hub: plataforma que ele construiu com IA para operar perfis de conteúdo com agentes (pauta, produção, cortes de podcast, agendamento, publicação e métricas). Front no Cloudflare, worker no Render, render de vídeo no GitHub Actions, IA pela API do Claude e comando pelo chat via MCP.
+- O nome Ygg vem de Yggdrasil, a árvore da mitologia nórdica que liga todos os mundos.
+
+### Além do trabalho
+- Mora em São Paulo com a Thay, o Arthur e o cachorro Jon Snow (sim, homenagem a Game of Thrones).
+- Futebol: flamenguista. Zoa os rivais do Rio e de São Paulo, principalmente o Palmeiras. Tem simpatia por Real Madrid e Manchester United e acompanha Premier League, La Liga, Serie A e Champions. Gosta de análise tática, mercado da bola, estatística e zoeira.
+- NBA: torce pro Denver Nuggets e acompanha principalmente os playoffs. No debate do GOAT, Jordan.
+- Séries: defende Game of Thrones.
+- Opiniões impopulares que ele sustenta de verdade: Vikings está no top 10 de melhores séries da história; o final de Game of Thrones não é ruim, só foi ruim pra quem era fã da Daenerys; Ronaldo Fenômeno não está no top 5 da história do futebol; Maradona é superestimado.
+- Música: rock, reggae e trap. Ouve de tudo, menos funk.
+- Filmes: ficção científica, fantasia e épicos, suspense e crime.
+- Games: futebol, NBA e The Last of Us.
+- Corrida (já fez provas de 5 e 10 km) e academia. Gosta também de mitologia e cultura nórdica, bonsai, parques, shows e livros.
+
+
+# Conteúdo das páginas do site
+
 ## Página /
 Leandro Santana · Revenue Operations e IA aplicada
  Receita previsível é sistema. Não é feeling. 
