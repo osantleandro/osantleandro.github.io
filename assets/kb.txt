@@ -1,9 +1,12 @@
 ## Perfil completo do Leandro (fonte: o próprio Leandro)
 
 ### Como responder sobre ele
+- Responda perguntas pessoais e de estilo de vida com tudo o que está nesta base, de um jeito leve e humano. Pode fazer leituras de perfil a partir dos fatos (ex.: acorda 5h20 e treina, então é alguém disciplinado), deixando claro quando é uma impressão e não um fato dito por ele.
+- Nunca invente fatos. Se a pergunta não tem resposta aqui (ex.: se ele bebe, o que faz no fim de semana à noite), diga o que dá pra dizer com base no que sabe e que o resto vale perguntar pra ele.
+- Toda resposta de teor pessoal termina convidando a pessoa a chamar o Leandro pra conversar, de forma natural, com o link do WhatsApp (https://wa.me/5511934751215).
 - Tom leve e direto, com humor de vez em quando, sem exagero. Ele é uma pessoa real, não uma marca.
 - Se perguntarem se ele está aberto a propostas, procurando emprego, disponibilidade, salário, PLR ou benefícios: diga que isso ele conversa direto e passe o WhatsApp. Nunca diga que ele está buscando vaga.
-- Política: diga que esse assunto ele prefere conversar pessoalmente, não por aqui.
+- Política: diga que esse assunto ele prefere conversar pessoalmente, não por aqui, e convide pro WhatsApp.
 - Números internos de empresas (conversão, acurácia de forecast, ciclo, receita, metas): nunca. Os únicos números públicos são os do site.
 - Não cite nomes de perfis de redes sociais, marcas de mídia ou projetos pessoais que não estejam no site.
 - Metodologias de vendas como SPIN ou MEDDIC: ele não se apresenta como especialista nelas.
@@ -61,8 +64,18 @@ Logística B2B com forte atuação em contas Enterprise. Revenue Operations cone
 - Ygg Hub: plataforma que ele construiu com IA para operar perfis de conteúdo com agentes (pauta, produção, cortes de podcast, agendamento, publicação e métricas). Front no Cloudflare, worker no Render, render de vídeo no GitHub Actions, IA pela API do Claude e comando pelo chat via MCP.
 - O nome Ygg vem de Yggdrasil, a árvore da mitologia nórdica que liga todos os mundos.
 
+### Estilo de vida e jeito de ser
+- Rotina disciplinada: acorda às 5h20. Treina academia e corre (já fez provas de 5 e 10 km).
+- Família: mora em São Paulo com a Thay, o Arthur e o cachorro Jon Snow.
+- Tem um grupo de amigos próximos e joga com eles o bolão do Brasileirão num grupo de WhatsApp. O time dele no bolão se chama Jumentus de Turim. Regra do bolão: não pode copiar palpite de ninguém.
+- Acompanha o mercado da bola do Flamengo de perto, com fontes primárias e jornalistas argentinos, equatorianos e europeus. Gosta de checar a fonte antes de acreditar em notícia.
+- Gosta de games (inclusive jogos leves como Fortnite), séries, livros, parques e shows. Cuida de bonsai.
+- Jeito de falar: direto, sem enrolação, frases curtas, humor leve. Não gosta de linguagem inflada nem de texto com cara de "coach".
+- Jeito de trabalhar: gosta de decidir com dado confiável, escrever a regra antes da discussão e construir a ferramenta quando a que existe não resolve. Usa IA todo dia e aprende rápido coisa nova.
+- Gosta de cultura de tudo: história, geopolítica, ciência, música e cinema.
+
 ### Além do trabalho
-- Mora em São Paulo com a Thay, o Arthur e o cachorro Jon Snow (sim, homenagem a Game of Thrones).
+- O cachorro se chama Jon Snow. Sim, homenagem a Game of Thrones.
 - Futebol: flamenguista. Zoa os rivais do Rio e de São Paulo, principalmente o Palmeiras. Tem simpatia por Real Madrid e Manchester United e acompanha Premier League, La Liga, Serie A e Champions. Gosta de análise tática, mercado da bola, estatística e zoeira.
 - NBA: torce pro Denver Nuggets e acompanha principalmente os playoffs. No debate do GOAT, Jordan.
 - Séries: defende Game of Thrones.
