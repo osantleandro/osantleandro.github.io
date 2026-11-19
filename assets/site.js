@@ -80,19 +80,19 @@ $$('[data-pal]').forEach(b => b.onclick = openPal);
 const AV = R + 'img/avatar.jpg';
 const link = (t, h) => `<a href="${h.startsWith('http') || h.startsWith('mailto') ? h : R + h}"${h.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${t}</a>`;
 const LOCAL = [
-  [/case|empresa|trabalh|experi|onde (ele|voce|vc)/, () => `Passei por três operações B2B:\n• Octadesk (LWSA), hoje, em Revenue Operations\n• Prestex, em Inteligência de Mercado\n• Grupo Ideal Trends, de analista de CRM a gerente de Inteligência Comercial\n\nCada uma tem uma página: ${link('ver cases', 'cases/')}.`],
-  [/ia|claude|agente|norn|ygg|painel|mcp|constru/, () => `Construí dois produtos com IA:\n• Norn, painel de RevOps usado pela liderança, com 40+ telas\n• Ygg Hub, operação de conteúdo tocada por agentes\n\nAs duas demos funcionam de verdade: ${link('projetos com IA', 'projetos/')}.`],
-  [/forecast|previs|pipeline|meta|budget|commit/, () => `Forecast pra mim sai do funil, não do feeling do vendedor: entradas, taxas de conversão e ticket, comparados com o budget. Assim o problema aparece semanas antes. Escrevi sobre isso: ${link('Forecast não é pesquisa de opinião', 'notas/forecast/')}.`],
-  [/atribu|sourced|origem|cac/, () => `Desenhei uma política de atribuição de 90 dias que separa Marketing Sourced de Sales Sourced, aprovada e em vigor no HubSpot. Detalhes: ${link('a nota sobre atribuição', 'notas/atribuicao/')}.`],
+  [/case|empresa|trabalh|experi|onde (ele|voce|vc)/, () => `O Leandro passou por três operações B2B:\n• Octadesk (LWSA), hoje, em Revenue Operations\n• Prestex, em Inteligência de Mercado\n• Grupo Ideal Trends, de analista de CRM a gerente de Inteligência Comercial\n\nCada uma tem uma página: ${link('ver cases', 'cases/')}.`],
+  [/\bia\b|inteligencia artificial|claude|agente|norn|ygg|painel|mcp|constru/, () => `Ele construiu dois produtos com IA:\n• Norn, painel de RevOps usado pela liderança, com 40+ telas\n• Ygg Hub, operação de conteúdo tocada por agentes\n\nAs duas demos funcionam de verdade: ${link('projetos com IA', 'projetos/')}.`],
+  [/forecast|previs|pipeline|meta|budget|commit/, () => `Pro Leandro, forecast sai do funil, não do feeling do vendedor: entradas, taxas de conversão e ticket, comparados com o budget. Assim o problema aparece semanas antes. Ele escreveu sobre isso: ${link('Forecast não é pesquisa de opinião', 'notas/forecast/')}.`],
+  [/atribu|sourced|origem|cac/, () => `Ele desenhou uma política de atribuição de 90 dias que separa Marketing Sourced de Sales Sourced, aprovada e em vigor no HubSpot. Detalhes: ${link('a nota sobre atribuição', 'notas/atribuicao/')}.`],
   [/hubspot|n8n|integra|automa|zapier|make|webhook|api|bigquery|sql/, () => `Alguns exemplos:\n• conversões offline do HubSpot pro Google Ads via webhook e n8n\n• chatbot da Octadesk integrado ao HubSpot nos dois sentidos (SLA e comunicação com o lead)\n• API do HubSpot pro BigQuery por Apps Script\n• workflows, lead score e régua de relacionamento no HubSpot\n\nTem mais em ${link('sistemas', 'projetos/#sistemas')}.`],
-  [/lider|gest|time|equipe|squad|coorden|gerente/, () => `Fui coordenador de 14 pessoas e depois gerente de Inteligência Comercial com 3 squads (CRM, Growth Hacking e SalesOps), respondendo a CEO e sócios. Tá na ${link('trajetória', 'sobre/#trajetoria')}.`],
-  [/36|prestex|lead scor|curva|abc|regua|régua/, () => `Na Prestex montei o lead scoring Fit x Potencial, a curva ABC da carteira e a régua de relacionamento por perfil, e implementei o HubSpot. Foram ações do time que ajudaram a receita a crescer 36%. ${link('Ver o case', 'cases/prestex/')}.`],
+  [/lider|gest|time|equipe|squad|coorden|gerente|trajet|carreira/, () => `Ele foi coordenador de 14 pessoas e depois gerente de Inteligência Comercial com 3 squads (CRM, Growth Hacking e SalesOps), respondendo a CEO e sócios. Tá na ${link('trajetória', 'sobre/#trajetoria')}.`],
+  [/36|prestex|lead scor|curva|abc|regua|régua/, () => `Na Prestex ele montou o lead scoring Fit x Potencial, a curva ABC da carteira e a régua de relacionamento por perfil, e implementou o HubSpot. Foram ações do time que ajudaram a receita a crescer 36%. ${link('Ver o case', 'cases/prestex/')}.`],
   [/diagn|maturidade|teste|avali/, () => `Tem um diagnóstico de RevOps com 10 perguntas rápidas. Ele devolve o nível de maturidade da operação e o próximo passo: ${link('fazer o diagnóstico', 'diagnostico/')}.`],
-  [/flamengo|futebol|hobb|pessoal|gosta|fora do trabalho|musica|música|serie|série|corr/, () => `Fora do trabalho: Flamengo, NBA (Denver), rock, reggae e trap, Game of Thrones, The Last of Us, corrida e mitologia nórdica, que deu nome ao Ygg. ${link('Mais sobre mim', 'sobre/#vida')}.`],
-  [/contat|whats|email|e-mail|falar|conversar|vaga|entrevista|linkedin|telefone/, () => `O jeito mais rápido é o ${link('WhatsApp', 'https://wa.me/' + WA)}. Também tem o ${link('LinkedIn', LINKEDIN)} e o e-mail ${link(MAIL, 'mailto:' + MAIL)}.`],
-  [/quem|sobre|resum|apresent|faz o que|o que (ele|voce|vc) faz/, () => `Sou o Leandro, de Revenue Operations em São Paulo. Trabalho onde a estratégia comercial vira operação: forecast, business plan, atribuição, governança de CRM e as ferramentas que a liderança usa pra decidir, muitas construídas com IA. ${link('Sobre', 'sobre/')}.`]
+  [/flamengo|futebol|hobb|pessoal|gosta|fora do trabalho|musica|música|serie|série|corr/, () => `Fora do trabalho: Flamengo, NBA (Denver), rock, reggae e trap, Game of Thrones, The Last of Us, corrida e mitologia nórdica, que deu nome ao Ygg. ${link('Mais sobre ele', 'sobre/#vida')}.`],
+  [/contat|whats|email|e-mail|falar|conversar|vaga|entrevista|linkedin|telefone/, () => `O jeito mais rápido de falar com ele é o ${link('WhatsApp', 'https://wa.me/' + WA)}. Também tem o ${link('LinkedIn', LINKEDIN)} e o e-mail ${link(MAIL, 'mailto:' + MAIL)}.`],
+  [/quem|sobre|resum|apresent|faz o que|o que (ele|voce|vc) faz/, () => `O Leandro é de Revenue Operations, em São Paulo. Ele trabalha onde a estratégia comercial vira operação: forecast, business plan, atribuição, governança de CRM e as ferramentas que a liderança usa pra decidir, muitas construídas com IA. ${link('Sobre', 'sobre/')}.`]
 ];
-const localAnswer = q => { const n = norm(q); for (const [re, f] of LOCAL) if (re.test(n)) return f(); return `Essa eu não sei responder por aqui. Dá uma olhada em ${link('cases', 'cases/')} e ${link('projetos', 'projetos/')}, ou fala direto comigo no ${link('WhatsApp', 'https://wa.me/' + WA)}.`; };
+const localAnswer = q => { const n = norm(q); for (const [re, f] of LOCAL) if (re.test(n)) return f(); return `Essa eu não sei responder por aqui. Dá uma olhada em ${link('cases', 'cases/')} e ${link('projetos', 'projetos/')}, ou fala direto com ele no ${link('WhatsApp', 'https://wa.me/' + WA)}.`; };
 const esc = s => s.replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 const fmtAI = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t, h) => link(t, h.replace(/^https:\/\/osantleandro\.github\.io\/?/, '').replace(/^\//, ''))).replace(/(^|\n)[-*] /g, '$1• ');
 const history = [];
@@ -101,31 +101,45 @@ const askHTML = (inline) => `<div class="ask-top"><img src="${AV}" alt=""><div><
 <div class="ask-chips"><button>Cases</button><button>Projetos com IA</button><button>Integrações e automações</button><button>Como falar com ele</button></div>
 <form class="ask-form"><input placeholder="Pergunte algo..." aria-label="Sua pergunta" maxlength="400"><button aria-label="Enviar">${ic('send')}</button></form>
 <div class="ask-note">Respostas geradas por IA a partir do conteúdo do site. Podem conter erros.</div>`;
+const boxes = [];
+let busy = false, autoOpened = false;
+const addAll = (cls, html) => boxes.map(bx => { const log = $('.ask-log', bx); const d = document.createElement('div'); d.className = 'msg ' + cls; d.innerHTML = html; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; });
+const setBusy = v => { busy = v; boxes.forEach(bx => $('.ask-form button', bx).disabled = v); };
+const send = async q => { q = (q || '').trim(); if (!q || busy) return; addAll('me', esc(q)); boxes.forEach(bx => $('.ask-form input', bx).value = ''); setBusy(true); const ty = addAll('bot typing', '<i></i><i></i><i></i>');
+  let out = null;
+  if (ASK_URL) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 20000);
+    const r = await fetch(ASK_URL, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ q, history: history.slice(-6) }), signal: ctl.signal }); clearTimeout(tm);
+    if (r.ok) { const j = await r.json(); if (j && j.answer) out = fmtAI(j.answer); } } catch (e) {} }
+  if (!out) { await new Promise(r => setTimeout(r, 450)); out = localAnswer(q); }
+  history.push({ role: 'user', content: q }, { role: 'assistant', content: out.replace(/<[^>]+>/g, '') });
+  ty.forEach(t => t.remove()); addAll('bot', out); setBusy(false); };
 const wire = box => {
-  const log = $('.ask-log', box), form = $('.ask-form', box), inp = $('input', form), btn = $('button', form);
-  const add = (cls, html) => { const d = document.createElement('div'); d.className = 'msg ' + cls; d.innerHTML = html; log.appendChild(d); log.scrollTop = log.scrollHeight; return d; };
-  const send = async q => { q = q.trim(); if (!q) return; add('me', esc(q)); inp.value = ''; btn.disabled = true; const ty = add('bot typing', '<i></i><i></i><i></i>');
-    let out = null;
-    if (ASK_URL) { try { const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 20000);
-      const r = await fetch(ASK_URL, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ q, history: history.slice(-6) }), signal: ctl.signal }); clearTimeout(tm);
-      if (r.ok) { const j = await r.json(); if (j && j.answer) out = fmtAI(j.answer); } } catch (e) {} }
-    if (!out) { await new Promise(r => setTimeout(r, 450)); out = localAnswer(q); }
-    history.push({ role: 'user', content: q }, { role: 'assistant', content: out.replace(/<[^>]+>/g, '') });
-    ty.remove(); add('bot', out); btn.disabled = false; };
+  boxes.push(box);
+  const form = $('.ask-form', box), inp = $('input', form);
   form.onsubmit = e => { e.preventDefault(); send(inp.value); };
   $$('.ask-chips button', box).forEach(b => b.onclick = () => send(b.textContent));
-  const x = $('.x', box); if (x) x.onclick = closeAsk;
+  const x = $('.x', box); if (x) x.onclick = () => { autoOpened = false; closeAsk(); };
 };
-$$('[data-ask-inline]').forEach(el => { el.classList.add('ask-card'); el.innerHTML = askHTML(true); wire(el); });
+const inline = $('[data-ask-inline]');
+if (inline) { inline.classList.add('ask-card'); inline.innerHTML = askHTML(true); wire(inline); }
 
 const fab = document.createElement('div'); fab.className = 'fab';
 fab.innerHTML = `<a class="fab-wa" href="https://wa.me/${WA}?text=${encodeURIComponent('Oi Leandro! Vi seu portfólio e queria conversar.')}" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2a9.8 9.8 0 0 0-8.4 14.8L2.2 21.8l4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 1.8a8 8 0 1 1-4.1 14.9l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4zm-3.3 3.9c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 2.1.8 2.6.7 3 .6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3l-1.6-.8c-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1-.3-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.4l-.7-1.8c-.2-.5-.4-.4-.6-.4h-.4z"/></svg></a>
 <button class="fab-btn" aria-label="Abrir assistente"><img src="${AV}" alt=""><span>Pergunte ao Leandro</span></button>`;
 B.appendChild(fab);
 const pop = document.createElement('div'); pop.className = 'ask-card ask-pop'; pop.innerHTML = askHTML(false); B.appendChild(pop); wire(pop);
-function openAsk() { pop.classList.add('open'); setTimeout(() => $('input', pop).focus(), 60); }
+function openAsk() { pop.classList.add('open'); const l = $('.ask-log', pop); l.scrollTop = l.scrollHeight; setTimeout(() => $('input', pop).focus({ preventScroll: true }), 60); }
 function closeAsk() { pop.classList.remove('open'); }
-$('.fab-btn', fab).onclick = () => pop.classList.contains('open') ? closeAsk() : openAsk();
+$('.fab-btn', fab).onclick = () => { autoOpened = false; pop.classList.contains('open') ? closeAsk() : openAsk(); };
 $$('[data-ask]').forEach(b => b.onclick = e => { e.preventDefault(); openAsk(); });
-if (B.classList.contains('home')) { const onS = () => B.classList.toggle('scrolled', scrollY > 700); addEventListener('scroll', onS, { passive: true }); onS(); }
+/* Na home o assistente da entrada acompanha a página: quando ele sai da tela,
+   aparece o botão flutuante e, se já tem conversa, ela continua na janela flutuante. */
+if (inline && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([e]) => {
+    const vis = e.isIntersecting;
+    B.classList.toggle('scrolled', !vis);
+    if (!vis && history.length && !pop.classList.contains('open')) { autoOpened = true; openAsk(); }
+    if (vis && autoOpened) { autoOpened = false; closeAsk(); }
+  }, { threshold: 0.25 }).observe(inline);
+} else B.classList.add('scrolled');
 })();

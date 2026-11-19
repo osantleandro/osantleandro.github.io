@@ -385,6 +385,8 @@ section{padding:96px 0;position:relative}
 .ask-pop{position:fixed;right:20px;bottom:84px;z-index:71;width:min(370px,calc(100vw - 32px));transform:translateY(12px) scale(.98);opacity:0;pointer-events:none;transition:all .22s}
 .ask-pop.open{transform:none;opacity:1;pointer-events:auto}
 .home .fab-btn{display:none}
+body:has(.ask-pop.open) .fab-wa{opacity:0;pointer-events:none}
+.fab-wa{transition:transform .2s,opacity .2s}
 .home.scrolled .fab-btn{display:flex}
 @media(max-width:560px){.fab-btn span{display:none}.fab-btn{padding:0 6px}}
 
