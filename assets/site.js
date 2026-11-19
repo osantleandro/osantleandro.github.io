@@ -6,7 +6,7 @@ const ic = n => `<svg class="ic"><use href="#i-${n}"/></svg>`;
 const store = { get(k) { try { return localStorage.getItem(k) } catch (e) { return null } }, set(k, v) { try { localStorage.setItem(k, v) } catch (e) {} } };
 
 /* Endereço do assistente com IA (Cloudflare Worker). Vazio = respostas prontas. */
-const ASK_URL = '';
+const ASK_URL = 'https://ask-leandro.leandrosantana-mkt.workers.dev';
 const WA = '5511934751215';
 const LINKEDIN = 'https://www.linkedin.com/in/leandrosantanamkt/';
 const MAIL = 'leandrosantana.mkt@gmail.com';

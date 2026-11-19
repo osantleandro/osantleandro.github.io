@@ -1,0 +1,426 @@
+## Página /
+Leandro Santana · Revenue Operations e IA aplicada
+ Receita previsível é sistema. Não é feeling. 
+ Trabalho onde a estratégia comercial vira operação: forecast, business plan, atribuição, dados e as ferramentas que a liderança usa pra decidir. Aqui estão as empresas onde trabalhei, o que fiz em cada uma e o que construí com IA.
+ Ver cases 
+ Projetos com IA
+ Ver trajetória
+ Copiar resumo do meu perfil
+ Agora Business Plan 2027 e IA aplicada à receita 
+ +36%
+ de receita na Prestex, resultado do time, com ações como lead score e régua de relacionamento
+ 14
+ pessoas lideradas como coordenador de Inteligência Comercial
+ 3
+ squads como gerente: CRM, Growth e SalesOps
+ 2
+ produtos construídos com IA, em uso
+ Empresas onde trabalhei
+ Três operações B2B. Do CRM à liderança em receita. 
+ Octadesk LWSA · set 2025 a hoje 
+ Prestex jul 2024 a ago 2025 
+ Grupo Ideal Trends nov 2020 a mai 2024 
+ Frentes de trabalho
+ O que eu faço na prática.
+ Cada frente liga a minha trajetória aos sistemas que eu construí.
+ Ver sistemas 
+ Forecast e planejamento
+ Business plan, metas, capacity e previsão de receita a partir do funil, contra o budget.
+ Explorar 
+ Governança e atribuição
+ Uma régua só pra Marketing, Vendas e CS: lifecycle, SLA, qualificação e quem gerou a receita.
+ Explorar 
+ Dados e integrações
+ HubSpot, BigQuery, Apps Script e n8n. Do dado bruto à visão executiva.
+ Explorar 
+ IA aplicada à receita
+ Painéis, agentes e automações construídos com IA, sem time de engenharia dedicado.
+ Explorar 
+ Trabalhos em destaque
+ Cases e projetos.
+ Ver todos os cases 
+ Atual · LWSA SaaS B2B · Atendimento e vendas com IA
+ Revenue Operations de SMB a Enterprise.
+ Ver case 
+ Logística B2B · Enterprise
+ Lead scoring, curva ABC e régua que ajudaram a receita a crescer 36%.
+ Ver case 
+ Inteligência Comercial · B2B
+ De analista de CRM a gerente, com 14 pessoas e 3 squads.
+ Ver case 
+ Demo ao vivo Painel de RevOps · Criado para um SaaS
+ Norn: Marketing, Vendas, CS e Receita no mesmo número.
+ Abrir projeto 
+ Demo ao vivo Produto próprio · Agentes de IA
+ Ygg Hub: conteúdo de 5 perfis tocado por agentes.
+ Abrir projeto 
+ Diagnóstico de RevOps 
+ Sua operação de receita é previsível?
+ 10 perguntas, uns 3 minutos. No fim você vê o nível de maturidade em dados, funil, forecast, atribuição e automação, e qual é o próximo passo.
+ Fazer o diagnóstico 
+ Perguntar ao assistente
+ Pergunta 5 de 10 · Forecast Como sai o forecast do mês?
+ Do feeling de cada vendedor De uma planilha montada na mão Do funil: entradas, conversões e ticket 
+ Em andamento
+ O que estou fazendo agora.
+ Business Plan 2027 de SMB e Enterprise
+ Painel de receita em produção na liderança, no computador, no celular e na TV
+ Ygg Hub cortando podcasts sozinho de madrugada
+ Ver atualizações
+
+## Página /sobre/
+Início
+ / Sobre
+ Sou o Leandro. Eu transformo meta de receita em operação. 
+ Comecei no CRM em 2020 e cheguei a gerente de Inteligência Comercial , com três squads e resposta direta pros sócios. Liderar me ensinou que decisão boa depende de dado que todo mundo confia.
+ Na Prestex e na Octadesk fui pro centro da operação de receita: implementar HubSpot, desenhar a atribuição, montar o Business Plan e construir as ferramentas que a liderança usa pra decidir.
+ Nos últimos meses, isso virou construir produto com IA. Um painel de receita usado pela liderança e uma plataforma de conteúdo tocada por agentes. As duas estão em Projetos
+, e dá pra clicar.
+ Se o forecast depende de perguntar pro vendedor quanto ele acha que fecha, você não tem forecast. Tem uma pesquisa de opinião.
+ Copiar resumo do perfil
+ LinkedIn
+ Em resumo 
+ Atual Revenue Operations · Octadesk (LWSA) 
+ Antes Gerente de Inteligência Comercial 
+ Foco Forecast, dados e IA aplicada à receita 
+ Base São Paulo, SP 
+ 01 Princípios
+ Um número só, igual pra todo mundo.
+ Se cada área chega com a sua versão, a reunião discute o número e não o que fazer com ele.
+ Regra escrita antes da discussão.
+ Atribuição, SLA, qualificação. A regra boa é a que todo mundo aceita antes de ver o resultado.
+ Se a ferramenta não resolve, eu construo.
+ Com IA, o gargalo deixou de ser programar. Passou a ser saber exatamente o que construir.
+ 02 Trajetória
+ De CRM a liderança em receita.
+ Octadesk (LWSA) set 2025 · hoje
+ Analista de Operações III · Revenue Operations
+ SMB e Enterprise · transversal a Marketing, Vendas e CS
+ Business Plan 2027 de SMB e Enterprise, das premissas ao P&L
+ Política de Atribuição de Receita de 90 dias, aprovada e em vigor
+ Forecast e pipeline levados à diretoria, com governança de CRM, dados e ferramentas
+ Metas e comissionamento do time comercial, e ponte entre Comercial e Produto
+ Painel de receita da liderança , construído com IA
+ Ver case 
+ Prestex jul 2024 · ago 2025
+ Analista de Inteligência de Mercado Sr.
+ Operação forte em Enterprise
+ Lead scoring Fit x Potencial , curva ABC da carteira, régua de relacionamento por perfil e HubSpot: ações que ajudaram a receita a crescer 36% 
+ Forecast e pipeline levados à diretoria e qualificação de oportunidades com pré-vendas
+ Capacitação do time comercial
+ Ver case 
+ Grupo Ideal Trends nov 2020 · mai 2024
+ Gerente de Inteligência Comercial
+ jun 2023 · mai 2024 · respondendo a CEO e sócios
+ Liderança de 3 squads : CRM, Growth Hacking e SalesOps
+ Avaliação e implementação de novas tecnologias: CRM, BI e IA em vendas
+ Forecast e pipeline no C-level, e ponte entre Comercial e Produto
+ Coordenador de Inteligência Comercial
+ jan 2022 · mai 2023
+ Liderança de 14 pessoas e capacitação do time comercial
+ Analista de CRM
+ nov 2020 · dez 2021
+ Início na operação de CRM e dados comerciais
+ Ver case 
+ FMU 2019 · 2021
+ Graduação em Marketing
+ Faculdades Metropolitanas Unidas
+ 03 Competências
+ Onde eu entro.
+ Revenue Operations
+ Lifecycle, SLA, handoffs e governança de CRM. O processo que faz o dado nascer certo.
+ HubSpot Sales Hub Custom objects 
+ Forecast e planejamento
+ Business Plan, metas, capacity e previsão de receita contra o budget.
+ Budget · Forecast · Commit Google Sheets 
+ Dados e integrações
+ Modelagem, views e integrações por API. Do dado bruto à visão executiva.
+ BigQuery SQL Apps Script APIs 
+ IA e automação
+ Agentes, ferramentas internas e automação de fluxo, construídos com IA.
+ Claude MCP n8n Make Zapier 
+ BI e análise
+ Dashboards, cohort, funil e análise de churn e expansão para a diretoria.
+ Power BI Tableau Looker 
+ Liderança
+ Squads, capacitação do time comercial e ponte entre Comercial, Produto e diretoria.
+ Gestão de times C-level Scrum 
+ 04 Além do trabalho
+ O resto de mim.
+ Futebol Flamenguista, o que já explica o meu humor na segunda-feira. Acompanho Premier League, La Liga, Serie A e Champions.
+ NBA Torço pro Denver Nuggets e acompanho principalmente os playoffs. No debate do GOAT, Jordan.
+ Em casa A família e um cachorro chamado Jon Snow. Sim, eu sou desse tipo de fã de Game of Thrones.
+ Música e games Rock, reggae e trap na playlist. No videogame, futebol, NBA e The Last of Us.
+ Corrida Já corri provas de 5 e 10 km. O mais difícil nunca foi a prova. Foi acordar.
+ Mitologia nórdica Tanto que o meu projeto pessoal se chama Ygg, de Yggdrasil, a árvore que liga todos os mundos. Coincidência eu gostar de sistema?
+
+## Página /cases/octadesk/
+Início
+ / Cases
+ / Octadesk
+ Atual · LWSA · SaaS B2B
+ Octadesk
+ Revenue Operations de SMB a Enterprise.
+ Na Octadesk eu cuido de como a empresa planeja, mede e prevê a receita, com Marketing, Vendas e CS lendo a mesma régua.
+ set 2025 · hoje
+ Analista de Operações III · Revenue Operations Reporte à coordenação e à Diretoria de Revenue 
+ Contexto
+ Plataforma de atendimento e vendas com IA, do grupo LWSA. Operação B2B com SMB e Enterprise, base acima de 1 milhão de contatos e atuação transversal entre Marketing, Vendas e Customer Success.
+ O que eu faço
+ Planejamento e previsão
+ Construí o Business Plan comercial e conduzo o do próximo ciclo, das premissas ao P&L, incluindo metas e o modelo de remuneração variável do time de vendas.
+ Respondo pelo forecast e pela leitura de pipeline, com análises e recomendações levadas à diretoria.
+ Governança e regras
+ Defini a Política de Atribuição de Receita de 90 dias entre Marketing e Vendas, hoje o critério oficial de como a empresa lê a origem do resultado.
+ Defini a governança de CRM, dados e ferramentas comerciais, e o modelo de qualificação de oportunidades com pré-vendas.
+ Dei à liderança a leitura de retorno da aquisição, ligando investimento a receita e não só a volume de leads.
+ Dados, integrações e IA
+ Infra de dados HubSpot → BigQuery , com view única de leads, deals e owners e cargas por Apps Script.
+ Conversões offline do HubSpot para o Google Ads via webhook e n8n.
+ Integração em n8n, nos dois sentidos, entre o chatbot da Octadesk e o HubSpot , alimentando SLA de atendimento e a comunicação com o lead.
+ Coordenação da implementação de um agente de IA de pré-vendas integrado ao HubSpot.
+ Construí com IA o painel de receita que a liderança usa, com mais de 40 telas e sem time de engenharia dedicado. A versão pública é o Norn
+.
+ Quando todo mundo olha pra mesma régua, a reunião para de discutir o número e começa a decidir o que fazer com ele.
+ HubSpot BigQuery SQL Apps Script n8n Google Ads Claude Business Plan Forecast 
+ Resumo Período set 2025 · hoje 
+ Segmentos SMB e Enterprise 
+ Áreas Marketing, Vendas e CS 
+ Reporte Coordenação e Diretoria de Revenue 
+ Próximo Painel Norn (demo) 
+ Perguntar sobre este case
+
+## Página /cases/prestex/
+Início
+ / Cases
+ / Prestex
+ Logística B2B · Enterprise
+ Prestex
+ Lead scoring, curva ABC e régua de relacionamento.
+ Na Prestex eu organizei como a empresa escolhia, priorizava e se relacionava com cada conta. Essas ações do time ajudaram a receita a crescer 36%.
+ jul 2024 · ago 2025
+ Analista de Inteligência de Mercado Sr. Revenue Operations com foco em Enterprise, conectando Marketing, Vendas e CS 
+ Contexto
+ Operação B2B de logística com forte atuação em contas Enterprise. O desafio era priorizar: com muitas contas e pouco tempo do time, quem merecia atenção próxima e quem era só um pico do momento?
+ O que eu fiz
+ Lead scoring Fit x Potencial
+ Um score de fit firmográfico, o enquadramento da empresa, somado à qualificação do SDR. O resultado classificava cada lead como descarte, baixo potencial, potencial ou estratégico .
+ Curva ABC da carteira
+ Revista a cada 3 meses pelo volume de carga e pela receita de cada cliente, pra definir a prioridade de atendimento.
+ Régua de relacionamento por perfil
+ Cadência por curva, classificação e papel do contato (decisor, influenciador, champion), em vendas e em CS. Curva A e estratégico recebia acompanhamento próximo. Curva A só potencial era lido como pico do momento, que tende a voltar pra B ou C.
+ HubSpot e previsibilidade
+ Conduzi a avaliação e a implementação do HubSpot como plataforma central de receita e padronizei funis e automações.
+ Respondi pela previsibilidade de receita (forecast, pipeline e LTV), com análises levadas à diretoria.
+ Apoiei o go-to-market com ICPs e análises de mercado e estruturei a capacitação do time comercial.
+ Essas ações, feitas com o time, ajudaram a receita a crescer 36%.
+ HubSpot Lead scoring Curva ABC Régua de relacionamento ICP Forecast LTV 
+ Resumo Período jul 2024 · ago 2025 
+ Foco Contas Enterprise 
+ Resultado +36% de receita, resultado do time 
+ Próximo Grupo Ideal Trends 
+ Perguntar sobre este case
+
+## Página /cases/ideal-trends/
+Início
+ / Cases
+ / Grupo Ideal Trends
+ Inteligência Comercial · B2B
+ Grupo Ideal Trends
+ De analista de CRM a gerente em três anos e meio.
+ No Grupo Ideal Trends eu cresci junto com a área de Inteligência Comercial: comecei no CRM, coordenei 14 pessoas e terminei gerente de três squads.
+ jun 2023 · mai 2024
+ Gerente de Inteligência Comercial Três squads, respondendo a CEO e sócios 
+ jan 2022 · mai 2023
+ Coordenador de Inteligência Comercial Equipe de 14 pessoas 
+ nov 2020 · dez 2021
+ Analista de CRM Estratégia de CRM e dados comerciais 
+ Contexto
+ Operação comercial B2B com outbound forte. Duas promoções em três anos e meio, de analista a gerente.
+ Como gerente
+ Liderei a área de Inteligência Comercial e seus três squads: CRM, Growth Hacking e SalesOps , com reporte direto à alta gestão.
+ Defini os planos de vendas B2B e as estratégias de prospecção, e respondi por forecast e pipeline junto à alta gestão.
+ Conduzi a avaliação e a implementação das tecnologias comerciais (CRM, BI e automação) e a governança de dados e ferramentas.
+ Fui o elo entre Comercial e Produto e implantei a gestão da área com Scrum e um roadmap de experimentos.
+ Como coordenador
+ Coordenei uma equipe de 14 pessoas , garantindo as entregas e o alinhamento do outbound aos objetivos da empresa.
+ Conduzi com o time a estratégia de captação de leads e instituí testes A/B pra evoluir captação e engajamento.
+ Como analista de CRM
+ Conduzi a estratégia de CRM e orientei decisões com análises de funil, segmentação de clientes e definição de ICPs.
+ Liderar me ensinou que decisão boa depende de dado que todo mundo confia.
+ CRM BI Automação Outbound Testes A/B Scrum Gestão de times 
+ Resumo Período nov 2020 · mai 2024 
+ Pico 14 pessoas e 3 squads 
+ Reporte CEO e sócios 
+ Próximo Octadesk 
+ Perguntar sobre este case
+
+## Página /projetos/
+Início
+ / Projetos
+ Projetos com IA. Pode clicar. 
+ Dois produtos que eu construí com IA, com demo funcionando de verdade, e os sistemas que sustentam a operação de receita no dia a dia.
+ Demo ao vivo Painel de RevOps · Criado para um SaaS
+ Norn: Marketing, Vendas, CS e Receita no mesmo número.
+ Abrir projeto 
+ Demo ao vivo Produto próprio · Agentes de IA
+ Ygg Hub: conteúdo de 5 perfis tocado por agentes.
+ Abrir projeto 
+ Construir ferramenta interna deixou de depender de saber programar. Depende de saber exatamente o que precisa ser construído.
+ Sistemas
+ O que eu construo na operação de receita.
+ Nem tudo dá pra mostrar numa demo. Estes são os sistemas que sustentam a operação. Os números internos ficam de fora.
+ 01
+ Business Plan 2027
+ Modelo de receita de SMB e Enterprise, das premissas ao P&L: motions, funil, receita, capacity, pessoas, ferramentas, custos e visão executiva. É a base das metas do ano.
+ Planejamento Capacity Google Sheets 
+ 02
+ Política de Atribuição de Receita Aprovada e em vigor 
+ Regra de 90 dias que separa o que é Marketing Sourced do que é Sales Sourced, com a janela ancorada no ciclo médio de vendas. Implementada no HubSpot.
+ Atribuição HubSpot Governança 
+ 03
+ Infra de dados HubSpot → BigQuery
+ View única de leads, deals e owners, com origem de canal e mapeamento de estágios. Forecast do planejamento e investimento de mídia entram no BigQuery por Apps Script e Google Ads Script.
+ BigQuery SQL Apps Script APIs 
+ 04
+ Weekly Governance
+ Modelo de dados refeito de ponta a ponta: bruto, tratado, views e visão executiva. Conversão MQL → SQL → OPP → WON contra o budget, por Inbound, Outbound e Motions.
+ Funil Budget Ritual de gestão 
+ 05
+ Agente de IA SDR
+ Coordenação da implementação de um agente de IA de pré-vendas integrado ao HubSpot, alinhando o time comercial e a diretoria.
+ IA Pré-vendas HubSpot 
+ 06
+ Análise executiva via API
+ Análise trimestral de receita feita só com a API do HubSpot, sem acesso a SQL: performance de SQL, OPP, WON e LOST, MRR e motivos de perda, entregue como relatório executivo.
+ HubSpot API MRR Diretoria 
+ 07
+ Automações e integrações com HubSpot
+ Conversões offline do HubSpot enviadas ao Google Ads via webhook e n8n, devolvendo pra mídia o que acontece com o lead depois do clique. Integração em n8n, nos dois sentidos, entre o chatbot da Octadesk e o HubSpot, alimentando SLA de atendimento e a comunicação com o lead. Integrações com a API do HubSpot por Apps Script, com paginação, retry e carga incremental, e fluxos em n8n que levam pedidos do Slack ao ClickUp. Dentro do HubSpot, workflows de funil, régua de relacionamento, lead score e regras de avanço de estágio. Em operações anteriores, Make e Zapier.
+ n8n Webhooks HubSpot API Google Ads Apps Script
+
+## Página /projetos/norn/
+Início
+ / Projetos
+ / Norn
+ Painel de RevOps · Criado para um SaaS · Em produção na liderança 
+ Norn. Um número só pra empresa inteira. 
+ Marketing, Vendas, CS, Produto e Receita num lugar só, com a mesma regra pra todo mundo. Criei esse painel para um SaaS, onde ele roda em produção com outro nome. Aqui ele virou Norn, com marca genérica e dados 100% fictícios.
+ 40+
+ telas em 7 áreas
+ 3
+ versões: computador, celular e TV
+ 4
+ fontes: HubSpot, BigQuery, mídia e metas
+ 0
+ pessoas de engenharia dedicadas
+ norn · versão pública com dados fictícios Ver abertura Tela cheia
+ Navegue pelo menu, troque Período e Painel, abra os alertas, a Leitura IA, o Modo TV e o "Ver como" no canto de baixo. Em tela cheia a experiência fica completa.
+ O problema
+ Toda semana alguém pergunta "como estamos no mês?". A resposta estava espalhada: uma planilha de funil, um relatório do CRM, uma base de receita, uma conversa no chat. Cada fonte com seu recorte e sua regra, e um número nem sempre batia com o outro.
+ O que muda
+ Uma fonte só , do MQL ao churn. Regra escrita e visível , numa tela editável. Meta junto do realizado : cada número contra o ritmo do dia, o Budget, o Forecast e o Commit.
+ Como foi construído
+ Eu defini o problema, as regras e o critério de aceite, e validei cada número contra os relatórios oficiais. A IA escreveu o código. O deploy nunca foi delegado a ela.
+ Arquitetura
+ O backend em Python monta um pacote do funil a cada 30 minutos. A tela em React baixa uma vez e faz todos os recortes no navegador, então os filtros respondem na hora e duas telas nunca discordam.
+ Desafio que mais ensinou
+ Fazer os números baterem com os relatórios que já eram oficiais. Cada diferença virou uma regra explícita e uma tela de Validação mostrando o que entrou e o que ficou de fora.
+ React Python · FastAPI Postgres HubSpot API BigQuery SSO por convite Leitura por IA Docker · GitLab CI 
+ Ler a nota sobre o painel 
+ Próximo: Ygg Hub
+
+## Página /projetos/ygg-hub/
+Início
+ / Projetos
+ / Ygg Hub
+ Produto próprio · Ygg Group 
+ Ygg Hub. Conteúdo tocado por agentes. 
+ Uma plataforma que opera 5 perfis de conteúdo de ponta a ponta: acha a pauta, produz o vídeo, corta o podcast, agenda, publica e mede. A única etapa humana é a minha: aprovar.
+ 147
+ conteúdos passando pelo Pipeline
+ 99
+ pedidos feitos aos agentes
+ 7
+ agentes, 5 de IA e 2 robôs em código
+ 1
+ etapa humana: a aprovação
+ Experimente: aprove um post na Início ou no Pipeline, gere cortes de um link no Estúdio, troque onde cada agente roda e veja tudo chegar na Caixa de entrada. Dados de exemplo. 
+ O desenho
+ O status do post manda no trabalho. Rascunho vira pedido na fila, o Thor produz, eu aprovo e o Hermod agenda e publica. Toda revisão minha vira aprendizado dos agentes, e o Mímir mede o que foi ao ar.
+ Custo sob controle
+ Cada agente tem modelo, teto por rodada e gasto do mês à vista. Dá pra escolher se ele roda no Hub ou no Claude, com um clique, e o que é regra fixa virou código sem IA.
+ A arquitetura
+ Front no Cloudflare Pages, worker no Render com banco cifrado no R2, render de vídeo no GitHub Actions, IA pela API do Claude e comando pelo chat via MCP.
+ O que mudou na minha rotina
+ Abro o Hub e a home já diz o que precisa de mim. O resto acontece de madrugada: cortes às 00:30, métricas às 06:47, produção de 4 em 4 horas.
+ Cloudflare Pages + R2 Render GitHub Actions Claude API MCP ElevenLabs Meta Graph API Agentes de IA 
+ Ver todos os projetos 
+ Norn
+
+## Página /notas/forecast/
+Início
+ / Notas
+ / Nota 01
+ Forecast não é pesquisa de opinião
+ Por que eu monto previsão a partir do funil, e não do feeling
+ Pergunta pro vendedor quanto ele acha que fecha no mês. Na primeira semana a resposta é otimista. Na última, conservadora. Isso não é previsão, é humor.
+ O forecast que eu monto parte do funil: quantos MQL entraram, quanto converte pra SQL, pra OPP e pra venda, e quanto isso vale em ticket. Cada taxa é comparada com o budget.
+ Três linhas no mesmo lugar: o que aconteceu, o que a gente prometeu e o que vai acontecer se o ritmo continuar.
+ Quando a projeção descola da meta, o problema aparece com semanas de antecedência, e não no último dia do mês. O feeling do vendedor ainda conta. Mas como ajuste, não como base.
+ Próxima nota Quem trouxe essa receita? 
+ Na prática Fazer o diagnóstico de RevOps
+
+## Página /notas/atribuicao/
+Início
+ / Notas
+ / Nota 02
+ Quem trouxe essa receita?
+ Atribuição é regra de convivência entre Marketing e Vendas
+ Toda empresa com Marketing e Vendas tem essa briga. O lead chegou pelo Inbound, esfriou, e meses depois o vendedor resgatou. De quem é a venda?
+ Sem regra, a resposta depende de quem fala mais alto na reunião. E o custo é maior que o clima ruim: o CAC de cada canal fica errado, e o investimento vai pro lugar errado. 
+ A política que eu desenhei usa uma janela de 90 dias a partir da origem do lead pra separar o que é Marketing Sourced do que é resgate de Vendas. O tamanho da janela não é chute: ele parte do ciclo médio de vendas.
+ Regra boa não é a que agrada todo mundo. É a que todo mundo aceita antes de ver o resultado.
+ Ela foi aprovada pela liderança e está em vigor no HubSpot. A conversa mudou de "de quem é" pra "o que fazer".
+ Próxima nota Construí um painel de receita com IA 
+ Na prática Fazer o diagnóstico de RevOps
+
+## Página /notas/painel-com-ia/
+Início
+ / Notas
+ / Nota 03
+ Construí um painel de receita com IA
+ O gargalo deixou de ser programar
+ Toda semana a mesma pergunta: como estamos no mês? A resposta estava espalhada em planilha, CRM e plataforma de mídia, e cada área chegava com a sua versão.
+ Construí o painel inteiro com um agente de IA. Eu sabia o que a liderança precisava ver e como o dado se comporta. A IA escrevia o código.
+ O resultado é um lugar só, com o mesmo número pra todo mundo: alerta quando um indicador sai do ritmo da meta, leitura automática da tela por IA, acesso por perfil, feedback com print direto pro RevOps e modo TV.
+ Construir ferramenta interna deixou de depender de saber programar. Depende de saber exatamente o que precisa ser construído.
+ A versão pública, com dados fictícios, está em Projetos › Norn
+.
+ Próxima nota Forecast não é pesquisa de opinião 
+ Na prática Fazer o diagnóstico de RevOps
+
+## Página /now/
+Início
+ / Now
+ Now. O que estou fazendo agora. 
+ Atualizações curtas sobre o que está na minha mesa. Atualizado em 18 de novembro de 2026.
+ nov 2026 Business Plan 2027
+ Fechando o plano de SMB e Enterprise: premissas, funil, receita, capacity e custos. É dele que saem as metas do ano.
+ nov 2026 Painel de receita em produção
+ O painel que construí com IA está em uso pela liderança, agora no computador, no celular e na TV. A versão pública é o Norn
+.
+ nov 2026 Ygg Hub cortando podcasts sozinho
+ Um worker baixa o episódio, transcreve, acha os trechos com gancho e renderiza os cortes em 9:16 com legenda. Eu só aprovo.
+ nov 2026 Este site
+ Portfólio refeito em várias páginas, com assistente que responde sobre o meu trabalho, busca com Ctrl+K e um diagnóstico de RevOps.
+ Por que uma página Now Currículo mostra o que eu fiz. Esta página mostra no que eu estou pensando agora.
+
+## Página /diagnostico/
+Início
+ / Diagnóstico de RevOps
+ Sua receita é previsível? 
+ 10 perguntas sobre dados, funil, forecast, atribuição e automação. No fim você vê o nível de maturidade da operação e o próximo passo. Nada é enviado: tudo roda no seu navegador.
+
+## Contato
+WhatsApp: https://wa.me/5511934751215 · LinkedIn: https://www.linkedin.com/in/leandrosantanamkt/ · E-mail: leandrosantana.mkt@gmail.com · Base: São Paulo, SP.
