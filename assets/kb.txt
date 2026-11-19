@@ -65,8 +65,10 @@ Logística B2B com forte atuação em contas Enterprise. Revenue Operations cone
 - O nome Ygg vem de Yggdrasil, a árvore da mitologia nórdica que liga todos os mundos.
 
 ### Estilo de vida e jeito de ser
-- Rotina disciplinada: acorda às 5h20. Treina academia e corre (já fez provas de 5 e 10 km).
-- Família: mora em São Paulo com a Thay, o Arthur e o cachorro Jon Snow.
+- Rotina disciplinada: acorda às 5h20. Treina academia e corre. Provas: 10 km na Sport TV Run (set/2024, pace 6:00/km, o melhor dele até então), 10 km no Desafio Minalba (nov/2024, recorde pessoal de 55min54s, pace 5:35/km), 16 km (abr/2025) e mais de 15 km (ago/2025). Próxima meta: a meia maratona, 21 km. Lema de treino: corpo forte, mente forte.
+- Família: mora em São Paulo com a Thay e o cachorro Jon Snow. O filho, Arthur, nasceu em julho de 2026. Virou pai em 2026.
+- Gosta de trilha e natureza (já fez a trilha da Cachoeira Véu de Noiva) e de viajar com os amigos de longa data (Aracaju em 2025).
+- Foi ao show do Post Malone em 2024. Frase que usa: "Agora que eu tô velho, eu só tô querendo paz."
 - Tem um grupo de amigos próximos e joga com eles o bolão do Brasileirão num grupo de WhatsApp. O time dele no bolão se chama Jumentus de Turim. Regra do bolão: não pode copiar palpite de ninguém.
 - Acompanha o mercado da bola do Flamengo de perto, com fontes primárias e jornalistas argentinos, equatorianos e europeus. Gosta de checar a fonte antes de acreditar em notícia.
 - Gosta de games (inclusive jogos leves como Fortnite), séries, livros, parques e shows. Cuida de bonsai.
@@ -83,10 +85,7 @@ Logística B2B com forte atuação em contas Enterprise. Revenue Operations cone
 - Música: rock, reggae e trap. Ouve de tudo, menos funk.
 - Filmes: ficção científica, fantasia e épicos, suspense e crime.
 - Games: futebol, NBA e The Last of Us.
-- Corrida (já fez provas de 5 e 10 km) e academia. Gosta também de mitologia e cultura nórdica, bonsai, parques, shows e livros.
-
-
-# Conteúdo das páginas do site
+- Corrida (provas de 10 km com recorde de 55min54s, já chegou a 16 km, mira a meia maratona) e academia. Gosta também de mitologia e cultura nórdica, bonsai, parques, shows e livros.
 
 ## Página /
 Leandro Santana · Revenue Operations e IA aplicada
@@ -241,7 +240,7 @@ Início
  NBA Torço pro Denver Nuggets e acompanho principalmente os playoffs. No debate do GOAT, Jordan.
  Em casa A família e um cachorro chamado Jon Snow. Sim, eu sou desse tipo de fã de Game of Thrones.
  Música e games Rock, reggae e trap na playlist. No videogame, futebol, NBA e The Last of Us.
- Corrida Já corri provas de 5 e 10 km. O mais difícil nunca foi a prova. Foi acordar.
+ Corrida Provas de 10 km, recorde de 55min54s, já cheguei a 16 km. Próxima meta: 21 km. O mais difícil nunca foi a prova. Foi acordar.
  Mitologia nórdica Tanto que o meu projeto pessoal se chama Ygg, de Yggdrasil, a árvore que liga todos os mundos. Coincidência eu gostar de sistema?
 
 ## Página /cases/octadesk/
