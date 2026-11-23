@@ -42,9 +42,9 @@ Logística B2B com forte atuação em contas Enterprise. Revenue Operations cone
 - Essas ações do time ajudaram a receita a crescer 36%. Não foi mérito só dele.
 
 **Grupo Ideal Trends · nov 2020 a mai 2024 · de analista a gerente com duas promoções**
-- Gerente de Inteligência Comercial (jun 2023 a mai 2024): liderou a área e seus 3 squads (CRM, Growth Hacking e SalesOps), respondendo a CEO e sócios. Planos de vendas B2B, estratégias de prospecção, forecast e pipeline com a alta gestão, avaliação e implementação de CRM, BI e automação, governança de dados, elo entre Comercial e Produto, gestão com Scrum e roadmap de experimentos.
-- Coordenador de Inteligência Comercial (jan 2022 a mai 2023): coordenou 14 pessoas, operação de outbound, estratégia de captação de leads e testes A/B.
-- Analista de CRM (nov 2020 a dez 2021): estratégia de CRM, análises de funil, segmentação de clientes e ICPs.
+- Gerente de Inteligência Comercial (jun 2023 a mai 2024): liderou a área e seus 3 squads (CRM, Growth Hacking e SalesOps), respondendo a CEO e sócios. Com otimização e automação de processos, a equipe passou de 14 para 9 pessoas sem perda de entrega. Planos de vendas B2B, estratégias de prospecção, forecast e pipeline com a alta gestão, avaliação e implementação de CRM, BI e automação, governança de dados, elo entre Comercial e Produto, gestão com Scrum e roadmap de experimentos.
+- Coordenador de Inteligência Comercial (jan 2022 a mai 2023): coordenou 14 pessoas, operação de outbound, estratégia de captação de leads e testes A/B. Liderou a migração do CRM interno para o Pipedrive: mais de 500 mil empresas, 250 mil deals, 1 milhão de contatos e 5 milhões de atividades, com menos de 1% de perda de histórico.
+- Analista de CRM (nov 2020 a dez 2021): estratégia de CRM, análises de funil, segmentação de clientes e ICPs. Criou a régua automatizada multicanal (e-mail, WhatsApp e LinkedIn) que levou a abertura de e-mail de 18% para 28% e a taxa de resposta de 30% para 48%.
 
 ### Competências e ferramentas
 - Estratégia: Revenue Operations, BizOps, Sales Operations, estratégia comercial B2B, ICP e segmentação, atribuição de receita, forecast e pipeline, business plan, metas e remuneração variável, capacity.
@@ -158,17 +158,14 @@ Leandro Santana · Revenue Operations e IA aplicada
  Ver atualizações
 
 ## Página /sobre/
-Início
- / Sobre
+Início / Sobre
  Sou o Leandro. Eu transformo meta de receita em operação. 
  Comecei no CRM em 2020 e cheguei a gerente de Inteligência Comercial , com três squads e resposta direta pros sócios. Liderar me ensinou que decisão boa depende de dado que todo mundo confia.
  Na Prestex e na Octadesk fui pro centro da operação de receita: implementar HubSpot, desenhar a atribuição, montar o Business Plan e construir as ferramentas que a liderança usa pra decidir.
- Nos últimos meses, isso virou construir produto com IA. Um painel de receita usado pela liderança e uma plataforma de conteúdo tocada por agentes. As duas estão em Projetos
-, e dá pra clicar.
+ Nos últimos meses, isso virou construir produto com IA. Um painel de receita usado pela liderança e uma plataforma de conteúdo tocada por agentes. As duas estão em Projetos , e dá pra clicar.
  Se o forecast depende de perguntar pro vendedor quanto ele acha que fecha, você não tem forecast. Tem uma pesquisa de opinião.
- Copiar resumo do perfil
- LinkedIn
- Em resumo 
+ Copiar resumo do perfil LinkedIn 
+ Em resumo
  Atual Revenue Operations · Octadesk (LWSA) 
  Antes Gerente de Inteligência Comercial 
  Foco Forecast, dados e IA aplicada à receita 
@@ -204,12 +201,15 @@ Início
  Liderança de 3 squads : CRM, Growth Hacking e SalesOps
  Avaliação e implementação de novas tecnologias: CRM, BI e IA em vendas
  Forecast e pipeline no C-level, e ponte entre Comercial e Produto
+ Com otimização e automação de processos, a equipe foi de 14 para 9 pessoas sem perder entrega
  Coordenador de Inteligência Comercial
  jan 2022 · mai 2023
  Liderança de 14 pessoas e capacitação do time comercial
+ Migração do CRM interno pro Pipedrive: 1 milhão de contatos , 500 mil empresas e 5 milhões de atividades, com menos de 1% de perda de histórico
  Analista de CRM
  nov 2020 · dez 2021
- Início na operação de CRM e dados comerciais
+ Estratégia de CRM, funil, segmentação e ICPs
+ Régua multicanal (e-mail, WhatsApp e LinkedIn): abertura de e-mail de 18% para 28% e resposta de 30% para 48% 
  Ver case 
  FMU 2019 · 2021
  Graduação em Marketing
@@ -242,6 +242,18 @@ Início
  Música e games Rock, reggae e trap na playlist. No videogame, futebol, NBA e The Last of Us.
  Corrida Provas de 10 km, recorde de 55min54s, já cheguei a 16 km. Próxima meta: 21 km. O mais difícil nunca foi a prova. Foi acordar.
  Mitologia nórdica Tanto que o meu projeto pessoal se chama Ygg, de Yggdrasil, a árvore que liga todos os mundos. Coincidência eu gostar de sistema?
+ Meia Maratona Internacional de São Paulo, 2025 
+ NB 15K São Paulo, passando pela ponte estaiada 
+ Desafio Minalba, 10 km. Recorde pessoal: 55min54s 
+ Trilha até a Cachoeira Véu de Noiva 
+ Medalha no peito depois do Minalba 
+ Fora do expediente 
+ Contato 
+ Vamos falar de receita. 
+ Revenue Operations, forecast, dados e ferramentas de receita construídas com IA. Se o assunto for esse, me chama.
+ WhatsApp 
+ LinkedIn 
+ E-mail
 
 ## Página /cases/octadesk/
 Início
@@ -311,9 +323,7 @@ Início
  Perguntar sobre este case
 
 ## Página /cases/ideal-trends/
-Início
- / Cases
- / Grupo Ideal Trends
+Início / Cases / Grupo Ideal Trends
  Inteligência Comercial · B2B
  Grupo Ideal Trends
  De analista de CRM a gerente em três anos e meio.
@@ -331,18 +341,30 @@ Início
  Defini os planos de vendas B2B e as estratégias de prospecção, e respondi por forecast e pipeline junto à alta gestão.
  Conduzi a avaliação e a implementação das tecnologias comerciais (CRM, BI e automação) e a governança de dados e ferramentas.
  Fui o elo entre Comercial e Produto e implantei a gestão da área com Scrum e um roadmap de experimentos.
+ Com otimização e automação de processos, a equipe passou de 14 para 9 pessoas sem perda de entrega.
  Como coordenador
  Coordenei uma equipe de 14 pessoas , garantindo as entregas e o alinhamento do outbound aos objetivos da empresa.
+ Liderei a migração do CRM interno pro Pipedrive: mais de 500 mil empresas, 250 mil deals, 1 milhão de contatos e 5 milhões de atividades , com menos de 1% de perda de histórico.
  Conduzi com o time a estratégia de captação de leads e instituí testes A/B pra evoluir captação e engajamento.
  Como analista de CRM
  Conduzi a estratégia de CRM e orientei decisões com análises de funil, segmentação de clientes e definição de ICPs.
+ Desenvolvi a régua automatizada multicanal (e-mail, WhatsApp e LinkedIn) que levou a abertura de e-mail de 18% para 28% e a taxa de resposta de 30% para 48% .
  Liderar me ensinou que decisão boa depende de dado que todo mundo confia.
  CRM BI Automação Outbound Testes A/B Scrum Gestão de times 
- Resumo Período nov 2020 · mai 2024 
+ Resumo
+ Período nov 2020 · mai 2024 
  Pico 14 pessoas e 3 squads 
+ Migração 1 mi de contatos, menos de 1% de perda 
  Reporte CEO e sócios 
- Próximo Octadesk 
- Perguntar sobre este case
+ Próximo
+ Octadesk 
+ Perguntar sobre este case 
+ Contato 
+ Vamos falar de receita. 
+ Revenue Operations, forecast, dados e ferramentas de receita construídas com IA. Se o assunto for esse, me chama.
+ WhatsApp 
+ LinkedIn 
+ E-mail
 
 ## Página /projetos/
 Início
